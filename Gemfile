@@ -36,3 +36,6 @@ gem 'capistrano'
 
 # To use debugger
 #gem 'debugger'
+
+# Passenger
+gem 'passenger'

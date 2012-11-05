@@ -34,6 +34,7 @@ $ ->
     #_iVideoControl.MediaStreamRender 0, generate_uri( 0 )
     _iVideoControl.MediaStreamRender 0, generate_uri( 1 )
 
+    # Trying to get a streaming from the past
     streaming = _iVideoControl.GetInterface( 'ADSDK.IStreaming' )
     #streaming.StreamingStartFrom
 

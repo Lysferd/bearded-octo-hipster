@@ -2,45 +2,29 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-# TODO: remove these plain text references
-user = 'admin'
-pass = 'VIDEO!edge23'
-address = '192.168.1.106'
+layout = "<?xml version='1.0' encoding='utf-8' ?>
+  <Layout xmlns='urn:VideoLayoutSchema' Name='1x1'
+  Rows='1'
+  Columns='1'
+  AspectRatio='4:3'>
+  <Pane Id='0'
+  RowSpan='1'
+  ColumnSpan='1'
+  RowNumber='0'
+  ColumnNumber='0'
+  IsMasterPane='true'/>
+  </Layout>"
 
-pane_layout = "<?xml version='1.0' encoding='utf-8' ?>
-               <Layout xmlns='urn:VideoLayoutSchema'
-               Name='1x2' Rows='1' Columns='1' AspectRatio='4:3'>
-               <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0'
-               ColumnNumber='0' IsMasterPane='true' />
-               <Pane Id='1' RowSpan='1' ColumnSpan='2' RowNumber='0'
-               ColumnNumber='1' IsMaterPane='false' />
-               </Layout>"
+# -=-=-=-=-
+# * Start streaming.
+#$ -> setTimeout(render_stream, 0)
 
-generate_uri = ( camera_id = 0 ) -> "nvr://#{user}:#{pass}@#{address#}/media/#{camera_id}/video/0/"
-
-$ ->
-  qtObj.innerHTML = "<object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
-    height=480 width=640
-    id='_iVideoControl' EnableJavaScript='true'
-    codebase='ADSDK.IVideoControl'></object>"
-
-  header.innerHTML = "<h1>Video Server 3</h1>
-    <h3>URI: #{generate_uri()}</h3>"
-
-@startButton_onclick = ->
+render_stream = ->
   try
-    _iVideoControl.SetPaneLayout pane_layout
-    _iVideoControl.MediaStreamStopAll
-    #_iVideoControl.MediaStreamRender 0, generate_uri( 0 )
-    _iVideoControl.MediaStreamRender 0, generate_uri( 1 )
-
-    # Trying to get a streaming from the past
-    streaming = _iVideoControl.GetInterface( 'ADSDK.IStreaming' )
-    #streaming.StreamingStartFrom
-
-    # The following undos the panels' width and height properties,
-    # hence has been commented.
-    #_iVideoControl.resize()
-  catch error
-    alert error
-
+    _iVideoControl.SetPaneLayout(layout)
+    _iVideoControl.MediaStreamStop(0)
+    #_iVideoControl.MediaStreamRender(0, "nvr://admin:VIDEO!edge23@192.168.1.106/media/1/video/0/")
+    #iStreaming = _iVideoControl.GetInterface('ADSDK.IStreaming')
+    #_iVideoControl.Resize
+  catch exception
+    alert exception

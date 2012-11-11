@@ -7,7 +7,6 @@ gem 'rails', '3.2.8'
 
 gem 'mysql2'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -39,3 +38,9 @@ gem 'capistrano'
 
 # Passenger
 gem 'passenger'
+
+# Ruby Test
+# minitest does not integrate well with RubyMine
+# using test-unit instead
+#gem 'minitest-reporters'
+gem 'test-unit'

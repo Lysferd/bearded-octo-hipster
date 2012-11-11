@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Videoserver3</title>
+  <title>Video Server 3</title>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
-<%= yield %>
+<div id='navigator'>
+  <ul>
+    <li><%= link_to 'Home', '#' %></li>
+    <li><%= link_to 'Playback', 'playback' %></li>
+  </ul>
+</div>
+
+<div style='text-align: center'>
+  <h1>Video Server 3</h1>
+  <%= yield %>
+</div>
 
 </body>
 </html>

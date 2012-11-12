@@ -3,25 +3,29 @@
 <table>
   <tr>
     <th>Label</th>
-    <th>Username</th>
     <th>Address</th>
+    <th>Username</th>
+    <th>Password digest</th>
+    <th>Warehouse</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @servers.each do |server| %>
-  <tr>
-    <td><%= server.label %></td>
-    <td><%= server.username %></td>
-    <td><%= server.address %></td>
-    <td><%= link_to 'Show', server %></td>
-    <td><%= link_to 'Edit', edit_server_path(server) %></td>
-    <td><%= link_to 'Destroy', server, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @servers.each do |server| %>
+      <tr>
+        <td><%= server.label %></td>
+        <td><%= server.address %></td>
+        <td><%= server.username %></td>
+        <td><%= server.password_digest %></td>
+        <td><%= server.warehouse_id %></td>
+        <td><%= link_to 'Show', server %></td>
+        <td><%= link_to 'Edit', edit_server_path(server) %></td>
+        <td><%= link_to 'Destroy', server, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
 </table>
 
-<br />
+<br/>
 
 <%= link_to 'New Server', new_server_path %>

@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
   <title>Video Server 3</title>
 
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
 </head>
 <body>
 
+<div id='header'>
+  <h1>Video Server 3</h1>
+
+  <h3>― Development Version ―</h3>
+</div>
+
+
 <div id='navigator'>
   <ul>
-    <li><%= link_to 'Home', '#' %></li>
-    <li><%= link_to 'Playback', 'playback' %></li>
+    <li><%= link_to 'Index', home_index_path %></li>
+    <li><%= link_to 'Live', home_live_path %></li>
+    <li><%= link_to 'Playback', home_playback_path %></li>
   </ul>
 </div>
 
-<div style='text-align: center'>
-  <h1>Video Server 3</h1>
+<div id='contents'>
   <%= yield %>
+</div>
+
+<div id='footer'>
+  <p>&copy; 2012 IB Tecnologia & Sistemas LTDA</p>
+  <h6>Debug rand: <%= rand %></h6>
 </div>
 
 </body>

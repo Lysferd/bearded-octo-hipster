@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+$navigator_width: 10%;
+
+@mixin base-style {
+  margin: {
+    top: 2px;
+    bottom: 2px;
+  }
+  background-color: #cccccc;
+}
+
+@mixin border-style {
+  border: {
+    style: dotted;
+    width: 1px;
+  }
+}
+
+#header {
+  text-align: center;
+  @include base-style;
+  @include border-style;
+}
+
+#navigator {
+  float: left;
+  width: $navigator_width;
+
+  padding: {
+    top: 10px;
+    bottom: 10px;
+  }
+
+  ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    list-style-type: none;
+  }
+
+  a {
+    color: #333333;
+  }
+
+  @include base-style;
+  @include border-style;
+}
+
+#contents {
+  float: right;
+  width: 99% - $navigator_width;
+}
+
+#footer {
+  clear: both;
+  text-align: center;
+  @include base-style;
+  @include border-style;
+}

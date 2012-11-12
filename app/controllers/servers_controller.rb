@@ -5,7 +5,7 @@ class ServersController < ApplicationController
     @servers = Server.all
 
     respond_to do |format|
-      format.html # __index.html.erb
+      format.html # index.html.erb
       format.json { render json: @servers }
     end
   end

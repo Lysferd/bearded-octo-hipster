@@ -5,8 +5,8 @@ class ServersControllerTest < ActionController::TestCase
     @server = servers(:one)
   end
 
-  test "should get live" do
-    get :live
+  test "should get index" do
+    get :index
     assert_response :success
     assert_not_nil assigns(:servers)
   end
@@ -18,7 +18,7 @@ class ServersControllerTest < ActionController::TestCase
 
   test "should create server" do
     assert_difference('Server.count') do
-      post :create, server: { address: @server.address, label: @server.label, password_digest: @server.password_digest, username: @server.username }
+      post :create, server: {address: @server.address, label: @server.label, password_digest: @server.password_digest, username: @server.username, warehouse_id: @server.warehouse_id}
     end
 
     assert_redirected_to server_path(assigns(:server))
@@ -35,7 +35,7 @@ class ServersControllerTest < ActionController::TestCase
   end
 
   test "should update server" do
-    put :update, id: @server, server: { address: @server.address, label: @server.label, password_digest: @server.password_digest, username: @server.username }
+    put :update, id: @server, server: {address: @server.address, label: @server.label, password_digest: @server.password_digest, username: @server.username, warehouse_id: @server.warehouse_id}
     assert_redirected_to server_path(assigns(:server))
   end
 

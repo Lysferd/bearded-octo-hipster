@@ -1,62 +1,63 @@
+<h3>Live</h3>
+<p style="text-align: center;">
+  <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
+          height=480
+          width=640
+          id='AxVideoControl'
+          EnableJavaScript='true'
+          codebase='ADSDK.IVideoControl'>
+    ActiveX not present!
+  </object>
+  <!--<br>
+  <input type="button" value="Start Live Video" onclick="btnLiveStart_Click()"/>-->
+</p>
 
-
+<script type="text/vbscript">
   <!--
-    Standard date and time:
-    2012/11/01 23:00:00.00
+    Dim StreamingInterface
+    Dim paneCount
+    Dim UserName
+    Dim Password
+    Dim UnitAddress
 
+    Sub AxVideoControl_OnCreated(resultCode)
 
-  <label>
-    Insert date and time:
-    <input name="StartTime" type="input" value="2012110123000000"/>
-    <input type="button" name="btnStart" value="Start" onclick ="btnStartEx_Click()" />
-  </label>-->
+      Dim recorderFactory
+      'recorderFactory = CreateObject("ADSDK.RecorderFactory")
 
-  <!--
+      UserName = "admin"
+      Password = "VIDEO!edge23"
+      UnitAddress = "192.168.1.106"
 
-  <p id='qtObj'><object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
-                        height=480
-                        width=640
-                        id='AxVideoControl'
-                        EnableJavaScript='true'
-                        codebase='ADSDK.IVideoControl'>ActiveX not present!</object></p>
-                        -->
+      ' 1x1
+      ' AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?>  <Layout xmlns='urn:VideoLayoutSchema' Name='1�1' Rows='1' Columns='1' AspectRatio='4:3'>  <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' />  </Layout>"
 
-  <h6>Debug rand: <%= rand %><br>
-  &copy; 2012 IB Tecnologia & Sistemas LTDA</h6>
-</div>
+      ' 2x2
+      AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?> <Layout xmlns='urn:VideoLayoutSchema' AspectRatio='4:3'  Orientation='' Name='2�2' Rows='2' Columns='2'>   <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /></Layout>"
 
-<script language="vbscript">
-<!--
+      ' 3x3
+      ' AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?> <Layout xmlns='urn:VideoLayoutSchema' AspectRatio='4:3'  Orientation='' Name='3�3' Rows='3' Columns='3'>   <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /></Layout>"
 
-  Dim streamUri
+      ' 4x4
+      ' AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?> <Layout xmlns='urn:VideoLayoutSchema' AspectRatio='4:3'  Orientation='' Name='4�4' Rows='4' Columns='4'>   <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='3' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='3' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='9' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='10' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /><Pane Id='11' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='3' IsMasterPane='false' /><Pane Id='12' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='0' IsMasterPane='false' /><Pane Id='13' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='1' IsMasterPane='false' /><Pane Id='14' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='2' IsMasterPane='false' /><Pane Id='15' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='3' IsMasterPane='false' /></Layout>"
 
-  Sub AxVideoControl_OnCreated(resultCode)
+      paneCount = 4
+      Set StreamingInterface = AxVideoControl.GetInterface("ADSDK.IStreaming")
+      'AxVideoControl.Resize
 
-    ' 1x1
-    AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?>  <Layout xmlns='urn:VideoLayoutSchema' Name='1\D71' Rows='1' Columns='1' AspectRatio='4:3'>  <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' />  </Layout>"
+      Dim streamUri
+      Dim cameraUri
+      streamUri = "nvr://" & UserName
+      streamUri = streamUri & ":" & Password
+      streamUri = streamUri & "@" & UnitAddress
 
-    ' 2x2
-    ' AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?> <Layout xmlns='urn:VideoLayoutSchema' AspectRatio='4:3'  Orientation='' Name='2\D72' Rows='2' Columns='2'>   <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /></Layout>"
+      For i = 0 To paneCount
+        cameraUri = streamUri & "/media/" & i
+        cameraUri = cameraUri & "/video/0"
+        AxVideoControl.MediaStreamRender i, cameraUri
+      Next
 
-    ' 3x3
-    ' AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?> <Layout xmlns='urn:VideoLayoutSchema' AspectRatio='4:3'  Orientation='' Name='3\D73' Rows='3' Columns='3'>   <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /></Layout>"
+    End Sub
 
-    ' 4x4
-    ' AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?> <Layout xmlns='urn:VideoLayoutSchema' AspectRatio='4:3'  Orientation='' Name='4\D74' Rows='4' Columns='4'>   <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='3' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='3' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='9' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='10' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /><Pane Id='11' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='3' IsMasterPane='false' /><Pane Id='12' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='0' IsMasterPane='false' /><Pane Id='13' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='1' IsMasterPane='false' /><Pane Id='14' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='2' IsMasterPane='false' /><Pane Id='15' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='3' IsMasterPane='false' /></Layout>"
-
-    AxVideoControl.Resize
-
-  End Sub
-
-  Sub btnStartEx_Click()
-
-    streamUri = "nvr://admin:VIDEO!edge23@192.168.1.106/media/0/video/0/"
-    Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
-    vidControlEx.OpenStreamEx 0, streamUri, StartTime.Value, false, false, 10000
-    vidControlEx = NULL
-
-  End Sub
-
-  'Call btnStartEx_Click()
--->
+  -->
 </script>

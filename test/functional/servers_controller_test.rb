@@ -2,6 +2,15 @@ require 'test_helper'
 
 class ServersControllerTest < ActionController::TestCase
   setup do
+    @input_attributes = {
+        address: 'myaddress',
+        label: 'myserver',
+        username: 'myusername',
+        password: 'mysecret',
+        #password_confirmation: 'mysecret',
+        warehouse_id: 0
+    }
+
     @server = servers(:one)
   end
 
@@ -18,7 +27,7 @@ class ServersControllerTest < ActionController::TestCase
 
   test "should create server" do
     assert_difference('Server.count') do
-      post :create, server: {address: @server.address, label: @server.label, password_digest: @server.password_digest, username: @server.username, warehouse_id: @server.warehouse_id}
+      post :create, server: @input_attributes
     end
 
     assert_redirected_to server_path(assigns(:server))
@@ -35,7 +44,7 @@ class ServersControllerTest < ActionController::TestCase
   end
 
   test "should update server" do
-    put :update, id: @server, server: {address: @server.address, label: @server.label, password_digest: @server.password_digest, username: @server.username, warehouse_id: @server.warehouse_id}
+    put :update, id: @server, server: @input_attributes
     assert_redirected_to server_path(assigns(:server))
   end
 

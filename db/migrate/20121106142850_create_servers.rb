@@ -4,7 +4,7 @@ class CreateServers < ActiveRecord::Migration
       t.string :label
       t.string :address
       t.string :username
-      t.string :password_digest
+      t.string :password
       t.integer :warehouse_id
 
       t.timestamps

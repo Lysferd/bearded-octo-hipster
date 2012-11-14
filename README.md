@@ -26,3 +26,31 @@ a closed-source SDK on the client's computer. Can't help it.
  Internet Explorer Only
 Unfortunately. Because it is required to have VBScript, and VBScript only works
 on IE.
+
+ Database Structure
+Because of inherent issues of the ADSDK, there is simple functionality that
+cannot be used, like calling IRecorder#GetCamerasList. Instead, annoying
+database structures have to be used as replacement.
+`+' is used to introduce a new table.
+Tabulation represents inheritance.
+
+ + Warehouse
+  Represents a congregation of servers.
+  String @label: warehouse's name.
+  Array @servers: object reference to its inherited servers.
+    + Server
+     Represents a VideoEdge NVR.
+     String @label: server's name.
+     String @address: server's TCP/IPv4 address.
+     String @username: server's authorization username.
+     String @password (digest): server's authorization password.
+     Array @cameras: object reference to its inherited cameras.
+        + Camera
+         String @label: camera's name.
+         Integer @camera_id: camera's real index number, relative to the real
+                             server (this is just an interface, after all).
+ + User
+  Represents an administrator authorized to make changes on the application's
+  data structure via browser.
+  String @username: authorization username.
+  String (digest) @password: authorization password.

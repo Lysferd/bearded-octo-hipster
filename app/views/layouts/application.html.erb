@@ -18,11 +18,26 @@
 
 
 <div id='navigator'>
-  <ul>
-    <li><%= link_to 'Index', home_index_path %></li>
-    <li><%= link_to 'Live', home_live_path %></li>
-    <li><%= link_to 'Playback', home_playback_path %></li>
-  </ul>
+  <div id="topic">― Warehouse List ―</div>
+  <% Warehouse::all.each do |warehouse| %>
+      <%= warehouse.label %>
+      <div id="links">
+        <%= link_to 'Live', live_path(warehouse_id: warehouse.id) %>
+        | <%= link_to 'Playback', playback_path(warehouse_id: warehouse.id) %>
+      </div>
+  <% end %>
+  <hr>
+  <div id="links">
+    <%= link_to 'Home', home_path %>
+    |
+    <% if User.find_by_id(session[:user_id]) %>
+        <%= link_to 'Admin', admin_path %>
+        | <%= link_to 'Logout', logout_path, method: :delete %>
+    <% else %>
+        <%= link_to 'Login', login_path %>
+    <% end %>
+    | <%= link_to 'Contact', 'mailto:fabioalmeida@ibtecnologia.com.br' %>
+  </div>
 </div>
 
 <div id='contents'>

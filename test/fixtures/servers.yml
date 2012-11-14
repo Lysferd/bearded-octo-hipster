@@ -4,12 +4,12 @@ one:
   label: MyString
   address: MyString
   username: MyString
-  password_digest: MyString
+  password: MyString
   warehouse_id: 1
 
 two:
   label: MyString
   address: MyString
   username: MyString
-  password_digest: MyString
+  password: MyString
   warehouse_id: 1

@@ -5,6 +5,7 @@ Videoserver3::Application.routes.draw do
   root to: 'home#index', as: 'home'
   get 'index' => 'home#index'
   get 'live' => 'home#live'
+  get 'error' => 'home#error'
   get 'playback' => 'home#playback'
   get 'admin' => 'admin#index'
 

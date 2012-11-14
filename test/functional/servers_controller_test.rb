@@ -7,7 +7,6 @@ class ServersControllerTest < ActionController::TestCase
         label: 'myserver',
         username: 'myusername',
         password: 'mysecret',
-        #password_confirmation: 'mysecret',
         warehouse_id: 0
     }
 

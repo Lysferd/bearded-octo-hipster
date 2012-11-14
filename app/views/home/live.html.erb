@@ -10,48 +10,21 @@
   </object>
 </p>
 
-<script type="vbscript">
-  <!--
+<script type="text/vbscript">
+  Sub AxVideoControl_OnCreated(resultCode)
+  AxVideoControl.SetPaneLayout "<%= @pane_layout %>"
+  AxVideoControl.resize
+  UserName = "<%= Server::first.username %>"
+  Password = "<%= Server::first.password %>"
+  UnitAddress = "<%= Server::first.address %>"
+  paneCount = 1
+  streamUri = "nvr://" & UserName & ":" & Password & "@" & UnitAddress
+  For i = 0 To paneCount
+  cameraUri = streamUri & "/media/" & i & "/video/0"
+  AxVideoControl.MediaStreamRender i, cameraUri
+  Next
 
-    msgbox 'test'
-
-    Dim StreamingInterface
-    Dim paneCount
-    Dim UserName
-    Dim Password
-    Dim UnitAddress
-
-    Sub AxVideoControl_OnCreated(resultCode)
-
-      MsgBox 'teste'
-
-      Dim recorderFactory
-      'recorderFactory = CreateObject("ADSDK.RecorderFactory")
-
-      UserName = <%= Server::first.username %>
-      Password = <%= Server::first.password %>
-      UnitAddress = <%= Server::first.address %>
-
-      ' 1x1
-      AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?>  <Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio='4:3'>  <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' />  </Layout>"
-
-      paneCount = 4
-      Set StreamingInterface = AxVideoControl.GetInterface("ADSDK.IStreaming")
-      AxVideoControl.Resize
-
-      Dim streamUri
-      Dim cameraUri
-      streamUri = "nvr://" & UserName
-      streamUri = streamUri & ":" & Password
-      streamUri = streamUri & "@" & UnitAddress
-
-      For i = 0 To paneCount
-        cameraUri = streamUri & "/media/" & i
-        cameraUri = cameraUri & "/video/0"
-        AxVideoControl.MediaStreamRender i, cameraUri
-      Next
-
-    End Sub
-
-  -->
+  'Set StreamingInterface = AxVideoControl.GetInterface("ADSDK.IStreaming")
+  MsgBox("Testing within sub procedure.")
+  End Sub
 </script>

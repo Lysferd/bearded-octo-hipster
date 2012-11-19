@@ -10,7 +10,7 @@
 <% end %>
 <hr>
 <% if (server_id = Server::find_by_id(params[:server_id])) %>
-    <table border="1">
+    <table border="1" style="text-align: center;">
       <tr>
         <% for i in 0...(params[:grid_size] || 1).to_i %>
             <td>

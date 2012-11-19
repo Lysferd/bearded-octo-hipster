@@ -44,4 +44,4 @@ gem 'test-unit'
 
 # Do some browser detection with Ruby. Includes ActionController integration.
 #gem 'browser'
-gem 'useragent'
+#gem 'useragent'

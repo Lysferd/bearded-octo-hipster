@@ -18,13 +18,15 @@
 
 
 <div id='navigator'>
-  <div id="topic">― Warehouse List ―</div>
   <% Warehouse::all.each do |warehouse| %>
-      <%= warehouse.label %>
-      <div id="links">
-        <%= link_to 'Live', live_path(warehouse_id: warehouse.id) %>
-        | <%= link_to 'Playback', playback_path(warehouse_id: warehouse.id) %>
-      </div>
+      <div id="topic"><%= warehouse.label %></div>
+      <% Server::all.each do |server| %>
+          <%= server.label %>
+          <div id="links">
+            <%= link_to 'Live', live_path(server_id: server.id) %>
+            | <%= link_to 'Playback', playback_path(server_id: server.id) %>
+          </div>
+      <% end %>
   <% end %>
   <hr>
   <div id="links">

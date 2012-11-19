@@ -15,7 +15,6 @@ class HomeController < ApplicationController
   def live
     # Defining pane grid layout.
     @pane_layout = LAYOUTS[params[:grid_size] || '1']
-
   end
 
   def playback

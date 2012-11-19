@@ -1,7 +1,49 @@
-<h5>Database modify</h5>
-<ul>
-  <li><%= link_to 'Warehouses', warehouses_path %></li>
-  <li><%= link_to 'Servers', servers_path %></li>
-  <li><%= link_to 'Cameras', cameras_path %></li>
-  <li><%= link_to 'Users', users_path %></li>
-</ul>
+<h5 xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">Administrative
+  page</h5>
+<% #noinspection RubyUnlessWithElseInspection
+   unless Warehouse::all.empty? %>
+    <table border="1" style="text-align: center;">
+      <tr>
+        <th><%= link_to 'Warehouse list', warehouses_path %></th>
+        <th><%= link_to 'Server list', servers_path %></th>
+        <th><%= link_to 'Camera list', cameras_path %></th>
+        <!--<th><%= link_to 'User list', users_path %></th>-->
+      </tr>
+
+      <% Warehouse::all.each do |warehouse| %>
+          <tr>
+            <td rowspan="<%= warehouse.element_count %>">
+              <%= link_to warehouse.label, warehouse %>
+            </td>
+            <% warehouse.servers.each_with_index do |server, server_index| %>
+                <% if server_index.zero? %>
+                    <td rowspan="<%= server.element_count %>">
+                <% else %>
+                    <tr>
+                      <td>
+                <% end %>
+                <%= link_to server.label, server %>
+                </td>
+                <% server.cameras.each_with_index do |camera, camera_index| %>
+                    <% if camera_index.zero? %>
+                        <td>
+                    <% else %>
+                        <tr>
+                          <td>
+                    <% end %>
+                    <%= link_to camera.label, camera %>
+                    </td>
+                    <% unless camera_index.zero? %>
+                        </tr>
+                    <% end %>
+                <% end %>
+            <% end %>
+      <% end %>
+    </table>
+<% else %>
+    Database is empty!
+<% end %>
+
+<br>
+
+<%= button_to 'Logout', logout_path, method: :delete %>

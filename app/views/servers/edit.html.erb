@@ -2,5 +2,13 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @server %> |
-<%= link_to 'Back', servers_path %>
+<table>
+  <tr>
+    <td>
+      <%= button_to 'Show', @server, method: :get %>
+    </td>
+    <td>
+      <%= button_to 'Return', severs_path, method: :get %>
+    </td>
+  </tr>
+</table>

@@ -6,5 +6,13 @@
 </p>
 
 
-<%= link_to 'Edit', edit_warehouse_path(@warehouse) %> |
-<%= link_to 'Back', warehouses_path %>
+<table>
+  <tr>
+    <td>
+      <%= button_to 'Edit', edit_warehouse_path(@warehouse), method: :get %>
+    </td>
+    <td>
+      <%= button_to 'Back', warehouses_path, method: :get %>
+    </td>
+  </tr>
+</table>

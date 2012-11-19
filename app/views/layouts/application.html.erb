@@ -16,11 +16,10 @@
   <h3>― Development Version ―</h3>
 </div>
 
-
 <div id='navigator'>
   <% Warehouse::all.each do |warehouse| %>
       <div id="topic"><%= warehouse.label %></div>
-      <% Server::all.each do |server| %>
+      <% warehouse.servers.each do |server| %>
           <%= server.label %>
           <div id="links">
             <%= link_to 'Live', live_path(server_id: server.id) %>

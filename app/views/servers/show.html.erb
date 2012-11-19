@@ -16,10 +16,22 @@
 </p>
 
 <p>
-  <b>Warehouse:</b>
-  <%= @server.warehouse_id %>
+  <b>Password:</b>
+  <%= @server.password %>
 </p>
 
+<p>
+  <b>Warehouse:</b>
+  <%= Warehouse::find_by_id(@server.warehouse_id).label %> (#<%= @server.warehouse_id %>)
+</p>
 
-<%= link_to 'Edit', edit_server_path(@server) %> |
-<%= link_to 'Back', servers_path %>
+<table>
+  <tr>
+    <td>
+      <%= button_to 'Edit', edit_server_path(@warehouse), method: :get %>
+    </td>
+    <td>
+      <%= button_to 'Back', servers_path, method: :get %>
+    </td>
+  </tr>
+</table>

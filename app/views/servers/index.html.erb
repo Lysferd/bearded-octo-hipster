@@ -1,6 +1,6 @@
 <h1>Listing servers</h1>
 
-<table>
+<table style="text-align: center;">
   <tr>
     <th>Label</th>
     <th>Address</th>
@@ -16,14 +16,23 @@
         <td><%= server.label %></td>
         <td><%= server.address %></td>
         <td><%= server.username %></td>
-        <td><%= server.warehouse_id %></td>
-        <td><%= link_to 'Show', server %></td>
-        <td><%= link_to 'Edit', edit_server_path(server) %></td>
-        <td><%= link_to 'Destroy', server, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= Warehouse::find_by_id(server.warehouse_id).label %> (#<%= server.warehouse_id %>)</td>
+        <td><%= button_to 'Show', server, method: :get %></td>
+        <td><%= button_to 'Edit', edit_server_path(server), method: :get %></td>
+        <td><%= button_to 'Destroy', server, method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
   <% end %>
 </table>
 
 <br/>
 
-<%= link_to 'New Server', new_server_path %>
+<table>
+  <tr>
+    <td>
+      <%= button_to 'New Server', new_server_path, method: :get %>
+    </td>
+    <td>
+      <%= button_to 'Return', admin_path, method: :get %>
+    </td>
+  </tr>
+</table>

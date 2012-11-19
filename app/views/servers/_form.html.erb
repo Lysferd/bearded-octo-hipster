@@ -34,7 +34,7 @@
     <div class="field">
       <%= f.label :warehouse_id %>
       <br/>
-      <%= f.number_field :warehouse_id %>
+      <%= f.collection_select :warehouse_id, Warehouse::all, :id, :label %>
     </div>
     <div class="actions">
       <%= f.submit %>

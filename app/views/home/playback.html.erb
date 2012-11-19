@@ -1,62 +1,49 @@
-<h3>Playback</h3>
+<h3 xmlns="http://www.w3.org/1999/html">Playback</h3>
 
-<div style="text-align: center;">
-  <label>
-    Data: <input type="text" name="StartDate" id="date" value="2012-11-10"/>
-    <br>
-    Hora: <input type="text" name="StartTime" value="23:00"/>
-    <br>
-  </label>
-  <script type="text/javascript">
-      calendar.set("date");
-  </script>
-  <input type="button" value="Executar" onclick="btnStartEx_Click()"/>
-
-</div>
-
-<!--
-  Standard date and time:
-  2012/11/10 23:00:00.00
--->
-<div style="text-align: center;">
-
-  <p id='qtObj'>
-    <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
-            height=480
-            width=640
-            id='AxVideoControl'
-            EnableJavaScript='true'
-            codebase='ADSDK.IVideoControl'>
-      ActiveX not present!
-    </object>
-  </p>
-
-</div>
-
-<script language="vbscript">
-  <!--
-    Sub AxVideoControl_OnCreated(resultCode)
-
-      ' 1x1
-      AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?>  <Layout xmlns='urn:VideoLayoutSchema' Name='1\D71' Rows='1' Columns='1' AspectRatio='4:3'>  <Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' />  </Layout>"
-
-      AxVideoControl.Resize
-
-    End Sub
-
-    Sub btnStartEx_Click()
-
-      Dim startDateTime
-      Dim streamUri
-
-      startDateTime = Replace(StartDate.Value, "-", "") + Replace(StartTime.Value, ":", "") + "0000"
-      streamUri = "nvr://admin:VIDEO!edge23@192.168.1.106/media/0/video/0/"
-      Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
-      vidControlEx.OpenStreamEx( 0, streamUri, startDateTime, false, false, 10000 )
-      vidControlEx = NULL
-
-    End Sub
-
-    'Call btnStartEx_Click()
-  -->
-</script>
+<% if (server = Server::find_by_id(params[:server_id])) %>
+    <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
+    <div style="text-align: center;">
+      <label>
+        Date: <input type="text" name="StartDate" value="<%= date %>"/>
+      </label>
+      <label>
+        Time: <input type="text" name="StartTime" value="<%= time %>:00"/>
+      </label>
+      <label>
+        Camera:
+        <select name="AxCameras">
+          <option value=""></option>
+          <% server.cameras.each do |camera| %>
+              <option value="<%= camera.camera_id %>"><%= camera.label %></option>
+          <% end %>
+        </select>
+        <br>
+      </label>
+      <input type="button" value="Play" onclick="AxVideoControl_Start()"/>
+      <hr>
+      <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
+              height='480'
+              width='640'
+              id='AxVideoControl'
+              EnableJavaScript='true'
+              codebase='ADSDK.IVideoControl'>
+        <p>American Dynamics SDK Plugin has not been found.<br/>
+          <a href='ADSDKRedist.exe'>Click here</a> to install it.</p>
+      </object>
+      <script type="text/vbscript">
+        <!--
+                Sub AxVideoControl_Start()
+                    AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio='4:3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true'/></Layout>"
+                    'AxVideoControl.resize
+                    streamUri = "nvr://" & "<%= server.username %>" & ":" & "<%= server.password %>" & "@" & "<%= server.address %>" & "/media/" & (AxCameras.Value - 1) & "/video/0"
+                    startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0000"
+                    Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
+                    vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
+                    vidControlEx = NULL
+                End Sub
+            -->
+      </script>
+    </div>
+<% else %>
+    <p>No tables in database!</p>
+<% end %>

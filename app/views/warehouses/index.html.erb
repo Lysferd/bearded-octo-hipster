@@ -1,6 +1,6 @@
 <h1>Listing warehouses</h1>
 
-<table>
+<table style="text-align: center;">
   <tr>
     <th>Label</th>
     <th></th>
@@ -11,13 +11,22 @@
   <% @warehouses.each do |warehouse| %>
       <tr>
         <td><%= warehouse.label %></td>
-        <td><%= link_to 'Show', warehouse %></td>
-        <td><%= link_to 'Edit', edit_warehouse_path(warehouse) %></td>
-        <td><%= link_to 'Destroy', warehouse, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= button_to 'Show', warehouse, method: :get %></td>
+        <td><%= button_to 'Edit', edit_warehouse_path(warehouse), method: :get %></td>
+        <td><%= button_to 'Destroy', warehouse, method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
   <% end %>
 </table>
 
 <br/>
 
-<%= link_to 'New Warehouse', new_warehouse_path %>
+<table>
+  <tr>
+    <td>
+      <%= button_to 'New Warehouse', new_warehouse_path, method: :get %>
+    </td>
+    <td>
+      <%= button_to 'Return', admin_path, method: :get %>
+    </td>
+  </tr>
+</table>

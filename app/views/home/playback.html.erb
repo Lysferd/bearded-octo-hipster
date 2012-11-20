@@ -36,7 +36,7 @@
                     AxVideoControl.SetPaneLayout "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio='4:3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true'/></Layout>"
                     'AxVideoControl.resize
                     streamUri = "nvr://" & "<%= server.username %>" & ":" & "<%= server.password %>" & "@" & "<%= server.address %>" & "/media/" & (AxCameras.Value - 1) & "/video/0"
-                    startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0000"
+                    startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
                     Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
                     vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
                     vidControlEx = NULL

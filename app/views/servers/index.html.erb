@@ -16,7 +16,7 @@
         <td><%= server.label %></td>
         <td><%= server.address %></td>
         <td><%= server.username %></td>
-        <td><%= Warehouse::find_by_id(server.warehouse_id).label %> (#<%= server.warehouse_id %>)</td>
+        <td><%= Warehouse::find_by_id(server.warehouse_id).label rescue 'NIL' %> (#<%= server.warehouse_id %>)</td>
         <td><%= button_to 'Show', server, method: :get %></td>
         <td><%= button_to 'Edit', edit_server_path(server), method: :get %></td>
         <td><%= button_to 'Destroy', server, method: :delete, data: {confirm: 'Are you sure?'} %></td>

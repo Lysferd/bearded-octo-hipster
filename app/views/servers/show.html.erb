@@ -22,13 +22,13 @@
 
 <p>
   <b>Warehouse:</b>
-  <%= Warehouse::find_by_id(@server.warehouse_id).label %> (#<%= @server.warehouse_id %>)
+  <%= Warehouse::find_by_id(@server.warehouse_id).label rescue 'NIL' %> (#<%= @server.warehouse_id %>)
 </p>
 
 <table>
   <tr>
     <td>
-      <%= button_to 'Edit', edit_server_path(@warehouse), method: :get %>
+      <%= button_to 'Edit', edit_server_path(@server), method: :get %>
     </td>
     <td>
       <%= button_to 'Back', servers_path, method: :get %>

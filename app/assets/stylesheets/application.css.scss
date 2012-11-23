@@ -80,7 +80,15 @@ $navigator_width: 20%;
 #contents {
   float: right;
   width: 99% - $navigator_width;
-  //text-align: center;
+
+  table {
+    text-align: center;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    ;
+  }
 }
 
 #footer {

@@ -12,14 +12,14 @@
       <label>
         Camera:
         <select name="AxCameras">
-          <option value=""></option>
+          <option value="">Select a camera.</option>
           <% server.cameras.each do |camera| %>
               <option value="<%= camera.camera_id %>"><%= camera.label %></option>
           <% end %>
         </select>
         <br>
       </label>
-      <input type="button" value="Play" onclick="AxVideoControl_Start()"/>
+      <input type="button" value="Play recorded video" onclick="AxVideoControl_Start()"/>
       <hr>
       <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
               height='480'
@@ -28,7 +28,7 @@
               EnableJavaScript='true'
               codebase='ADSDK.IVideoControl'>
         <p>American Dynamics SDK Plugin has not been found.<br/>
-          <a href='ADSDKRedist.exe'>Click here</a> to install it.</p>
+          <a href='vs3_plugin_setup.exe'>Click here</a> to install it.</p>
       </object>
       <script type="text/vbscript">
         <!--

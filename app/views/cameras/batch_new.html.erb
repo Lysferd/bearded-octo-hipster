@@ -1,0 +1,16 @@
+<%= form_tag({action: :create}, multipart: true) do %>
+    <div class='field'>
+      <%= label_tag :csv_file, 'Carregar arquivo CSV' %>
+      <br>
+      <%= file_field_tag :csv_file %>
+    </div>
+    <div class="field">
+      <%= label_tag 'Servidor' %>
+      <br/>
+      <%= collection_select :server, :id, Server::all, :id, :label %>
+    </div>
+    <div class='actions'>
+      <%= submit_tag %>
+      <%= button_to 'Cancelar', cameras_path, method: :get %>
+    </div>
+<% end %>

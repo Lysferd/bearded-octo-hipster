@@ -11,43 +11,26 @@
 <body>
 
 <div id='header'>
-  <h1>Video Server 3</h1>
+  <a href="http://www.rochalog.com.br/"><%= image_tag 'logo_ib.jpg', id: 'image', align: 'left' %></a>
+  <a href="http://www.ibtecnologia.com.br/"><%= image_tag 'rocha_logo.gif', id: 'image', align: 'right' %></a>
 
-  <h3>― Development Version ―</h3>
-</div>
-
-<div id='navigator'>
-  <% Warehouse::all.each do |warehouse| %>
-      <div id="topic"><%= warehouse.label %></div>
-      <% warehouse.servers.each do |server| %>
-          <%= server.label %>
-          <div id="links">
-            <%= link_to 'Live', live_path(server_id: server.id) %>
-            | <%= link_to 'Playback', playback_path(server_id: server.id) %>
-          </div>
-      <% end %>
+  <h1><%= @warehouse.label rescue "Administração" %></h1>
+  <% if @warehouse %>
+      <div id="links">
+        <%= link_to 'Visualizar imagens ao vivo', live_path(w: @warehouse.id) %>
+        | <%= link_to 'Visualizar imagens gravadas', playback_path(w: @warehouse.id) %>
+      </div>
   <% end %>
-  <hr>
-  <div id="links">
-    <%= link_to 'Home', home_path %>
-    |
-    <% if User.find_by_id(session[:user_id]) %>
-        <%= link_to 'Admin', admin_path %>
-        | <%= link_to 'Logout', logout_path, method: :delete %>
-    <% else %>
-        <%= link_to 'Login', login_path %>
-    <% end %>
-    | <%= link_to 'Contact', 'mailto:fabioalmeida@ibtecnologia.com.br' %>
-  </div>
 </div>
 
-<div id='contents'>
+<div id="contents">
   <%= yield %>
 </div>
 
 <div id='footer'>
-  <p>&copy; 2012 IB Tecnologia & Sistemas LTDA</p>
-  <h6>Debug rand: <%= rand 100 %></h6>
+  <p><a href="mailto:fabioalmeida@ibtecnologia.com.br">Contato com o webmaster</a><br/>
+    Video Server 3.5β
+    &copy; 2012-2013 IB Tecnologia & Sistemas LTDA</p>
 </div>
 
 </body>

@@ -1,13 +1,13 @@
-<h5 xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">Administrative
-  page</h5>
+<h3 xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">Página
+  administrativa</h3>
 <% #noinspection RubyUnlessWithElseInspection
    unless Warehouse::all.empty? %>
     <table border="1" style="text-align: center;">
       <tr>
-        <th><%= link_to 'Warehouse list', warehouses_path %></th>
-        <th><%= link_to 'Server list', servers_path %></th>
-        <th><%= link_to 'Camera list', cameras_path %></th>
-        <!--<th><%= link_to 'User list', users_path %></th>-->
+        <th><%= link_to 'Lista de Armazéns', warehouses_path %></th>
+        <th><%= link_to 'Lista de Servidores', servers_path %></th>
+        <th><%= link_to 'Lista de Câmeras', cameras_path %></th>
+        <!--<th><%= link_to 'Lista de Usuários', users_path %></th>-->
       </tr>
 
       <% Warehouse::all.each do |warehouse| %>
@@ -41,9 +41,10 @@
       <% end %>
     </table>
 <% else %>
-    Database is empty!
+    Banco de dados vazio!
 <% end %>
 
 <br>
-
-<%= button_to 'Logout', logout_path, method: :delete %>
+<div style="text-align: center">
+  <%= button_to 'Deslogar', logout_path, method: :delete %>
+</div>

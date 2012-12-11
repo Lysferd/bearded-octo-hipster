@@ -5,8 +5,9 @@ Videoserver3::Application.routes.draw do
   root to: 'home#index', as: 'home'
   get 'index' => 'home#index'
   get 'live' => 'home#live'
-  get 'error' => 'home#error'
   get 'playback' => 'home#playback'
+  get 'error' => 'home#error'
+
   get 'admin' => 'admin#index'
 
   controller :sessions do
@@ -15,11 +16,17 @@ Videoserver3::Application.routes.draw do
     delete 'logout' => :destroy
   end
 
+  controller :cameras do
+    get :upload
+  end
+
   # -=-=-=-=-
   # Define resources.
   resources :users
   resources :servers
-  resources :cameras
+  resources :cameras do
+    get :batch_new, on: :collection
+  end
   resources :warehouses
 
 end

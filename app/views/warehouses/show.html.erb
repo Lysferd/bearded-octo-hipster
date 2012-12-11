@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Label:</b>
+  <b>Nome:</b>
   <%= @warehouse.label %>
 </p>
 
@@ -9,10 +9,10 @@
 <table>
   <tr>
     <td>
-      <%= button_to 'Edit', edit_warehouse_path(@warehouse), method: :get %>
+      <%= button_to 'Editar', edit_warehouse_path(@warehouse), method: :get %>
     </td>
     <td>
-      <%= button_to 'Back', warehouses_path, method: :get %>
+      <%= button_to 'Voltar', warehouses_path, method: :get %>
     </td>
   </tr>
 </table>

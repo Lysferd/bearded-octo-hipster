@@ -1,37 +1,37 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Label:</b>
+  <b>Nome:</b>
   <%= @server.label %>
 </p>
 
 <p>
-  <b>Address:</b>
+  <b>Endereço IP:</b>
   <%= @server.address %>
 </p>
 
 <p>
-  <b>Username:</b>
+  <b>Usuário:</b>
   <%= @server.username %>
 </p>
 
 <p>
-  <b>Password:</b>
+  <b>Senha:</b>
   <%= @server.password %>
 </p>
 
 <p>
-  <b>Warehouse:</b>
+  <b>Armazém:</b>
   <%= Warehouse::find_by_id(@server.warehouse_id).label rescue 'NIL' %> (#<%= @server.warehouse_id %>)
 </p>
 
 <table>
   <tr>
     <td>
-      <%= button_to 'Edit', edit_server_path(@server), method: :get %>
+      <%= button_to 'Editar', edit_server_path(@server), method: :get %>
     </td>
     <td>
-      <%= button_to 'Back', servers_path, method: :get %>
+      <%= button_to 'Voltar', servers_path, method: :get %>
     </td>
   </tr>
 </table>

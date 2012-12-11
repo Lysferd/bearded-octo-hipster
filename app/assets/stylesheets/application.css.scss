@@ -31,10 +31,30 @@ $navigator_width: 20%;
 
 #header {
   text-align: center;
+  height: 102px;
+
+  #image {
+    height: 100px;
+    background-color: #ffffff;
+    border: {
+      width: 1px;
+    }
+    ;
+  }
+
+  #links {
+    font: {
+      size: 90%;
+    //variant: small-caps;
+    }
+    margin-bottom: 12px;
+  }
+
   @include base-style;
   @include border-style;
 }
 
+/*
 #navigator {
   float: left;
   width: $navigator_width;
@@ -66,20 +86,16 @@ $navigator_width: 20%;
     }
   }
 
-  #links {
-    font: {
-      size: 80%;
-      variant: small-caps;
-    }
-  }
-
   @include base-style;
   @include border-style;
-}
+}*/
 
 #contents {
-  float: right;
-  width: 99% - $navigator_width;
+  //float: right;
+  //width: 100%; //99% - $navigator_width;
+
+  margin: 10px 10px;
+  text-align: center;
 
   table {
     text-align: center;
@@ -92,7 +108,11 @@ $navigator_width: 20%;
 }
 
 #footer {
-  clear: both;
+  //clear: both;
+  p {
+    font-size: 80%;
+    margin: 0 0;
+  }
   text-align: center;
   @include base-style;
   @include border-style;

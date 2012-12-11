@@ -1,11 +1,11 @@
-<h1>Listing servers</h1>
+<h3>Listando servidores</h3>
 
 <table style="text-align: center;">
   <tr>
-    <th>Label</th>
-    <th>Address</th>
-    <th>Username</th>
-    <th>Warehouse</th>
+    <th>Nome</th>
+    <th>Endereço IP</th>
+    <th>Usuário</th>
+    <th>Armazém</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,9 +17,9 @@
         <td><%= server.address %></td>
         <td><%= server.username %></td>
         <td><%= Warehouse::find_by_id(server.warehouse_id).label rescue 'NIL' %> (#<%= server.warehouse_id %>)</td>
-        <td><%= button_to 'Show', server, method: :get %></td>
-        <td><%= button_to 'Edit', edit_server_path(server), method: :get %></td>
-        <td><%= button_to 'Destroy', server, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= button_to 'Mostrar', server, method: :get %></td>
+        <td><%= button_to 'Editar', edit_server_path(server), method: :get %></td>
+        <td><%= button_to 'Apagar', server, method: :delete, data: {confirm: 'Tem certeza?'} %></td>
       </tr>
   <% end %>
 </table>
@@ -29,10 +29,10 @@
 <table>
   <tr>
     <td>
-      <%= button_to 'New Server', new_server_path, method: :get %>
+      <%= button_to 'Novo servidor', new_server_path, method: :get %>
     </td>
     <td>
-      <%= button_to 'Return', admin_path, method: :get %>
+      <%= button_to 'Retornar', admin_path, method: :get %>
     </td>
   </tr>
 </table>

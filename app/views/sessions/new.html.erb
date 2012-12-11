@@ -1,21 +1,24 @@
-<div>
-  <% if flash[:alert] %>
-      <p id="notice"><%= flash[:alert] %></p>
-  <% end %>
-  <%= form_tag do %>
-      <fieldset>
-        <legend>Log in for administrative privileges.</legend>
-        <div>
-          <label for="name">Username:</label>
+<% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+<% end %>
+<%= form_tag do %>
+    <table>
+      <tr>
+        <td>
+          Usuário:
+        </td>
+        <td>
           <%= text_field_tag :username, params[:username] %>
-        </div>
-        <div>
-          <label for="password">Password:</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Senha:
+        </td>
+        <td>
           <%= password_field_tag :password, params[:password] %>
-        </div>
-        <div>
-          <%= submit_tag "Login" %>
-        </div>
-      </fieldset>
-  <% end %>
-</div>
+        </td>
+      </tr>
+    </table>
+    <%= submit_tag "Logar" %>
+<% end %>

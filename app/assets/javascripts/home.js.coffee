@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 @popitup = ->
-  newwindow = window.open('instructions.htm', 'Plugin Installation Instructions', 'height=400,width=300')
+  newwindow = window.open('instructions.htm', 'Instruçoes de instalaçao do plugin.', 'height=400,width=300')
   newwindow.focus if window.focus

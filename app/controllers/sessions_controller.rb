@@ -1,3 +1,5 @@
+# Encoding: UTF-8
+
 class SessionsController < ApplicationController
 
   skip_before_filter :authorize
@@ -11,12 +13,12 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to admin_url
     else
-      redirect_to login_url, alert: "Invalid username or password."
+      redirect_to login_url, alert: "Usuário ou senha inválido(s)."
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to login_url, notice: "Logged out."
+    redirect_to login_url, notice: "Deslogado com sucesso."
   end
 end

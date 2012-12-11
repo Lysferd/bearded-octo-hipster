@@ -1,10 +1,12 @@
-<h1>Listing cameras</h1>
+<h3>Listando câmeras</h3>
+
+<p id="notice"><%= notice %></p>
 
 <table style="text-align: center;">
   <tr>
-    <th>Label</th>
-    <th>Camera</th>
-    <th>Server</th>
+    <th>Nome</th>
+    <th>Câmera ID</th>
+    <th>Servidor</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,9 +18,9 @@
         <td><%= camera.label %></td>
         <td><%= camera.camera_id %></td>
         <td><%= Server::find_by_id(camera.server_id).label rescue 'NIL' %> (#<%= camera.server_id %>)</td>
-        <td><%= button_to 'Show', camera, method: :get %></td>
-        <td><%= button_to 'Edit', edit_camera_path(camera), method: :get %></td>
-        <td><%= button_to 'Destroy', camera, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= button_to 'Mostrar', camera, method: :get %></td>
+        <td><%= button_to 'Editar', edit_camera_path(camera), method: :get %></td>
+        <td><%= button_to 'Apagar', camera, method: :delete, data: {confirm: 'Tem certeza?'} %></td>
       </tr>
   <% end %>
 </table>
@@ -28,10 +30,13 @@
 <table>
   <tr>
     <td>
-      <%= button_to 'New Camera', new_camera_path, method: :get %>
+      <%= button_to 'Nova câmera', new_camera_path, method: :get %>
     </td>
     <td>
-      <%= button_to 'Return', admin_path, method: :get %>
+      <%= button_to 'Cadastrar cameras em lote', batch_new_cameras_path, method: :get %>
+    </td>
+    <td>
+      <%= button_to 'Retornar', admin_path, method: :get %>
     </td>
   </tr>
 </table>

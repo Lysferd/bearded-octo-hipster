@@ -44,7 +44,7 @@ class WarehousesController < ApplicationController
 
     respond_to do |format|
       if @warehouse.save
-        format.html { redirect_to @warehouse, notice: 'Warehouse was successfully created.' }
+        format.html { render action: :index, notice: 'Warehouse was successfully created.' }
         format.json { render json: @warehouse, status: :created, location: @warehouse }
       else
         format.html { render action: "new" }

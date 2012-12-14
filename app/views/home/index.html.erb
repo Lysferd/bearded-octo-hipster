@@ -1,10 +1,10 @@
 <p>Armazem em visualizaçao: <%= @warehouse.label %></p>
 <p>Favor selecionar abaixo o que deseja visualizar:</p>
-<ul>
+<ul style="list-style-type: none;">
   <li>
-    Visualizar imagens ao vivo.
+    <%= link_to 'Visualizar imagens ao vivo', live_path(w: @warehouse.id) %>
   </li>
   <li>
-    Visualizar imagens gravadas.
+    <%= link_to 'Visualizar imagens gravadas', playback_path(w: @warehouse.id) %>
   </li>
 </ul>

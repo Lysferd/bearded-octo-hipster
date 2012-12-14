@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   def ensure_an_admin_remains
-    fail('Last user on the application - Impossible to destroy.') if User::count.zero?
+    #fail('Last user on the application - Impossible to destroy.') if User::count.zero?
   end
 
 end

@@ -11,7 +11,7 @@
     <th></th>
   </tr>
 
-  <% @servers.each do |server| %>
+  <% Server::all.each do |server| %>
       <tr>
         <td><%= server.label %></td>
         <td><%= server.address %></td>

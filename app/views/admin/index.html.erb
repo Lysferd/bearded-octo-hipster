@@ -4,13 +4,13 @@
     <th><%= link_to 'Lista de Armazéns', warehouses_path %></th>
     <th><%= link_to 'Lista de Servidores', servers_path %></th>
     <th><%= link_to 'Lista de Câmeras', cameras_path %></th>
-    <!--<th><%= link_to 'Lista de Usuários', users_path %></th>-->
   </tr>
 
   <% Warehouse::all.each do |warehouse| %>
       <tr>
         <td rowspan="<%= warehouse.element_count %>">
           <%= link_to warehouse.label, warehouse %>
+          <br><%= link_to '(Visualizar)', home_path(w: warehouse.label[warehouse.label.index("\s")+1..-1].downcase, u: 'ib', token: 'ibtech') %>
         </td>
         <% warehouse.servers.each_with_index do |server, server_index| %>
             <% if server_index.zero? %>
@@ -37,6 +37,22 @@
         <% end %>
   <% end %>
 </table>
+
+<% if User::find_by_id(session[:user_id]).username == 'Administrador' %>
+    <br>
+    <table border="1" style="text-align: center;">
+      <tr>
+        <th><%= link_to 'Lista de Usuários', users_path %></th>
+      </tr>
+      <% User::all.each do |user| %>
+          <tr>
+            <td>
+              <%= link_to user.username, user %>
+            </td>
+          </tr>
+      <% end %>
+    </table>
+<% end %>
 
 <br>
 <div style="text-align: center">

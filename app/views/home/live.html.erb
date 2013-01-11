@@ -1,3 +1,11 @@
+<script type="text/javascript">
+    function openit() {
+        newwindow = window.open('instructions.htm', 'Instruçoes de instalaçao do plugin.', 'height=400,width=300')
+        if (window.focus())
+            newwindow.focus()
+    }
+</script>
+
 <% if @warehouse %>
     <%= form_tag('/live', method: 'get') do %>
         <%= hidden_field_tag 'w', @warehouse.id %>
@@ -41,7 +49,7 @@
                       EnableJavaScript='true'
                       codebase='ADSDK.IVideoControl'>
                 <p>Plugin American Dynamics SDK não foi encontrado.<br/>
-                  <a href='' onclick="popitup()">Clique aqui</a> para instruções de como instalá-lo.</p>
+                  <a href='' onclick="popitup()" target="_blank">Clique aqui</a> para instruções de como instalá-lo.</p>
               </object>
               <script type="text/vbscript">
                 <!--

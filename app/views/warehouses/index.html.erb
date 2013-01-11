@@ -8,7 +8,7 @@
     <th></th>
   </tr>
 
-  <% @warehouses.each do |warehouse| %>
+  <% Warehouse::all.each do |warehouse| %>
       <tr>
         <td><%= warehouse.label %></td>
         <td><%= button_to 'Mostrar', warehouse, method: :get %></td>

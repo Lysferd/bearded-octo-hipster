@@ -25,7 +25,6 @@ class HomeController < ApplicationController
   def check_for_parameters
     # Check for Username and Token parameters.
     #authenticate!( params[:u], params[:token] )
-    @test = params[:t]
 
     # Check for Warehouse parameter.
     if params[:w] =~ /\d+/

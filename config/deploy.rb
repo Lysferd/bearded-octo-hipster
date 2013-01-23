@@ -1,21 +1,16 @@
+require 'rvm/capistrano'
+
 set :user, 'ibtech'
 set :password, 'ibtechserver'
 set :application, 'videoserver3'
-set :repository, 'git@github.com:Lysferd/bearded-octo-hipster.git'
+set :repository, 'https://github.com/Lysferd/bearded-octo-hipster.git' #'git@github.com:Lysferd/bearded-octo-hipster.git'
 set :deploy_to, "/home/#{user}/#{application}"
-
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
-#require 'rvm/capistrano'
-set :rvm_ruby_string, '1.9.3-p286'
-set :rvm_type, :user
-
-# set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+set :rvm_ruby_string, '1.9.3-head'
 
 role :web, '201.64.223.142' # Your HTTP server, Apache/etc
 role :app, '201.64.223.142' # This may be the same as your `Web` server
 role :db, '201.64.223.142', :primary => true # This is where Rails migrations will run
-#role :db, "your slave db-server here"
+                                                                       #role :db, "your slave db-server here"
 
 set :deploy_via, :remote_cache
 set :scm, 'git'
@@ -23,6 +18,12 @@ set :branch, 'master'
 set :scm_verbose, true
 set :use_sudo, false
 set :rails_env, :production
+
+namespace :test_me do
+  task :default do
+    run "echo 'testing'"
+  end
+end
 
 namespace :deploy do
   desc "cause Passenger to initiate a restart"

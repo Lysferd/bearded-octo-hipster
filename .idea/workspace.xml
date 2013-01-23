@@ -8,16 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bearded-octo-hipster.iml" afterPath="$PROJECT_DIR$/.idea/bearded-octo-hipster.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cameras/index.html.erb" afterPath="$PROJECT_DIR$/app/views/cameras/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/live.html.erb" afterPath="$PROJECT_DIR$/app/views/home/live.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/servers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/servers/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/warehouses/index.html.erb" afterPath="$PROJECT_DIR$/app/views/warehouses/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,28 +39,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="15" selection-start="1787" selection-end="1787" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
+            <state line="26" column="48" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cameras_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/cameras_controller.rb">
+      <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="11" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
+            <state line="22" column="40" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,63 +60,52 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="7" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1357642196000" expanded="true" signature="4:348" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="playback.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="12" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="-8.181818">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="live.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/live.html.erb">
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="38" selection-start="3587" selection-end="3587" vertical-scroll-proportion="-54.545456">
+            <state line="24" column="0" selection-start="780" selection-end="780" vertical-scroll-proportion="0.44354838">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="2" selection-start="246" selection-end="386" vertical-scroll-proportion="0.0">
+            <state line="12" column="140" selection-start="496" selection-end="584" vertical-scroll-proportion="-8.181818">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="40" column="14" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="38" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
+            <state line="23" column="4" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="servers_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/servers_controller.rb">
+      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="16" column="66" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,22 +135,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/app/controllers/cameras_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/servers_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/warehouses_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/servers/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/warehouses/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/cameras/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/live.html.erb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/deploy.rb" />
+        <option value="$USER_HOME$/www.ibtecnologia.com.br/css/styleHome.css" />
+        <option value="$USER_HOME$/www.ibtecnologia.com.br/en/products/acces_control.htm" />
+        <option value="$USER_HOME$/www.ibtecnologia.com.br/en/products/building_automation.html" />
+        <option value="$USER_HOME$/www.ibtecnologia.com.br/en/products/access_control.html" />
+        <option value="$USER_HOME$/www.ibtecnologia.com.br/en/index.php" />
+        <option value="$USER_HOME$/www.ibtecnologia.com.br/en/products.php" />
+        <option value="$USER_HOME$/www.ibtecnologia.com.br/css/style.css" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -444,6 +423,118 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -475,7 +566,7 @@
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/assets" />
+    <property name="last_opened_file_path" value="$USER_HOME$/www.ibtecnologia.com.br/css/style.css" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -493,29 +584,24 @@
       <recent name="$PROJECT_DIR$/lib/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: bearded-octo-hipster">
-    <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+  <component name="RunManager" selected="Capistrano.deploy:setup">
+    <configuration default="false" name="deploy" type="CapistranoRunConfigurationType" factoryName="Capistrano" temporary="true">
       <module name="bearded-octo-hipster" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-      </envs>
+      <CAPISTRANO_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:migrate" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_NAME" VALUE="deploy" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_ARGS" VALUE="" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_STAGE" VALUE="" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -541,6 +627,48 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="deploy:setup" type="CapistranoRunConfigurationType" factoryName="Capistrano" temporary="true">
+      <module name="bearded-octo-hipster" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_NAME" VALUE="deploy:setup" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_ARGS" VALUE="" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_STAGE" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="deploy:migrate" type="CapistranoRunConfigurationType" factoryName="Capistrano" temporary="true">
+      <module name="bearded-octo-hipster" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_NAME" VALUE="deploy:migrate" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_ARGS" VALUE="" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_STAGE" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="false" name="deploy:migrations" type="CapistranoRunConfigurationType" factoryName="Capistrano" temporary="true">
       <module name="bearded-octo-hipster" />
       <CAPISTRANO_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -558,56 +686,6 @@
       <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_NAME" VALUE="deploy:migrations" />
       <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_ARGS" VALUE="" />
       <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_STAGE" VALUE="" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="db:create" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
-      <module name="bearded-octo-hipster" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:create" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="db:seed" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
-      <module name="bearded-octo-hipster" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:seed" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -806,6 +884,13 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
@@ -917,23 +1002,23 @@
       <method />
     </configuration>
     <list size="9">
-      <item index="0" class="java.lang.String" itemvalue="Rails.Production: bearded-octo-hipster" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Development: bearded-octo-hipster" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="5" class="java.lang.String" itemvalue="Capistrano.deploy:check" />
-      <item index="6" class="java.lang.String" itemvalue="Capistrano.deploy:migrations" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.db:create" />
-      <item index="8" class="java.lang.String" itemvalue="Rake.db:seed" />
+      <item index="0" class="java.lang.String" itemvalue="Capistrano.deploy" />
+      <item index="1" class="java.lang.String" itemvalue="Capistrano.deploy:check" />
+      <item index="2" class="java.lang.String" itemvalue="Capistrano.deploy:setup" />
+      <item index="3" class="java.lang.String" itemvalue="Capistrano.deploy:migrate" />
+      <item index="4" class="java.lang.String" itemvalue="Capistrano.deploy:migrations" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Production: bearded-octo-hipster" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Development: bearded-octo-hipster" />
+      <item index="7" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="8" class="java.lang.String" itemvalue="Rake.spec" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:seed" />
-        <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:create" />
-        <item index="3" class="java.lang.String" itemvalue="Capistrano.deploy:migrations" />
-        <item index="4" class="java.lang.String" itemvalue="Capistrano.deploy:check" />
+        <item index="0" class="java.lang.String" itemvalue="Capistrano.deploy:setup" />
+        <item index="1" class="java.lang.String" itemvalue="Capistrano.deploy:migrations" />
+        <item index="2" class="java.lang.String" itemvalue="Capistrano.deploy:migrate" />
+        <item index="3" class="java.lang.String" itemvalue="Capistrano.deploy:check" />
+        <item index="4" class="java.lang.String" itemvalue="Capistrano.deploy" />
       </list>
     </recent_temporary>
   </component>
@@ -1018,7 +1103,11 @@
       <created>1355506342418</created>
       <updated>1355506342419</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Minor bug fixes.">
+      <created>1357901518714</created>
+      <updated>1357901518714</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1049,11 +1138,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299578" sideWeight="0.670088" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25364667" sideWeight="0.24340177" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1936791" sideWeight="0.5601173" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21312805" sideWeight="0.9618768" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2617504" sideWeight="0.43695015" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44134897" sideWeight="0.3808752" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43847242" sideWeight="0.6134522" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43841642" sideWeight="0.6134522" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1101,7 +1190,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor bug fixes. User existence verification. Debug button." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor bug fixes." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1131,109 +1220,108 @@
     <MESSAGE value="Translated to Portuguese (Brazil). NOT I18n (yet)." />
     <MESSAGE value="Camera addition via upload of CSV file function created. Minor tweaks everywhere." />
     <MESSAGE value="Minor bug fixes. User existence verification. Debug button." />
+    <MESSAGE value="Minor bug fixes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="502" selection-end="502" vertical-scroll-proportion="-9.142858" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="144" selection-end="144" vertical-scroll-proportion="-5.714286" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/warehouses/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/servers/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cameras/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="16" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/cameras_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="11" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="2" selection-start="246" selection-end="386" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="38" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/live.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="38" selection-start="3597" selection-end="3597" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="4" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/servers_controller.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="40" column="14" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="15" selection-start="1787" selection-end="1787" vertical-scroll-proportion="0.0">
+        <state line="16" column="66" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
+    <entry file="file://$USER_HOME$/www.ibtecnologia.com.br/en/products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="115" column="66" selection-start="4352" selection-end="4352" vertical-scroll-proportion="0.64122134" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www.ibtecnologia.com.br/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="211" column="19" selection-start="3474" selection-end="3474" vertical-scroll-proportion="0.022900764">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www.ibtecnologia.com.br/css/styleHome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="47" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.022900764">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="40" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1357642196000" expanded="true" signature="4:348" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="12" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="-8.181818">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="246" selection-end="386" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="38" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/live.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="38" selection-start="3587" selection-end="3587" vertical-scroll-proportion="-54.545456">
+        <state line="12" column="140" selection-start="496" selection-end="584" vertical-scroll-proportion="-8.181818">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
+        <state line="26" column="48" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="780" selection-end="780" vertical-scroll-proportion="0.44354838">
           <folding />
         </state>
       </provider>

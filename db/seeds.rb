@@ -9,6 +9,7 @@
 # WARNING: this is development only! should be removed when deploying.
 
 # Clearing current objects.
+=begin
 Warehouse::delete_all
 Server::delete_all
 Camera::delete_all
@@ -20,3 +21,4 @@ server_id = Server::create(label: 'AZMARGARIDA', address: '192.168.1.106', usern
 Camera::create(label: 'Camera-01', camera_id: 1, server_id: server_id)
 Camera::create(label: 'Camera-02 [PTZ]', camera_id: 2, server_id: server_id)
 User::create(username: 'admin', password: 'ibtech2012', password_confirmation: 'ibtech2012')
+=end

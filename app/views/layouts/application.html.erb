@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Video Server 3</title>
+  <title>Video Server 3
+    <% if @warehouse %>
+        : <%= @warehouse.label %>
+    <% end %>
+  </title>
 
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -17,8 +21,8 @@
   <h1><%= @warehouse.label rescue "Administração" %></h1>
   <% if @warehouse %>
       <div id="links">
-        <%= link_to 'Visualizar imagens ao vivo', live_path(w: @warehouse.id) %>
-        | <%= link_to 'Visualizar imagens gravadas', playback_path(w: @warehouse.id) %>
+        <%= link_to 'Visualizar imagens ao vivo', live_path(w: @warehouse.label[@warehouse.label.index("\s")+1..-1].downcase, u: params[:u], token: params[:token]) %>
+        | <%= link_to 'Visualizar imagens gravadas', playback_path(w: @warehouse.label[@warehouse.label.index("\s")+1..-1].downcase, u: params[:u], token: params[:token]) %>
       </div>
   <% end %>
 </div>

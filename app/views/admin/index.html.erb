@@ -17,7 +17,7 @@
                 <td rowspan="<%= server.element_count %>">
             <% else %>
                 <tr>
-                  <td>
+                  <td rowspan="<%= server.element_count %>">
             <% end %>
             <%= link_to server.label, server %>
             </td>

@@ -27,11 +27,7 @@ class HomeController < ApplicationController
     #authenticate!( params[:u], params[:token] )
 
     # Check for Warehouse parameter.
-    if params[:w] =~ /\d+/
-      @warehouse = Warehouse::find_by_id(params[:w].to_i)
-
-      # deprecated: getting a warehouse by id is a deprecated functionality.
-    elsif not params[:w].nil?
+    if params[:w]
       Warehouse::all.each do |warehouse|
         @warehouse = warehouse if /#{params[:w]}/i =~ warehouse.label
       end

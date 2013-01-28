@@ -8,8 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ADSDKRedist.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ADSDKSetup.exe" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vs3_plugin_setup.exe" afterPath="$PROJECT_DIR$/public/vs3_plugin_setup.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
@@ -54,7 +53,7 @@
       <file leaf-file-name="live.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/live.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="25" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.733871">
+            <state line="27" column="70" selection-start="889" selection-end="889" vertical-scroll-proportion="0.4919355">
               <folding />
             </state>
           </provider>
@@ -1288,7 +1287,11 @@
       <created>1359388305391</created>
       <updated>1359388305391</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Removing executables from VC. Makes pushing a huge pain in the ass anyway.">
+      <created>1359389392144</created>
+      <updated>1359389392144</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1313,7 +1316,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1280" height="776" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.54092824" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.4970464" order="11" side_tool="false" content_ui="tabs" />
@@ -1321,7 +1324,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299578" sideWeight="0.670088" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25364667" sideWeight="0.24340177" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21961102" sideWeight="0.5615836" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21961102" sideWeight="0.5615836" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2617504" sideWeight="0.43695015" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43841642" sideWeight="0.38492706" order="7" side_tool="true" content_ui="tabs" />
@@ -1371,7 +1374,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified plugin executable. Fixed admin table bug." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing executables from VC. Makes pushing a huge pain in the ass anyway." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1384,7 +1387,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Live camera stream view updated (now functional, I hope)." />
     <MESSAGE value="Adding new files that got overlooked." />
     <MESSAGE value="Added ADSDK Executable files." />
     <MESSAGE value="Added ADSDK Executable file." />
@@ -1409,6 +1411,7 @@
     <MESSAGE value="Fixed layout grid bug." />
     <MESSAGE value="Including Executables." />
     <MESSAGE value="Modified plugin executable. Fixed admin table bug." />
+    <MESSAGE value="Removing executables from VC. Makes pushing a huge pain in the ass anyway." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1519,7 +1522,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/live.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="25" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.733871">
+        <state line="27" column="70" selection-start="889" selection-end="889" vertical-scroll-proportion="0.4919355">
           <folding />
         </state>
       </provider>

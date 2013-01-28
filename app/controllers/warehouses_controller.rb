@@ -24,6 +24,7 @@ class WarehousesController < ApplicationController
   # GET /warehouses/new
   # GET /warehouses/new.json
   def new
+    @new = true
     @warehouse = Warehouse.new
 
     respond_to do |format|

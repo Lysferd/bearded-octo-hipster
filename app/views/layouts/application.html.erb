@@ -18,8 +18,12 @@
   <a href="http://www.rochalog.com.br/"><%= image_tag 'logo_ib.jpg', id: 'image', align: 'left' %></a>
   <a href="http://www.ibtecnologia.com.br/"><%= image_tag 'rocha_logo.gif', id: 'image', align: 'right' %></a>
 
-  <h1><%= @warehouse.label rescue "Administração" %></h1>
-  <% if @warehouse %>
+  <h1><%= if not @warehouse or @new then
+            "Administração"
+          else
+            @warehouse.label
+          end %></h1>
+  <% if @warehouse and not @new %>
       <div id="links">
         <%= link_to 'Visualizar imagens ao vivo', live_path(w: @warehouse.label[@warehouse.label.index("\s")+1..-1].downcase, u: params[:u], token: params[:token]) %>
         | <%= link_to 'Visualizar imagens gravadas', playback_path(w: @warehouse.label[@warehouse.label.index("\s")+1..-1].downcase, u: params[:u], token: params[:token]) %>

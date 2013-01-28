@@ -1,0 +1,42 @@
+<%= form_for(@server) do |f| %>
+    <% if @server.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@server.errors.count, "erro") %> proibiram este servidor de ser salvo:</h2>
+
+          <ul>
+            <% @server.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :label, 'Nome' %>
+      <br/>
+      <%= f.text_field :label %>
+    </div>
+    <div class="field">
+      <%= f.label :address, 'Endereço' %>
+      <br/>
+      <%= f.text_field :address %>
+    </div>
+    <div class="field">
+      <%= f.label :username, 'Usuário' %>
+      <br/>
+      <%= f.text_field :username %>
+    </div>
+    <div class="field">
+      <%= f.label :password, 'Senha' %>
+      <br/>
+      <%= f.text_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :warehouse_id, 'Armazém' %>
+      <br/>
+      <%= f.collection_select :warehouse_id, Warehouse::all, :id, :label %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Aplicar' %>
+    </div>
+<% end %>

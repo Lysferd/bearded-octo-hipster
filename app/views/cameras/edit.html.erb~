@@ -1,0 +1,14 @@
+<h1>Editando câmera</h1>
+
+<%= render 'form' %>
+
+<table>
+  <tr>
+    <td>
+      <%= button_to 'Mostrar', @camera, method: :get %>
+    </td>
+    <td>
+      <%= button_to 'Retornar', cameras_path, method: :get %>
+    </td>
+  </tr>
+</table>

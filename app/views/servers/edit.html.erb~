@@ -1,0 +1,14 @@
+<h1>Editando servidor</h1>
+
+<%= render 'form' %>
+
+<table>
+  <tr>
+    <td>
+      <%= button_to 'Mostrar', @server, method: :get %>
+    </td>
+    <td>
+      <%= button_to 'Retornar', servers_path, method: :get %>
+    </td>
+  </tr>
+</table>

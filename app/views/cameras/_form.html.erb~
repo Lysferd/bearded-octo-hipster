@@ -1,0 +1,32 @@
+<%= form_for(@camera) do |f| %>
+    <% if @camera.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@camera.errors.count, "erro") %> proibiram esta câmera de ser salva:</h2>
+
+          <ul>
+            <% @camera.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :label, 'Nome' %>
+      <br/>
+      <%= f.text_field :label %>
+    </div>
+    <div class="field">
+      <%= f.label :camera_id, 'Câmera ID' %>
+      <br/>
+      <%= f.number_field :camera_id %>
+    </div>
+    <div class="field">
+      <%= f.label :server_id, 'Servidor' %>
+      <br/>
+      <%= f.collection_select :server_id, Server::all, :id, :label %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Aplicar' %>
+    </div>
+<% end %>

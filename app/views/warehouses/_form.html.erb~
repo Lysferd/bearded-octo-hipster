@@ -1,0 +1,22 @@
+<%= form_for(@warehouse) do |f| %>
+    <% if @warehouse.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@warehouse.errors.count, "erro") %> proibiu o armazém de ser salvo:</h2>
+
+          <ul>
+            <% @warehouse.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :label, 'Nome' %>
+      <br/>
+      <%= f.text_field :label %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Apilcar' %>
+    </div>
+<% end %>

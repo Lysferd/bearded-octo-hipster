@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Server 3</title>
+
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<div id='header'>
+  <h1>Video Server 3</h1>
+  <h5>― Versão 1.0β ―</h3>
+</div>
+
+<div id='navigator'>
+  <% Warehouse::all.each do |warehouse| %>
+      <div id="topic"><%= warehouse.label %></div>
+      <% warehouse.servers.each do |server| %>
+          <%= server.label %>
+          <div id="links">
+            <%= link_to 'Ao vivo', live_path(server_id: server.id) %>
+            | <%= link_to 'Gravado', playback_path(server_id: server.id) %>
+          </div>
+      <% end %>
+  <% end %>
+  <hr>
+  <div id="links">
+    <%= link_to 'Início', home_path %>
+    |
+    <% if User.find_by_id(session[:user_id]) %>
+        <%= link_to 'Admin', admin_path %>
+        | <%= link_to 'Deslogar', logout_path, method: :delete %>
+    <% else %>
+        <%= link_to 'Logar', login_path %>
+    <% end %>
+    | <%= link_to 'Contato', 'mailto:fabioalmeida@ibtecnologia.com.br' %>
+  </div>
+</div>
+
+<div id='contents'>
+  <%= yield %>
+</div>
+
+<div id='footer'>
+  <p>&copy; 2012-2013 IB Tecnologia & Sistemas LTDA</p>
+</div>
+
+</body>
+</html>

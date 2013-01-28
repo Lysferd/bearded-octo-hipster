@@ -7,12 +7,9 @@
     <bookmark url="file://$PROJECT_DIR$" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vs3_plugin_setup.exe" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/ADSDKRedist.exe" afterPath="" />
+    <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="Removed Check URI debug button. Returned to plugin installer. Fixed some things on Home views.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vs3_plugin_setup.exe" afterPath="$PROJECT_DIR$/public/vs3_plugin_setup.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/live.html.erb" afterPath="$PROJECT_DIR$/app/views/home/live.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/playback.html.erb" afterPath="$PROJECT_DIR$/app/views/home/playback.html.erb" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +53,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="71" selection-start="22" selection-end="22" vertical-scroll-proportion="0.024193548">
+            <state line="26" column="5" selection-start="980" selection-end="980" vertical-scroll-proportion="0.62903225">
               <folding />
             </state>
           </provider>
@@ -65,7 +62,7 @@
       <file leaf-file-name="live.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/live.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="18" selection-start="1357" selection-end="1357" vertical-scroll-proportion="-17.045454">
+            <state line="70" column="70" selection-start="3299" selection-end="3299" vertical-scroll-proportion="-12.954545">
               <folding />
             </state>
           </provider>
@@ -606,7 +603,7 @@
       <recent name="$PROJECT_DIR$/lib/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="IRB console.Rails console: bearded-octo-hipster">
+  <component name="RunManager" selected="Capistrano.deploy">
     <configuration default="false" name="deploy" type="CapistranoRunConfigurationType" factoryName="Capistrano" temporary="true">
       <module name="bearded-octo-hipster" />
       <CAPISTRANO_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -1036,8 +1033,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: bearded-octo-hipster" />
-        <item index="1" class="java.lang.String" itemvalue="Capistrano.deploy" />
+        <item index="0" class="java.lang.String" itemvalue="Capistrano.deploy" />
+        <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: bearded-octo-hipster" />
         <item index="2" class="java.lang.String" itemvalue="Capistrano.deploy:setup" />
         <item index="3" class="java.lang.String" itemvalue="Capistrano.deploy:migrations" />
         <item index="4" class="java.lang.String" itemvalue="Capistrano.deploy:migrate" />
@@ -1133,7 +1130,11 @@
       <created>1358938739937</created>
       <updated>1358938739937</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Removed Check URI debug button. Returned to plugin installer. Fixed some things on Home views.">
+      <created>1359370532194</created>
+      <updated>1359370532194</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1160,12 +1161,13 @@
     <frame x="0" y="24" width="1280" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.54092824" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.4970464" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299578" sideWeight="0.670088" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25364667" sideWeight="0.24340177" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21961102" sideWeight="0.670088" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21961102" sideWeight="0.5615836" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2617504" sideWeight="0.43695015" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44134897" sideWeight="0.3808752" order="7" side_tool="true" content_ui="tabs" />
@@ -1175,7 +1177,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.54092824" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1216,7 +1217,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing things all around." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Check URI debug button. Returned to plugin installer. Fixed some things on Home views." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1248,6 +1249,7 @@
     <MESSAGE value="Minor bug fixes. User existence verification. Debug button." />
     <MESSAGE value="Minor bug fixes." />
     <MESSAGE value="Fixing things all around." />
+    <MESSAGE value="Removed Check URI debug button. Returned to plugin installer. Fixed some things on Home views." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1336,14 +1338,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/live.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="18" selection-start="1357" selection-end="1357" vertical-scroll-proportion="-17.045454">
+        <state line="70" column="70" selection-start="3299" selection-end="3299" vertical-scroll-proportion="-12.954545">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="71" selection-start="22" selection-end="22" vertical-scroll-proportion="0.024193548">
+        <state line="26" column="5" selection-start="980" selection-end="980" vertical-scroll-proportion="0.62903225">
           <folding />
         </state>
       </provider>

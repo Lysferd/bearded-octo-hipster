@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Label:</b>
+  <%= @warehouse.label %>
+</p>
+
+
+<table>
+  <tr>
+    <td>
+      <%= button_to 'Edit', edit_warehouse_path(@warehouse), method: :get %>
+    </td>
+    <td>
+      <%= button_to 'Back', warehouses_path, method: :get %>
+    </td>
+  </tr>
+</table>

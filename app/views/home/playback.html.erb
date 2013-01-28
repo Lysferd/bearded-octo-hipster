@@ -33,7 +33,7 @@
       <!--
           Sub AxVideoControl_Start()
               arguments = Split(AxCameras.value, "|")
-              camera_id = arguments(0)
+              camera_id = arguments(0) - 1
               address  = arguments(1)
               username = arguments(2)
               password = arguments(3)

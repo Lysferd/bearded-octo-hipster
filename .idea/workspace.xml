@@ -9,7 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/playback.html.erb" afterPath="$PROJECT_DIR$/app/views/home/playback.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/live.html.erb" afterPath="$PROJECT_DIR$/app/views/home/live.html.erb" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,19 +50,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="live.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="live.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/live.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="70" selection-start="3299" selection-end="3299" vertical-scroll-proportion="-13.5">
+            <state line="12" column="55" selection-start="464" selection-end="464" vertical-scroll-proportion="0.29032257">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="playback.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="playback.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="90" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.7693548">
+            <state line="21" column="83" selection-start="833" selection-end="833" vertical-scroll-proportion="-14.318182">
               <folding />
             </state>
           </provider>
@@ -159,12 +159,12 @@
         <option value="$USER_HOME$/www.ibtecnologia.com.br/en/products.php" />
         <option value="$USER_HOME$/www.ibtecnologia.com.br/css/style.css" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/live.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/warehouses_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/warehouses/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/playback.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/live.html.erb" />
       </list>
     </option>
   </component>
@@ -1271,7 +1271,11 @@
       <created>1359374235468</created>
       <updated>1359374235468</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fixed wrong index for playback video.">
+      <created>1359376234046</created>
+      <updated>1359376234046</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1354,7 +1358,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing typo." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed wrong index for playback video." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1367,7 +1371,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Basic layout made. Changed to NVR functionality to VBScript. Attempt to use a calendar to choose date &amp; time for playback of recorded video." />
     <MESSAGE value="README file. ActiveX tests." />
     <MESSAGE value="Fixed layout. Login/session functionality. Debug index page." />
     <MESSAGE value="Added MSIE check. Authorization check for database-related pages." />
@@ -1392,6 +1395,7 @@
     <MESSAGE value="Fixed bug in layout." />
     <MESSAGE value="Added ADSDK executable." />
     <MESSAGE value="Fixing typo." />
+    <MESSAGE value="Fixed wrong index for playback video." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1493,16 +1497,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/live.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="70" selection-start="3299" selection-end="3299" vertical-scroll-proportion="-13.5">
+        <state line="21" column="83" selection-start="833" selection-end="833" vertical-scroll-proportion="-14.318182">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/live.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="90" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.7693548">
+        <state line="12" column="55" selection-start="464" selection-end="464" vertical-scroll-proportion="0.29032257">
           <folding />
         </state>
       </provider>

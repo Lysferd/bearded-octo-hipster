@@ -8,7 +8,9 @@
 
 <% if @warehouse %>
     <%= form_tag('/live', method: 'get') do %>
-        <%= hidden_field_tag 'w', @warehouse.id %>
+        <%= hidden_field_tag 'w', params[:w] %>
+        <%= hidden_field_tag 'u', params[:u] %>
+        <%= hidden_field_tag 'token', params[:token] %>
         <%= label_tag 'Mosaico' %>
         <label>
           <select name="grid_size" onchange="">

@@ -1,22 +1,14 @@
-<script type="text/javascript">
-    function openit() {
-        newwindow = window.open('instructions.htm', 'Instruçoes de instalaçao do plugin.', 'height=400,width=300')
-        if (window.focus())
-            newwindow.focus()
-    }
-</script>
-
 <% if @warehouse %>
     <%= form_tag('/live', method: 'get') do %>
         <%= hidden_field_tag 'w', params[:w] %>
         <%= hidden_field_tag 'u', params[:u] %>
         <%= hidden_field_tag 'token', params[:token] %>
-        <%= label_tag 'Mosaico' %>
+        <%= label_tag 'Mosaico:' %>
         <label>
           <select name="grid_size" onchange="">
             <option value="1">1x1</option>
             <option value="4">2x2</option>
-            <!--<option value="9">3x3</option>-->
+            <option value="9">3x3</option>
           </select>
         </label>
         <br>
@@ -44,8 +36,8 @@
 
               <br>
               <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
-                      height='<%= 480 / (params[:grid_size] == '4' ? 2 : 1) %>'
-                      width='<%= 640 / (params[:grid_size] == '4' ? 2 : 1) %>'
+                      height='<%= 480 / (params[:grid_size] == '9' ? 2 : 1) %>'
+                      width='<%= 640 / (params[:grid_size] == '9' ? 2 : 1) %>'
                       id='AxVideoControl_<%= i + 1 %>'
                       EnableJavaScript='true'
                       codebase='ADSDK.IVideoControl'>
@@ -79,9 +71,15 @@
                   -->
               </script>
             </td>
-            <% if i > 0 and i == (params[:grid_size].to_i / 2) - 1 %>
-                </tr>
-                <tr>
+            <% if i > 0 %>
+                <% if params[:grid_size] == '4' and i == 1 %>
+                    </tr>
+                    <tr>
+                <% end %>
+                <% if params[:grid_size] == '9' and i == 2 or i == 5 %>
+                    </tr>
+                    <tr>
+                <% end %>
             <% end %>
         <% end %>
         </tr>

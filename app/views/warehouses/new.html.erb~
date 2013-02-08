@@ -1,5 +1,0 @@
-<h1>Novo armazém</h1>
-
-<%= render 'form' %>
-
-<%= button_to 'Voltar', warehouses_path, method: :get %>

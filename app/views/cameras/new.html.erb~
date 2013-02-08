@@ -1,5 +1,0 @@
-<h1>Nova câmera</h1>
-
-<%= render 'form' %>
-
-<%= button_to 'Voltar', cameras_path, method: :get %>

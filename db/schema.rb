@@ -11,12 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114113603) do
+ActiveRecord::Schema.define(:version => 20130221120541) do
 
   create_table "cameras", :force => true do |t|
     t.string "label"
     t.integer "camera_id"
     t.integer "server_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "exclusive_cameras", :force => true do |t|
+    t.string "label"
+    t.string "server_id"
+    t.string "camera_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -27,6 +35,8 @@ ActiveRecord::Schema.define(:version => 20121114113603) do
     t.string "username"
     t.string "password"
     t.integer "warehouse_id"
+    t.integer "admin_port"
+    t.integer "media_port"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -1,13 +1,15 @@
 Videoserver3::Application.routes.draw do
 
+  resources :exclusive_cameras
+
   # -=-=-=-=-
   # Define routes.
   root to: 'home#index', as: 'home'
   get 'index' => 'home#index'
   get 'live' => 'home#live'
   get 'playback' => 'home#playback'
-  get 'error' => 'home#error'
-
+  get 'error_406' => 'home#error_406'
+  get 'error_401' => 'home#error_401'
   get 'admin' => 'admin#index'
 
   controller :sessions do

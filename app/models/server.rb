@@ -1,5 +1,5 @@
 class Server < ActiveRecord::Base
-  attr_accessible :address, :label, :password, :username, :warehouse_id
+  attr_accessible :address, :admin_port, :media_port, :label, :password, :username, :warehouse_id
   belongs_to :warehouse
   has_many :cameras
 

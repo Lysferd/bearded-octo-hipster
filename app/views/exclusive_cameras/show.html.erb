@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Label:</b>
+  <%= @exclusive_camera.label %>
+</p>
+
+<p>
+  <b>Server:</b>
+  <%= @exclusive_camera.server_id %>
+</p>
+
+<p>
+  <b>Camera:</b>
+  <%= @exclusive_camera.camera_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_exclusive_camera_path(@exclusive_camera) %> |
+<%= link_to 'Back', exclusive_cameras_path %>

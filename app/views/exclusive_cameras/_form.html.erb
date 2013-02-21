@@ -1,0 +1,33 @@
+<%= form_for(@exclusive_camera) do |f| %>
+    <% if @exclusive_camera.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@exclusive_camera.errors.count, "error") %> prohibited this exclusive_camera from being
+            saved:</h2>
+
+          <ul>
+            <% @exclusive_camera.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :label %>
+      <br/>
+      <%= f.text_field :label %>
+    </div>
+    <div class="field">
+      <%= f.label :server_id %>
+      <br/>
+      <%= f.text_field :server_id %>
+    </div>
+    <div class="field">
+      <%= f.label :camera_id %>
+      <br/>
+      <%= f.text_field :camera_id %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

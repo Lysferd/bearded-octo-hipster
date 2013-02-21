@@ -22,6 +22,16 @@
       <%= f.text_field :address %>
     </div>
     <div class="field">
+      <%= f.label :admin_port, 'Porta HTTP' %>
+      <br/>
+      <%= f.text_field :admin_port %>
+    </div>
+    <div class="field">
+      <%= f.label :media_port, 'Porta RTSP' %>
+      <br/>
+      <%= f.text_field :media_port %>
+    </div>
+    <div class="field">
       <%= f.label :username, 'Usuário' %>
       <br/>
       <%= f.text_field :username %>
@@ -29,7 +39,7 @@
     <div class="field">
       <%= f.label :password, 'Senha' %>
       <br/>
-      <%= f.text_field :password %>
+      <%= f.password_field :password %>
     </div>
     <div class="field">
       <%= f.label :warehouse_id, 'Armazém' %>

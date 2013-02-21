@@ -60,8 +60,8 @@ class ServersController < ApplicationController
 
     respond_to do |format|
       if @server.update_attributes(params[:server])
-        format.html { redirect_to @server, notice: 'Server was successfully updated.' }
-        format.json { head :no_content }
+        format.html { render action: :index, notice: 'Server was successfully updated.' }
+        format.json { render json: @server, status: :created, location: @server }
       else
         format.html { render action: "edit" }
         format.json { render json: @server.errors, status: :unprocessable_entity }

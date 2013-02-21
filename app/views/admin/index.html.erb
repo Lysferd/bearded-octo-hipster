@@ -1,4 +1,3 @@
-<h3>Página administrativa</h3>
 <table border="1" style="text-align: center;">
   <tr>
     <th><%= link_to 'Lista de Armazéns', warehouses_path %></th>
@@ -10,7 +9,11 @@
       <tr>
         <td rowspan="<%= warehouse.element_count %>">
           <%= link_to warehouse.label, warehouse %>
-          <br><%= link_to '(Visualizar)', home_path(w: warehouse.label[warehouse.label.index("\s")+1..-1].downcase, u: 'ib', token: 'ibtech') %>
+          <br>
+
+          <div style="font-size: smaller; font-weight: bold;">
+            <%= link_to 'Visualizar', home_path(w: warehouse.label[warehouse.label.index("\s").to_i + (warehouse.label =~ /\s/ ? 1 : 0)..-1].downcase, u: 'ib', token: 'ibtech') %>
+          </div>
         </td>
         <% warehouse.servers.each_with_index do |server, server_index| %>
             <% if server_index.zero? %>

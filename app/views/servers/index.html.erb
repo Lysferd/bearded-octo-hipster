@@ -1,25 +1,31 @@
-<h3>Listando servidores</h3>
+<h3>Servidores</h3>
 
-<table style="text-align: center;">
+<p id="notice"><%= notice %></p>
+
+<table border='1' style="text-align: center;">
   <tr>
     <th>Nome</th>
     <th>Endereço IP</th>
+    <th>Porta HTTP</th>
+    <th>Porta RTSP</th>
     <th>Usuário</th>
-    <th>Armazém</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Armazém (#ID)</th>
+    <th>Comandos</th>
   </tr>
 
   <% Server::all.each do |server| %>
       <tr>
         <td><%= server.label %></td>
         <td><%= server.address %></td>
+        <td><%= server.admin_port %></td>
+        <td><%= server.media_port %></td>
         <td><%= server.username %></td>
         <td><%= Warehouse::find_by_id(server.warehouse_id).label rescue 'NIL' %> (#<%= server.warehouse_id %>)</td>
-        <td><%= button_to 'Mostrar', server, method: :get %></td>
-        <td><%= button_to 'Editar', edit_server_path(server), method: :get %></td>
-        <td><%= button_to 'Apagar', server, method: :delete, data: {confirm: 'Tem certeza?'} %></td>
+        <td>
+          <!--< link_to 'Mostrar', server >-->
+          <%= link_to 'Editar', edit_server_path(server) %>
+          <%= link_to 'Apagar', server, method: :delete, data: {confirm: 'Tem certeza?'} %>
+        </td>
       </tr>
   <% end %>
 </table>

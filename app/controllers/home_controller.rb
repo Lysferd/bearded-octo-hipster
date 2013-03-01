@@ -6,9 +6,9 @@ class HomeController < ApplicationController
   # FIXME: Define proper URI for authentication filepath.
   UNISOLUTION_PATH = 'http://someurl.com.br/'
 
-  skip_before_filter :check_browser, only: :error_406
+  skip_before_filter :check_browser, only: [:error_406, :index]
   skip_before_filter :authorize
-  before_filter :check_for_parameters, except: [:error_406, :error_401]
+  before_filter :check_for_parameters, except: [:error_406, :error_401, :index]
 
   def check_for_parameters
     if params[:u] && params[:token] && params[:w]

@@ -2,6 +2,16 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-@popitup = ->
-  newwindow = window.open('instructions.htm', 'Instruçoes de instalaçao do plugin.', 'height=400,width=300')
-  newwindow.focus if window.focus
+
+$(document).ready ->
+  $("").focus ->
+    $(this).remove()
+
+###
+<script type="text/javascript">
+function setStyle(id) {
+document.getElementById(id).parentNode.style.borderWidth = '5px';
+document.getElementById(id).parentNode.style.borderStyle = 'Solid';
+}
+</script>
+###

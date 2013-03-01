@@ -18,16 +18,16 @@
       <%= f.text_field :label %>
     </div>
     <div class="field">
-      <%= f.label :server_id %>
-      <br/>
-      <%= f.text_field :server_id %>
-    </div>
-    <div class="field">
       <%= f.label :camera_id %>
       <br/>
       <%= f.text_field :camera_id %>
     </div>
+    <div class="field">
+      <%= f.label :server_id, 'Servidor' %>
+      <br/>
+      <%= f.collection_select :server_id, Server::all, :id, :label %>
+    </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit 'Aplicar' %>
     </div>
 <% end %>

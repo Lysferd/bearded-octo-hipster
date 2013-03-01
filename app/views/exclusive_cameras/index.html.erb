@@ -1,11 +1,10 @@
-<h1>Listing exclusive_cameras</h1>
+<h1>Listando câmeras exclusivas</h1>
 
 <table>
   <tr>
-    <th>Label</th>
-    <th>Server</th>
-    <th>Camera</th>
-    <th></th>
+    <th>Nome</th>
+    <th>Câmera ID</th>
+    <th>Servidor</th>
     <th></th>
     <th></th>
   </tr>
@@ -13,15 +12,14 @@
   <% @exclusive_cameras.each do |exclusive_camera| %>
       <tr>
         <td><%= exclusive_camera.label %></td>
-        <td><%= exclusive_camera.server_id %></td>
         <td><%= exclusive_camera.camera_id %></td>
-        <td><%= link_to 'Show', exclusive_camera %></td>
-        <td><%= link_to 'Edit', edit_exclusive_camera_path(exclusive_camera) %></td>
-        <td><%= link_to 'Destroy', exclusive_camera, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= Server::find_by_id(exclusive_camera.server_id).label %></td>
+        <td><%= link_to 'Editar', edit_exclusive_camera_path(exclusive_camera) %></td>
+        <td><%= link_to 'Apagar', exclusive_camera, method: :delete, data: {confirm: 'Tem certeza?'} %></td>
       </tr>
   <% end %>
 </table>
 
 <br/>
 
-<%= link_to 'New Exclusive camera', new_exclusive_camera_path %>
+<%= link_to 'Criar nova câmera exclusiva', new_exclusive_camera_path %>

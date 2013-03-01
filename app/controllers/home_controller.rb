@@ -11,12 +11,12 @@ class HomeController < ApplicationController
   before_filter :check_for_parameters, except: [:error_406, :error_401]
 
   def check_for_parameters
-    redirect_to login_path unless params[:u] && params[:token] && params[:w]
-
-    Warehouse::all.each { |warehouse| @warehouse = warehouse if /#{params[:w]}/i =~ warehouse.label }
-    authenticate!(params[:u], params[:token])
-
-    #get_tokens if params[:grid_size] and params[:grid_size].to_i != 1 # disabled functionality
+    if params[:u] && params[:token] && params[:w]
+      Warehouse::all.each { |warehouse| @warehouse = warehouse if /#{params[:w]}/i =~ warehouse.label }
+      authenticate!(params[:u], params[:token])
+    else
+      redirect_to login_path
+    end
   end
 
   #------------------------------------------------------------------------------------------------------------------

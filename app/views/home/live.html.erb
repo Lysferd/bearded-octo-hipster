@@ -84,7 +84,7 @@
                                                    end %>
                   <% for i in 0...(params[:grid_size].to_i || 1) %>
                     camera_id = camera_id + <%= i %>
-                    AxVideoControl.MediaStreamRender <%= i %>, "nvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
+                    AxVideoControl.MediaStreamRender <%= i %>, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
                   <% end %>
               End Sub
 

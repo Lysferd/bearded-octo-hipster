@@ -40,6 +40,19 @@
         <% end %>
   <% end %>
 </table>
+<br/>
+<table border="1" style="text-align: center;">
+  <tr>
+    <th><%= link_to 'Lista de Câmeras Exclusivas', exclusive_cameras_path %></th>
+  </tr>
+  <% ExclusiveCamera::all.each do |ex_camera| %>
+      <tr>
+        <td>
+          <%= ex_camera.label %>
+        </td>
+      </tr>
+  <% end %>
+</table>
 
 <% if User::find_by_id(session[:user_id]).username == 'Administrador' %>
     <br>
@@ -56,7 +69,6 @@
       <% end %>
     </table>
 <% end %>
-
 <br>
 <div style="text-align: center">
   <%= button_to 'Deslogar', logout_path, method: :delete %>

@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(:version => 20130221120541) do
 
   create_table "exclusive_cameras", :force => true do |t|
     t.string "label"
-    t.string "server_id"
-    t.string "camera_id"
+    t.integer "server_id"
+    t.integer "camera_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -1,7 +1,5 @@
 Videoserver3::Application.routes.draw do
 
-  resources :exclusive_cameras
-
   # -=-=-=-=-
   # Define routes.
   root to: 'home#index', as: 'home'
@@ -29,6 +27,7 @@ Videoserver3::Application.routes.draw do
   resources :cameras do
     get :batch_new, on: :collection
   end
+  resources :exclusive_cameras
   resources :warehouses
 
 end

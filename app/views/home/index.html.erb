@@ -1,18 +1,80 @@
-<div id="test" style='text-align: center; padding: 5px' onfocus="setStyle(this.id)">
-  <p>
-    <input type="text" id="test">
-  </p>
-  <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
-          width='320'
-          height='240'
-          id='AxVideoControl'
-          EnableJavaScript='true'
-          codebase='ADSDK.IVideoControl'>
-    <p>Plugin American Dynamics SDK não foi encontrado.<br/>
-      <a href='vs3_plugin_setup.zip'>Clique aqui</a> para instalá-lo.</p>
-  </object>
-  <script type="text/vbscript">
-    <!--
+<script type="text/javascript">
+    function setStyle(id) {
+        //window.alert(id);
+        document.getElementById(id).parentNode.style.borderWidth = '5px';
+        document.getElementById(id).parentNode.style.borderStyle = 'Solid';
+        document.getElementById(id).parentNode.style.borderColor = 'yellow';
+    }
+
+    function unsetStyle(id) {
+        document.getElementById(id).parentNode.style.borderWidth = '5px';
+        document.getElementById(id).parentNode.style.borderStyle = 'Solid';
+        document.getElementById(id).parentNode.style.borderColor = 'black';
+    }
+</script>
+
+<table border='1'>
+  <tr>
+    <td>
+      <a href="#">Live View</a>
+      <br>
+      <a href="#">Playback</a>
+    </td>
+    <td>
+      <button>1x1</button>
+    </td>
+    <td>
+      <button>2x2</button>
+    </td>
+    <td>
+      <button>3x3</button>
+    </td>
+    <td>
+      <button>4x4</button>
+    </td>
+    <td>
+      <button>1+12</button>
+    </td>
+    <td>
+      <button>1+8</button>
+    </td>
+  </tr>
+  <tr>
+    <td rowspan=1>
+      Camera Tree
+    </td>
+    <td colspan="6" rowspan="2">
+      <div id="video_grid" style='text-align: center; padding: 5px'>
+        <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
+                onmouseover="setStyle(this.id)" onmouseout='unsetStyle(this.id)'
+                onmousedown="window.alert(this.id)"
+                width='320'
+                height='240'
+                id='AxVideoControl'
+                EnableJavaScript='true'
+                codebase='ADSDK.IVideoControl'>
+          <p>Plugin American Dynamics SDK não foi encontrado.<br/>
+            <a href='vs3_plugin_setup.zip'>Clique aqui</a> para instalá-lo.</p>
+        </object>
+        <br>
+        <button id="select" onclick="window.alert(this.id)">Selecionar</button>
+        <button id="clear" onclick="window.alert(this.id)">Apagar</button>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      PTZ Controls
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
+
+<script type="text/vbscript">
+  <!--
       Sub AxVideoControlStart()
           arguments = Split(AxCameras.value, "|")
           camera_id = CDbl(arguments(0)) - 1
@@ -47,12 +109,12 @@
                      "</Layout>"
 
           AxVideoControl.SetPaneLayout <%= case params[:grid_size].to_i
-                                                     when 4 then
-                                                       'LayoutX2'
-                                                     when 9 then
-                                                       'LayoutX3'
-                                                     else
-                                                       'LayoutX1'
+                                                   when 4 then
+                                                     'LayoutX2'
+                                                   when 9 then
+                                                     'LayoutX3'
+                                                   else
+                                                     'LayoutX1'
                                            end %>
           <% for i in 0...(params[:grid_size].to_i || 1) %>
             camera_id = camera_id + <%= i %>
@@ -70,5 +132,5 @@
           MsgBox "nvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
       End Sub
     -->
-  </script>
+</script>
 </div>

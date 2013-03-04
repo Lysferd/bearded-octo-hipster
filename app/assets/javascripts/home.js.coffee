@@ -4,14 +4,15 @@
 
 
 $(document).ready ->
-  $("").focus ->
+  $("contents").ready ->
     $(this).remove()
 
 ###
-<script type="text/javascript">
-function setStyle(id) {
-document.getElementById(id).parentNode.style.borderWidth = '5px';
-document.getElementById(id).parentNode.style.borderStyle = 'Solid';
+`
+function setStyle() {
+  window.alert("Teste");
+  document.getElementById("test").style.borderWidth = '5px';
+  document.getElementById("test").style.borderStyle = 'Solid';
 }
-</script>
+`
 ###

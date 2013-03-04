@@ -9,44 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/grid_1.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/capistrano-2.13.5.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/coffee-script-source-1.4.0.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/daemon_controller-1.1.0.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/i18n-0.6.1.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/jquery-rails-2.1.3.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/json-1.7.5.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/libv8-3.3.10.4-x86-linux.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/mime-types-1.19.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/multi_json-1.3.7.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/net-scp-1.0.4.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/net-sftp-2.0.5.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/net-ssh-2.6.1.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/net-ssh-gateway-1.1.0.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/passenger-3.0.18.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/rack-1.4.1.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/rack-ssl-1.3.2.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/rdoc-3.12.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/sass-3.2.3.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/sass-rails-3.2.5.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/test-unit-2.5.2.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/therubyracer-0.10.2.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/thor-0.16.0.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/tilt-1.3.3.gem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/tzinfo-0.3.35.gem" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bearded-octo-hipster.iml" afterPath="$PROJECT_DIR$/.idea/bearded-octo-hipster.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/server.rb" afterPath="$PROJECT_DIR$/app/models/server.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1349,7 +1312,11 @@
       <created>1362170832262</created>
       <updated>1362170832262</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Layout redesign.">
+      <created>1362426568140</created>
+      <updated>1362426568140</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1432,7 +1399,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="bump" />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout redesign." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1445,7 +1412,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Translated to Portuguese (Brazil). NOT I18n (yet)." />
     <MESSAGE value="Camera addition via upload of CSV file function created. Minor tweaks everywhere." />
     <MESSAGE value="Minor bug fixes. User existence verification. Debug button." />
     <MESSAGE value="Minor bug fixes." />
@@ -1470,6 +1436,7 @@
     <MESSAGE value="Plugin installer upgraded." />
     <MESSAGE value="Testing new features." />
     <MESSAGE value="bump" />
+    <MESSAGE value="Layout redesign." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

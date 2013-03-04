@@ -13,58 +13,85 @@
     }
 </script>
 
-<table border='1'>
+<table id="home_table" border='1'>
   <tr>
     <td>
-      <a href="#">Live View</a>
+      <button id="live">Live View</button>
       <br>
-      <a href="#">Playback</a>
+      <button id="playback">Playback</button>
     </td>
     <td>
-      <button>1x1</button>
+      <button id="grid_1">1x1</button>
     </td>
     <td>
-      <button>2x2</button>
+      <button id="grid_4">2x2</button>
     </td>
     <td>
-      <button>3x3</button>
+      <button id="grid_9">3x3</button>
     </td>
     <td>
-      <button>4x4</button>
+      <button id="grid_16">4x4</button>
     </td>
     <td>
-      <button>1+12</button>
+      <button id="grid_1+12">1+12</button>
     </td>
     <td>
-      <button>1+8</button>
+      <button id="grid_1+8">1+8</button>
     </td>
   </tr>
   <tr>
-    <td rowspan=1>
-      Camera Tree
+    <td>
+      <ol class="tree">
+
+        <% @warehouse = Warehouse::all.first unless @warehouse %>
+
+        <% @warehouse.servers.each do |server| %>
+            <li>
+              <label for="<%= server.id %>"><%= server.label %></label> <input type="checkbox" id="<%= server.id %>>"/>
+              <ol>
+                <% server.cameras.each do |camera| %>
+                    <li class="file"><a href="#"><%= camera.label %></a></li>
+                <% end %>
+              </ol>
+            </li>
+        <% end %>
+      </ol>
     </td>
     <td colspan="6" rowspan="2">
-      <div id="video_grid" style='text-align: center; padding: 5px'>
-        <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
-                onmouseover="setStyle(this.id)" onmouseout='unsetStyle(this.id)'
-                onmousedown="window.alert(this.id)"
-                width='320'
-                height='240'
-                id='AxVideoControl'
-                EnableJavaScript='true'
-                codebase='ADSDK.IVideoControl'>
-          <p>Plugin American Dynamics SDK não foi encontrado.<br/>
-            <a href='vs3_plugin_setup.zip'>Clique aqui</a> para instalá-lo.</p>
-        </object>
-        <br>
-        <button id="select" onclick="window.alert(this.id)">Selecionar</button>
-        <button id="clear" onclick="window.alert(this.id)">Apagar</button>
-      </div>
+      <iframe src="grid_1.html">
+      </iframe>
     </td>
   </tr>
   <tr>
     <td>
-      PTZ Controls
+      <table>
+        <tr>
+          <td colspan="3">
+            <button>UP</button>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2">
+            <button>LEFT</button>
+          </td>
+          <td>
+            <button>ZOOM IN</button>
+          </td>
+          <td rowspan="2">
+            <button>RIGHT</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button>ZOOM OUT</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <button>DOWN</button>
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
 </table>

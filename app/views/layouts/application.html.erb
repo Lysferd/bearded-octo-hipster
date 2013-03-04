@@ -23,12 +23,13 @@
           else
             @warehouse.label
           end %></h1>
+  <!--
   <% if @warehouse and not @new %>
       <div id="links">
         <%= link_to 'Visualizar imagens ao vivo', live_path(w: @warehouse.label[@warehouse.label.index("\s").to_i + (@warehouse.label =~ /\s/ ? 1 : 0)..-1].downcase, u: params[:u], token: params[:token]) %>
         | <%= link_to 'Visualizar imagens gravadas', playback_path(w: @warehouse.label[@warehouse.label.index("\s").to_i + (@warehouse.label =~ /\s/ ? 1 : 0)..-1].downcase, u: params[:u], token: params[:token]) %>
       </div>
-  <% end %>
+  <% end %>-->
 </div>
 
 <div id="contents">

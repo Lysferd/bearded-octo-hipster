@@ -2,17 +2,11 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+$ ->
+  $("#contents button#live").click ->
+    # change to live view
+    #alert(this)
+    $("#contents div#video_object").hide()
 
-$(document).ready ->
-  $("contents").ready ->
-    $(this).remove()
-
-###
-`
-function setStyle() {
-  window.alert("Teste");
-  document.getElementById("test").style.borderWidth = '5px';
-  document.getElementById("test").style.borderStyle = 'Solid';
-}
-`
-###
+  $("#contents button#playback").click ->
+    # change to playback view

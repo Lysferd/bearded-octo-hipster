@@ -104,14 +104,14 @@
               Sub StartPTZ()
                 MsgBox "Within StartPTZ"
                 Set vidPTZ = AxVideoControl.GetInterface("ADSDK.IPtz")
-                dim tmp
-                vidPTZ.StartSession(28, tmp)
-                MsgBox( tmp )
-                If ( tmp ) Then
-                    MsgBox "Okay!"
-                Else
-                    MsgBox "Oh no!"
-                End If
+                Dim resultCode
+                resultCode = vidPTZ.StartSession(28)
+                MsgBox( resultCode )
+                'If ( tmp ) Then
+                '    MsgBox "Okay!"
+                'Else
+                '    MsgBox "Oh no!"
+                'End If
               End Sub
             -->
         </script>

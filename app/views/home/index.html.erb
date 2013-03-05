@@ -103,8 +103,11 @@
 
               Sub StartPTZ()
                 MsgBox "Within StartPTZ"
-                Set vidPTZ = AxVideoControl.GetInterface("ADSDK.IPtz")
-                vidPTZ = NULL
+                Try
+                    Set vidPTZ = AxVideoControl.GetInterface("ADSDK.IPtz")
+                Catch ex As Exception
+                    MsgBox ex
+                End Try
 
                 'Dim resultCode
                 'resultCode = vidPTZ.StartSession(28)

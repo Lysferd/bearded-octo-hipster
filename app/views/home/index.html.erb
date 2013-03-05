@@ -85,17 +85,17 @@
         </object>
         <br>
         <!---->
-        <button id="select" onclick="AxVideoControlStart(1, '201.64.223.142', 'admin', 'ibtech')">Selecionar</button>
+        <button id="select" onclick="AxVideoControlStart()">Selecionar</button>
         <button id="clear" onclick="unsetStyle(this.id)">Apagar</button>
         <script type="text/vbscript">
           <!--
-              Sub AxVideoControlStart(id, add, user, pass)
+              Sub AxVideoControlStart()
                   MsgBox "Okay1"
                   'arguments = Split(AxCameras.value, "|")
-                  camera_id = id 'CDbl(arguments(0)) - 1
-                  address  = add 'arguments(1)
-                  username = user 'arguments(2)
-                  password = pass 'arguments(3)
+                  camera_id = 1                 'CDbl(arguments(0)) - 1
+                  address  = "201.64.223.142"   'arguments(1)
+                  username = "admin"            'arguments(2)
+                  password = "ibtech"           'arguments(3)
 
                   MsgBox "Okay2"
 

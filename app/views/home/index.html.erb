@@ -85,7 +85,7 @@
         </object>
         <br>
         <!---->
-        <button id="select" onclick="AxVideoControlStart('1', '201.64.223.142', 'admin', 'ibtech')">Selecionar</button>
+        <button id="select" onclick="AxVideoControlStart(1, '201.64.223.142', 'admin', 'ibtech')">Selecionar</button>
         <button id="clear" onclick="unsetStyle(this.id)">Apagar</button>
         <script type="text/vbscript">
           <!--
@@ -130,10 +130,10 @@
                                                                    else
                                                                      'LayoutX1'
                                                    end %>
-
+                  MsgBox "Okay"
                   AxVideoControl.MediaStreamRender 0, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
 
-                  StartPTZ()
+                  'StartPTZ()
               End Sub
 
               Sub StartPTZ()

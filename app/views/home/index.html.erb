@@ -1,4 +1,15 @@
 <script type="text/javascript">
+
+    function generate() {
+        alert('teste');
+        var recorder_factory = new ActiveXObject("ADSDK.RecorderFactory");
+        alert(recorder_factory);
+        if (recorder_factory != null)
+            alert("Successfully created RecorderFactory object!");
+        else
+            alert("Error when creating RecorderFactory object!");
+    }
+
     function setStyle(id) {
         //window.alert(id);
         document.getElementById(id).parentNode.style.borderWidth = '5px';
@@ -69,7 +80,8 @@
             <a href='vs3_plugin_setup.zip'>Clique aqui</a> para instalá-lo.</p>
         </object>
         <br>
-        <button id="select" onclick="AxVideoControlStart('1', '201.64.223.142', 'admin', 'ibtech')">Selecionar</button>
+        <!--AxVideoControlStart('1', '201.64.223.142', 'admin', 'ibtech')-->
+        <button id="select" onclick="generate()">Selecionar</button>
         <button id="clear" onclick="unsetStyle(this.id)">Apagar</button>
         <script type="text/vbscript">
           <!--

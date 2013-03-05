@@ -3,13 +3,6 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $ ->
-  alert('teste')
-  recorder_factory = new ActiveXObject("ADSDK.RecorderFactory")
-  alert(recorder_factory)
-  if recorder_factory
-    alert("Successfully created RecorderFactory object!")
-  else
-    alert("Error when creating RecorderFactory object!")
   #recorder = recorder_factory.CreateVideoEdgeNvr1('201.64.223.')
 
   $("#contents button#live").click ->

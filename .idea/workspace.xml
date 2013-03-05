@@ -9,8 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.js.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="16" selection-start="251" selection-end="251" vertical-scroll-proportion="0.114503816">
+            <state line="4" column="4" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,11 +105,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="17" selection-start="1628" selection-end="1628" vertical-scroll-proportion="-7.5">
-              <folding />
+            <state line="83" column="47" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.70388347">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,8 +163,8 @@
         <option value="$PROJECT_DIR$/app/views/admin/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
         <option value="$PROJECT_DIR$/app/views/home/grid_1.html" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
       </list>
     </option>
   </component>
@@ -1547,17 +1549,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="17" selection-start="1628" selection-end="1628" vertical-scroll-proportion="-7.5">
+        <state line="4" column="4" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="251" selection-end="251" vertical-scroll-proportion="0.114503816">
-          <folding />
+        <state line="83" column="47" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.70388347">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

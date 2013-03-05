@@ -4,6 +4,7 @@
 
 $ ->
   recorder_factory = new ActiveXObject("ADSDK.RecorderFactory")
+  alert(recorder_factory)
   if recorder_factory
     alert("Successfully created RecorderFactory object!")
   else

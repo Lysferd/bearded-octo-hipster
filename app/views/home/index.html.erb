@@ -103,11 +103,16 @@
 
               Sub StartPTZ()
                 MsgBox "Within StartPTZ"
-                Try
-                    Set vidPTZ = AxVideoControl.GetInterface("ADSDK.IPtz")
-                Catch ex As Exception
-                    MsgBox ex
-                End Try
+                On Error Resume Next
+                Err.Clear
+                Set vidPTZ = AxVideoControl.GetInterface("ADSDK.IPtz")
+                If Err.Number <> 0 Then
+                    MsgBox "Error: " & Err.Number
+                    MsgBox "Error (Hex): " & Hex(Err.Number)
+                    MsgBox "Source: " &  Err.Source
+                    MsgBox "Description: " &  Err.Description
+                    Err.Clear
+                End If
 
                 'Dim resultCode
                 'resultCode = vidPTZ.StartSession(28)

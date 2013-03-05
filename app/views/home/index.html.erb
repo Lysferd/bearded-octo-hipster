@@ -105,11 +105,8 @@
                 MsgBox "Within StartPTZ"
                 On Error Resume Next
                 Err.Clear
-                Set vidPTZ = AxVideoControl.GetInterface("ADSDK.IPtz")
+                Set vidPTZ = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback") 'ADSDK.IPtz
                 If Err.Number <> 0 Then
-                    MsgBox "Error: " & Err.Number
-                    MsgBox "Error (Hex): " & Hex(Err.Number)
-                    MsgBox "Source: " &  Err.Source
                     MsgBox "Description: " &  Err.Description
                     Err.Clear
                 End If

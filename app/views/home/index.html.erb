@@ -88,7 +88,7 @@
               Sub AxVideoControlStart()
                   MsgBox "Within AxVideoControlStart"
 
-                  camera_id = 1
+                  camera_id = 28
                   address  = "201.64.223.142"
                   username = "admin"
                   password = "ibtech"
@@ -103,8 +103,8 @@
 
               Sub StartPTZ()
                 MsgBox "Within StartPTZ"
-                'Set vidPTZ = AxVideoControl.GetInterface "ADSDK.IPtz"
-                'If ( vidPTZ.StartSession ) Then
+                Set vidPTZ = AxVideoControl.GetInterface "ADSDK.IPtz"
+                'If ( vidPTZ.StartSession() ) Then
                 '    MsgBox "Okay!"
                 'Else
                 '    MsgBox "Oh no!"

@@ -106,7 +106,7 @@
                 On Error Resume Next
                 Err.Clear
                 Dim recorderFactory
-                Set recorderFactory = CreateObject("ADSDK.RecorderFactory")
+                Set recorderFactory = CreateObject("ADSDK.IRecorderFactory")
                 If Err.Number <> 0 Then
                     MsgBox "Description: " &  Err.Description
                     Err.Clear

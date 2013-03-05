@@ -89,7 +89,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="35" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.2605178">
+            <state line="108" column="59" selection-start="3653" selection-end="3653" vertical-scroll-proportion="0.50323623">
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
               </folding>
@@ -109,7 +109,7 @@
       <file leaf-file-name="playback.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="86" selection-start="2105" selection-end="2129" vertical-scroll-proportion="-17.0">
+            <state line="44" column="88" selection-start="2131" selection-end="2131" vertical-scroll-proportion="-17.0">
               <folding />
             </state>
           </provider>
@@ -1550,14 +1550,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="86" selection-start="2105" selection-end="2129" vertical-scroll-proportion="-17.0">
+        <state line="44" column="88" selection-start="2131" selection-end="2131" vertical-scroll-proportion="-17.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="35" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.2605178">
+        <state line="108" column="59" selection-start="3653" selection-end="3653" vertical-scroll-proportion="0.50323623">
           <folding>
             <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
           </folding>

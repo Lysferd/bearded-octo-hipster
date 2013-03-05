@@ -103,16 +103,20 @@
 
               Sub StartPTZ()
                 MsgBox "Within StartPTZ"
-                'Set vidPTZ = AxVideoControl.GetInterface("ADSDK.IPtz")
+                Set vidPTZ = AxVideoControl.GetInterface("ADSDK.IPtz")
+                vidPTZ = NULL
+
                 'Dim resultCode
                 'resultCode = vidPTZ.StartSession(28)
                 'MsgBox( resultCode )
-                MsgBox( "After StartSession call" )
+
                 'If ( tmp ) Then
                 '    MsgBox "Okay!"
                 'Else
                 '    MsgBox "Oh no!"
                 'End If
+
+                MsgBox( "After StartSession call" )
               End Sub
             -->
         </script>

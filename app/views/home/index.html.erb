@@ -86,27 +86,23 @@
         <script type="text/vbscript">
           <!--
               Sub AxVideoControlStart()
-                  MsgBox "Okay1"
+                  MsgBox "Within AxVideoControlStart"
 
                   camera_id = 1
                   address  = "201.64.223.142"
                   username = "admin"
                   password = "ibtech"
 
-                  MsgBox "Okay2"
-
                   LayoutX1 = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio=':3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /></Layout>"
 
-                  MsgBox "Okay3"
-
                   AxVideoControl.SetPaneLayout LayoutX1
-                  MsgBox "Okay4"
                   AxVideoControl.MediaStreamRender 0, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
 
-                  'StartPTZ()
+                  StartPTZ()
               End Sub
 
               Sub StartPTZ()
+                MsgBox "Within StartPTZ"
                 'Set vidPTZ = AxVideoControl.GetInterface "ADSDK.IPtz"
                 'If ( vidPTZ.StartSession ) Then
                 '    MsgBox "Okay!"

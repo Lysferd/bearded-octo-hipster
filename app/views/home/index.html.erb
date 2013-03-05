@@ -105,8 +105,8 @@
                 MsgBox "Within StartPTZ"
                 On Error Resume Next
                 Err.Clear
-                Dim recorderFactory;
-                Set recorderFactory = CreateObject("ADSDK.RecorderFactory");
+                Dim recorderFactory
+                Set recorderFactory = CreateObject("ADSDK.RecorderFactory")
                 If Err.Number <> 0 Then
                     MsgBox "Description: " &  Err.Description
                     Err.Clear

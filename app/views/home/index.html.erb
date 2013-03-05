@@ -71,6 +71,66 @@
         <br>
         <button id="select" onclick="setStyle(this.id)">Selecionar</button>
         <button id="clear" onclick="unsetStyle(this.id)">Apagar</button>
+        <script type="text/vbscript">
+          <!--
+              Sub AxVideoControlStart()
+                  arguments = Split(AxCameras.value, "|")
+                  camera_id = CDbl(arguments(0)) - 1
+                  address  = arguments(1)
+                  username = arguments(2)
+                  password = arguments(3)
+
+                  LayoutX1 = "<?xml version='1.0' encoding='utf-8' ?>" &_
+                             "<Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio=':3'>" &_
+                             "<Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' />" &_
+                             "</Layout>"
+
+                  LayoutX2 = "<?xml version='1.0' encoding='utf-8' ?>" &_
+                             "<Layout xmlns='urn:VideoLayoutSchema' Name='2x2' Rows='2' Columns='2' AspectRatio='4:3'>" &_
+                             "<Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' />" &_
+                             "<Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' />" &_
+                             "<Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' />" &_
+                             "<Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' />" &_
+                             "</Layout>"
+
+                  LayoutX3 = "<?xml version='1.0' encoding='utf-8' ?>" &_
+                             "<Layout xmlns='urn:VideoLayoutSchema' Name='3x3' Rows='3' Columns='3' AspectRatio='4:3'>" &_
+                             "<Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' />" &_
+                             "<Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' />" &_
+                             "<Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' />" &_
+                             "<Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' />" &_
+                             "<Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' />" &_
+                             "<Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' />" &_
+                             "<Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' />" &_
+                             "<Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' />" &_
+                             "<Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' />" &_
+                             "</Layout>"
+
+                  AxVideoControl.SetPaneLayout <%= case params[:grid_size].to_i
+                                                                   when 4 then
+                                                                     'LayoutX2'
+                                                                   when 9 then
+                                                                     'LayoutX3'
+                                                                   else
+                                                                     'LayoutX1'
+                                                   end %>
+                  <% for i in 0...(params[:grid_size].to_i || 1) %>
+                    camera_id = camera_id + <%= i %>
+                    AxVideoControl.MediaStreamRender <%= i %>, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
+                  <% end %>
+              End Sub
+
+              Sub CheckUri()
+                  arguments = Split(AxCameras.value, "|")
+                  camera_id = CDbl(arguments(0)) - 1
+                  address  = arguments(1)
+                  username = arguments(2)
+                  password = arguments(3)
+
+                  MsgBox "nvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
+              End Sub
+            -->
+        </script>
       </div>
     </td>
   </tr>
@@ -109,67 +169,3 @@
 </table>
 
 <br>
-
-
-
-<script type="text/vbscript">
-  <!--
-      Sub AxVideoControlStart()
-          arguments = Split(AxCameras.value, "|")
-          camera_id = CDbl(arguments(0)) - 1
-          address  = arguments(1)
-          username = arguments(2)
-          password = arguments(3)
-
-          LayoutX1 = "<?xml version='1.0' encoding='utf-8' ?>" &_
-                     "<Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio=':3'>" &_
-                     "<Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' />" &_
-                     "</Layout>"
-
-          LayoutX2 = "<?xml version='1.0' encoding='utf-8' ?>" &_
-                     "<Layout xmlns='urn:VideoLayoutSchema' Name='2x2' Rows='2' Columns='2' AspectRatio='4:3'>" &_
-                     "<Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' />" &_
-                     "<Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' />" &_
-                     "<Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' />" &_
-                     "<Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' />" &_
-                     "</Layout>"
-
-          LayoutX3 = "<?xml version='1.0' encoding='utf-8' ?>" &_
-                     "<Layout xmlns='urn:VideoLayoutSchema' Name='3x3' Rows='3' Columns='3' AspectRatio='4:3'>" &_
-                     "<Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' />" &_
-                     "<Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' />" &_
-                     "<Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' />" &_
-                     "<Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' />" &_
-                     "<Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' />" &_
-                     "<Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' />" &_
-                     "<Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' />" &_
-                     "<Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' />" &_
-                     "<Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' />" &_
-                     "</Layout>"
-
-          AxVideoControl.SetPaneLayout <%= case params[:grid_size].to_i
-                                                   when 4 then
-                                                     'LayoutX2'
-                                                   when 9 then
-                                                     'LayoutX3'
-                                                   else
-                                                     'LayoutX1'
-                                           end %>
-          <% for i in 0...(params[:grid_size].to_i || 1) %>
-            camera_id = camera_id + <%= i %>
-            AxVideoControl.MediaStreamRender <%= i %>, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
-          <% end %>
-      End Sub
-
-      Sub CheckUri()
-          arguments = Split(AxCameras.value, "|")
-          camera_id = CDbl(arguments(0)) - 1
-          address  = arguments(1)
-          username = arguments(2)
-          password = arguments(3)
-
-          MsgBox "nvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
-      End Sub
-    -->
-</script>
-</div>

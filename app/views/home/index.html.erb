@@ -1,5 +1,4 @@
 <script type="text/javascript">
-
     function generate() {
         try {
             var recorder_factory = new ActiveXObject("ADSDK.RecorderFactory");
@@ -25,6 +24,8 @@
         document.getElementById(id).parentNode.style.borderStyle = 'Solid';
         document.getElementById(id).parentNode.style.borderColor = 'black';
     }
+
+  //window.onload = generate;
 </script>
 
 <table id="home_table" border='1'>
@@ -83,8 +84,8 @@
             <a href='vs3_plugin_setup.zip'>Clique aqui</a> para instalá-lo.</p>
         </object>
         <br>
-        <!--AxVideoControlStart('1', '201.64.223.142', 'admin', 'ibtech')-->
-        <button id="select" onclick="generate()">Selecionar</button>
+        <!---->
+        <button id="select" onclick="AxVideoControlStart('1', '201.64.223.142', 'admin', 'ibtech')">Selecionar</button>
         <button id="clear" onclick="unsetStyle(this.id)">Apagar</button>
         <script type="text/vbscript">
           <!--
@@ -133,6 +134,17 @@
                     camera_id = camera_id + <%= i %>
                     AxVideoControl.MediaStreamRender <%= i %>, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
                   <% end %>
+
+                  StartPTZ()
+              End Sub
+
+              Sub StartPTZ()
+                Set vidPTZ = AxVideoControl.GetInterface "ADSDK.IPtz"
+                If ( vidPTZ.StartSession ) Then
+                    MsgBox "Okay!"
+                Else
+                    MsgBox "Oh no!"
+                End If
               End Sub
 
               Sub CheckUri()

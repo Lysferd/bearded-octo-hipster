@@ -105,7 +105,8 @@
                 MsgBox "Within StartPTZ"
                 On Error Resume Next
                 Err.Clear
-                Set vidPTZ = AxVideoControl.GetInterface("ADSDK.IRecorder")
+                'Set vidPTZ = AxVideoControl.GetInterface("ADSDK.RecorderFactory")
+                Set recorderFactory = CreateObject("ADSDK.RecorderFactory")
                 'MsgBox vidPTZ.GetRecorderName()
                 If Err.Number <> 0 Then
                     MsgBox "Description: " &  Err.Description

@@ -130,10 +130,8 @@
                                                                    else
                                                                      'LayoutX1'
                                                    end %>
-                  <% for i in 0...(params[:grid_size].to_i || 1) %>
-                    camera_id = camera_id + <%= i %>
-                    AxVideoControl.MediaStreamRender <%= i %>, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
-                  <% end %>
+                  'camera_id = camera_id + <%= i %>
+                  AxVideoControl.MediaStreamRender 0, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
 
                   StartPTZ()
               End Sub
@@ -145,16 +143,6 @@
                 Else
                     MsgBox "Oh no!"
                 End If
-              End Sub
-
-              Sub CheckUri()
-                  arguments = Split(AxCameras.value, "|")
-                  camera_id = CDbl(arguments(0)) - 1
-                  address  = arguments(1)
-                  username = arguments(2)
-                  password = arguments(3)
-
-                  MsgBox "nvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
               End Sub
             -->
         </script>

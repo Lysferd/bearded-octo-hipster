@@ -3,6 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $ ->
+  alert('teste')
   recorder_factory = new ActiveXObject("ADSDK.RecorderFactory")
   alert(recorder_factory)
   if recorder_factory

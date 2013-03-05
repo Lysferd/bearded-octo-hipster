@@ -88,10 +88,10 @@
               Sub AxVideoControlStart()
                   MsgBox "Okay1"
                   'arguments = Split(AxCameras.value, "|")
-                  camera_id = 1                 'CDbl(arguments(0)) - 1
-                  address  = "201.64.223.142"   'arguments(1)
-                  username = "admin"            'arguments(2)
-                  password = "ibtech"           'arguments(3)
+                  'camera_id = 1                 'CDbl(arguments(0)) - 1
+                  'address  = "201.64.223.142"   'arguments(1)
+                  'username = "admin"            'arguments(2)
+                  'password = "ibtech"           'arguments(3)
 
                   MsgBox "Okay2"
 
@@ -132,7 +132,7 @@
                                                                      'LayoutX1'
                                                    end %>
                   MsgBox "Okay4"
-                  AxVideoControl.MediaStreamRender 0, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
+                  'AxVideoControl.MediaStreamRender 0, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
 
                   'StartPTZ()
               End Sub

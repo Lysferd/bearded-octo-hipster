@@ -5,7 +5,7 @@ set :password, 'ibtechserver'
 set :application, 'videoserver3'
 set :repository, 'https://github.com/Lysferd/bearded-octo-hipster.git' #'git@github.com:Lysferd/bearded-octo-hipster.git'
 set :deploy_to, "/home/#{user}/#{application}"
-set :rvm_ruby_string, '2.0.0-preview1'
+set :rvm_ruby_string, '1.9.3-p392'
 
 #role :web, '201.64.223.142' # Your HTTP server, Apache/etc
 #role :app, '201.64.223.142' # This may be the same as your `Web` server

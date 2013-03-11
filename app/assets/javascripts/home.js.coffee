@@ -1,7 +1,7 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-
+###
 $ ->
   #recorder = recorder_factory.CreateVideoEdgeNvr1('201.64.223.')
 
@@ -12,7 +12,7 @@ $ ->
 
   $("#contents button#playback").click ->
     # change to playback view
-    ###
+
     // Create nvr recorder
     var recorder = recorderFactory.CreateVideoEdgeNvr1(_unitAddress.value, _userName.value, _password.value);
     if (recorder == null) {

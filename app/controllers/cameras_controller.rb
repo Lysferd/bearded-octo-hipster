@@ -58,7 +58,7 @@ class CamerasController < ApplicationController
         File.open("public/csv_file") do |f|
           f.readlines.each do |line|
             next if line.empty?
-            label, camera_id = line.split ';'
+            label, camera_id = line.split ','
             new_cameras << Camera::new(label: label, camera_id: camera_id, server_id: server_id)
             fail "Failed to create camera: #{label}" unless new_cameras.last.save
           end

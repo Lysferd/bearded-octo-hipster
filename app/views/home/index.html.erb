@@ -28,17 +28,19 @@
     <td>
       <ol class="tree">
 
-        <% @warehouse = Warehouse::all.first unless @warehouse %>
+        <% Warehouse::all.each do |warehouse| %>
 
-        <% @warehouse.servers.each do |server| %>
-            <li>
-              <label for="<%= server.id %>"><%= server.label %></label> <input type="checkbox" id="<%= server.id %>>"/>
-              <ol>
-                <% server.cameras.each do |camera| %>
-                    <li class="file" onclick="AxVideoControlStart()"><%= camera.label %></li>
-                <% end %>
-              </ol>
-            </li>
+            <% warehouse.servers.each do |server| %>
+                <li>
+                  <label for="<%= server.id %>"><%= server.label %></label>
+                  <input type="checkbox" id="<%= server.id %>>"/>
+                  <ol>
+                    <% server.cameras.each do |camera| %>
+                        <li class="file" onclick="AxVideoControlStart()"><%= camera.label %></li>
+                    <% end %>
+                  </ol>
+                </li>
+            <% end %>
         <% end %>
       </ol>
     </td>

@@ -36,7 +36,7 @@
                   <input type="checkbox" id="<%= server.id %>>"/>
                   <ol>
                     <% server.cameras.each do |camera| %>
-                        <li class="file" onclick="AxVideoControlStart()"><%= camera.label %></li>
+                        <li class="file"><a href="#" onclick="AxVideoControlStart()"><%= camera.label %></a></li>
                     <% end %>
                   </ol>
                 </li>

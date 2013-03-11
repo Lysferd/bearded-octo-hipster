@@ -9,7 +9,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
@@ -36,8 +35,9 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="18" selection-start="2491" selection-end="2491" vertical-scroll-proportion="0.75242716">
+            <state line="109" column="38" selection-start="8100" selection-end="8100" vertical-scroll-proportion="0.7330097">
               <folding>
+                <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -47,7 +47,7 @@
       <file leaf-file-name="home.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="8" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+            <state line="100" column="0" selection-start="1798" selection-end="1798" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1477,15 +1477,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+        <state line="100" column="0" selection-start="1798" selection-end="1798" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="18" selection-start="2491" selection-end="2491" vertical-scroll-proportion="0.75242716">
+        <state line="109" column="38" selection-start="8100" selection-end="8100" vertical-scroll-proportion="0.7330097">
           <folding>
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
           </folding>
         </state>

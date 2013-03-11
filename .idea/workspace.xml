@@ -44,7 +44,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="135" selection-start="4629" selection-end="4629" vertical-scroll-proportion="0.17475729">
+            <state line="97" column="67" selection-start="7564" selection-end="7564" vertical-scroll-proportion="0.44174758">
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
               </folding>
@@ -1435,7 +1435,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="135" selection-start="4629" selection-end="4629" vertical-scroll-proportion="0.17475729">
+        <state line="97" column="67" selection-start="7564" selection-end="7564" vertical-scroll-proportion="0.44174758">
           <folding>
             <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
           </folding>

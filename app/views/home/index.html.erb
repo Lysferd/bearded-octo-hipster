@@ -36,7 +36,7 @@
                   <input type="checkbox" id="<%= server.id %>>"/>
                   <ol>
                     <% server.cameras.each do |camera| %>
-                        <li class="file"><a href="#" onclick="AxVideoControlStart()"><%= camera.label %></a></li>
+                        <li class="file"><a href="#" onclick="AxVideoControlStart(<%= camera.camera_id %>)"><%= camera.label %></a></li>
                     <% end %>
                   </ol>
                 </li>
@@ -59,17 +59,19 @@
           <!--
               'Option Explicit
               'Dim layout_set = False
-              Sub AxVideoControlStart()
+              Dim index = 0
+              Sub AxVideoControlStart(id)
                   'MsgBox "Within AxVideoControlStart"
 
-                  camera_id = 23
+                  camera_id = id
                   address  = "177.0.200.3"
                   username = "admin"
                   password = "ibtech"
 
                   'If layout_set = False Then SetLayoutX1()
 
-                  AxVideoControl.MediaStreamRender 0, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
+                  AxVideoControl.MediaStreamRender index, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
+                  index = index + 1
               End Sub
 
               Sub SetLayoutX1()

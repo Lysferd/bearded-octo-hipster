@@ -1,48 +1,18 @@
-<script type="text/javascript">
-    function generate() {
-        try {
-            var recorder_factory = new ActiveXObject("ADSDK.RecorderFactory");
-            if (recorder_factory != null)
-                alert("Successfully created RecorderFactory object!");
-            else
-                alert("Error when creating RecorderFactory object!");
-        }
-        catch (e) {
-            alert(e);
-        }
-    }
-
-    function setStyle(id) {
-        //window.alert(id);
-        document.getElementById(id).parentNode.style.borderWidth = '5px';
-        document.getElementById(id).parentNode.style.borderStyle = 'Solid';
-        document.getElementById(id).parentNode.style.borderColor = 'yellow';
-    }
-
-    function unsetStyle(id) {
-        document.getElementById(id).parentNode.style.borderWidth = '5px';
-        document.getElementById(id).parentNode.style.borderStyle = 'Solid';
-        document.getElementById(id).parentNode.style.borderColor = 'black';
-    }
-
-    //window.onload = generate;
-</script>
-
-<table id="home_table" border='1'>
+<table id="home_table" border='0'>
   <tr>
     <td>
-      <button id="live">Live View</button>
-      <br>
+      <!--<button id="live" >Live View</button>
+      <br>-->
       <button id="playback">Playback</button>
     </td>
     <td>
-      <button id="grid_1">1x1</button>
+      <button id="grid_1" onclick="SetLayoutX1()">1x1</button>
     </td>
     <td>
-      <button id="grid_4">2x2</button>
+      <button id="grid_4" onclick="SetLayoutX2()">2x2</button>
     </td>
     <td>
-      <button id="grid_9">3x3</button>
+      <button id="grid_9" onclick="SetLayoutX3()">3x3</button>
     </td>
     <td>
       <button id="grid_16">4x4</button>
@@ -65,7 +35,7 @@
               <label for="<%= server.id %>"><%= server.label %></label> <input type="checkbox" id="<%= server.id %>>"/>
               <ol>
                 <% server.cameras.each do |camera| %>
-                    <li class="file"><a href="#"><%= camera.label %></a></li>
+                    <li class="file" onclick="AxVideoControlStart()"><%= camera.label %></li>
                 <% end %>
               </ol>
             </li>
@@ -93,44 +63,26 @@
                   username = "admin"
                   password = "ibtech"
 
-                  LayoutX1 = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio=':3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /></Layout>"
-
-                  AxVideoControl.SetPaneLayout LayoutX1
+                  SetLayoutX1()
                   AxVideoControl.MediaStreamRender 0, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
-
-                  'StartPTZ()
               End Sub
 
-              Sub StartPTZ()
-                MsgBox "Within StartPTZ"
-                On Error Resume Next
-                Err.Clear
-                Dim recorderFactory
-                Set recorderFactory = CreateObject("ADSDK.IRecorderFactory")
-                If Err.Number <> 0 Then
-                    MsgBox "Description: " &  Err.Description
-                    Err.Clear
-                End If
-
-                'Dim resultCode
-                'resultCode = vidPTZ.StartSession(28)
-                'MsgBox( resultCode )
-
-                'If ( tmp ) Then
-                '    MsgBox "Okay!"
-                'Else
-                '    MsgBox "Oh no!"
-                'End If
-
-                MsgBox( "After StartSession call" )
+              Sub SetLayoutX1()
+                  LayoutX1 = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio=':3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /></Layout>"
+                  AxVideoControl.SetPaneLayout LayoutX1
               End Sub
 
-              AxVideoControlStart()
+              Sub SetLayoutX2()
+                  LayoutX2 = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='2x2' Rows='2' Columns='2' AspectRatio='4:3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /></Layout>"
+                  AxVideoControl.SetPaneLayout LayoutX2
+              End Sub
+
+              Sub SetLayoutX3()
+                  LayoutX3 = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='3x3' Rows='3' Columns='3' AspectRatio='4:3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' />Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /></Layout>"
+                  AxVideoControl.SetPaneLayout LayoutX3
+              End Sub
             -->
         </script>
-        <!--<br>
-        <button id="select" onclick="AxVideoControlStart()">Selecionar</button>
-        <button id="clear" onclick="unsetStyle(this.id)">Apagar</button>-->
       </div>
     </td>
   </tr>

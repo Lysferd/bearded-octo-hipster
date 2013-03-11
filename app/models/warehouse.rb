@@ -3,6 +3,8 @@ class Warehouse < ActiveRecord::Base
   has_many :servers
 
   def element_count
+    return -1 if servers.empty?
+
     number = 0
     servers.each do |server|
       number += server.element_count

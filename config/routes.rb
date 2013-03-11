@@ -1,5 +1,8 @@
 Videoserver3::Application.routes.draw do
 
+  resources :clients
+
+
   # -=-=-=-=-
   # Define routes.
   root to: 'home#index', as: 'home'

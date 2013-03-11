@@ -11,45 +11,52 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130221120541) do
+ActiveRecord::Schema.define(:version => 20130311153126) do
 
   create_table "cameras", :force => true do |t|
-    t.string "label"
-    t.integer "camera_id"
-    t.integer "server_id"
+    t.string   "label"
+    t.integer  "camera_id"
+    t.integer  "server_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "clients", :force => true do |t|
+    t.string   "username"
+    t.binary   "data"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "exclusive_cameras", :force => true do |t|
-    t.string "label"
-    t.integer "server_id"
-    t.integer "camera_id"
+    t.string   "label"
+    t.integer  "server_id"
+    t.integer  "camera_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "servers", :force => true do |t|
-    t.string "label"
-    t.string "address"
-    t.string "username"
-    t.string "password"
-    t.integer "warehouse_id"
-    t.integer "admin_port"
-    t.integer "media_port"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "label"
+    t.string   "address"
+    t.string   "username"
+    t.string   "password"
+    t.integer  "warehouse_id"
+    t.integer  "admin_port"
+    t.integer  "media_port"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "username"
+    t.string   "password_digest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "warehouses", :force => true do |t|
-    t.string "label"
+    t.string   "label"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

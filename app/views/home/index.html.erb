@@ -2,9 +2,9 @@
 <tr>
   <td>
     <% if params[:session] == 'playback' %>
-        <%= button_to 'Playback', home_path(session: 'playback', w: params[:w], u: params[:u], token: params[:token]) %>
-    <% else %>
         <%= button_to 'Ao Vivo', home_path(session: 'live', w: params[:w], u: params[:u], token: params[:token]) %>
+    <% else %>
+        <%= button_to 'Playback', home_path(session: 'playback', w: params[:w], u: params[:u], token: params[:token]) %>
     <% end %>
   </td>
   <td>
@@ -77,7 +77,7 @@
 
                   AxVideoControl.MediaStreamRender Index, "wnvr://" & user & ":" & pass & "@" & address & "/media/" & (id-1) & "/video/0"
 
-                  If CurrentLayout = 17 || CurrentLayout = 1 Then
+                  If CurrentLayout = 17 Then
                     n = 1
                   Else
                     n = 0

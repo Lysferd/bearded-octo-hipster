@@ -1,78 +1,85 @@
 <table id="home_table" border='1'>
-  <tr>
-    <td>
-      <!--<button id="live" >Live View</button>
-      <br>-->
-      <button id="playback">Playback</button>
-    </td>
-    <td>
-      <button id="grid_1" onclick="SetLayoutX1()">1x1</button>
-    </td>
-    <td>
-      <button id="grid_4" onclick="SetLayoutX2()">2x2</button>
-    </td>
-    <td>
-      <button id="grid_9" onclick="SetLayoutX3()">3x3</button>
-    </td>
-    <td>
-      <button id="grid_16" onclick="SetLayoutX4()">4x4</button>
-    </td>
-    <td>
-      <button id="grid_2+8" onclick="SetLayoutX2p8()">2+8</button>
-    </td>
-    <td>
-      <button id="grid_1+12" onclick="SetLayoutX1p12()">1+12</button>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <div style="width: 150px; height: auto; overflow: auto;">
-        <ol class="tree">
-          <% Warehouse::all.each do |warehouse| %>
-              <% warehouse.servers.each do |server| %>
-                  <li>
-                    <label for="<%= server.id %>"><%= server.label %></label>
-                    <input type="checkbox" id="<%= server.id %>>"/>
-                    <ol>
-                      <% server.cameras.each do |camera| %>
-                          <li class="file">
-                            <a href="#" onclick="AxVideoControlStart(<%= camera.camera_id %>)"><%= camera.label %></a>
-                          </li>
-                      <% end %>
-                    </ol>
-                  </li>
-              <% end %>
-          <% end %>
-        </ol>
-      </div>
-    </td>
-    <td colspan="6" rowspan="2">
-      <div id="video_object" style='text-align: center; padding: 5px'>
-        <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
-                width='640'
-                height='480'
-                id='AxVideoControl'
-                EnableJavaScript='true'
-                codebase='ADSDK.IVideoControl'>
-          <p>Plugin American Dynamics SDK não foi encontrado.<br/>
-            <a href='vs3_plugin_setup.zip'>Clique aqui</a> para instalá-lo.</p>
-        </object>
-        <script type="text/vbscript">
-          <!--
+<tr>
+  <td>
+    <!--<button id="live" >Live View</button>
+    <br>-->
+    <button id="playback">Playback</button>
+  </td>
+  <td>
+    <button id="grid_1" onclick="SetLayoutX1()">1x1</button>
+  </td>
+  <td>
+    <button id="grid_4" onclick="SetLayoutX2()">2x2</button>
+  </td>
+  <td>
+    <button id="grid_9" onclick="SetLayoutX3()">3x3</button>
+  </td>
+  <td>
+    <button id="grid_16" onclick="SetLayoutX4()">4x4</button>
+  </td>
+  <td>
+    <button id="grid_2+8" onclick="SetLayoutX2p8()">2+8</button>
+  </td>
+  <td>
+    <button id="grid_1+12" onclick="SetLayoutX1p12()">1+12</button>
+  </td>
+</tr>
+<tr>
+  <td>
+    <div style="width: 150px; height: 480px; overflow: auto;">
+      <ol class="tree">
+        <% Warehouse::all.each do |warehouse| %>
+            <% warehouse.servers.each do |server| %>
+                <li>
+                  <label for="<%= server.id %>"><%= server.label %></label>
+                  <input type="checkbox" id="<%= server.id %>>"/>
+                  <ol>
+                    <% server.cameras.each do |camera| %>
+                        <li class="file">
+                          <a onclick='AxVideoControlStart(<%= camera.camera_id %>, "<%= server.username %>", "<%= server.password %>", "<%= server.address %>")'><%= camera.label %></a>
+                        </li>
+                    <% end %>
+                  </ol>
+                </li>
+            <% end %>
+        <% end %>
+      </ol>
+    </div>
+  </td>
+  <td colspan="6" rowspan="2">
+    <div id="video_object" style='text-align: center; padding: 5px'>
+      <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
+              width='640'
+              height='480'
+              id='AxVideoControl'
+              EnableJavaScript='true'
+              codebase='ADSDK.IVideoControl'>
+        <p>Plugin American Dynamics SDK não foi encontrado.<br/>
+          <a href='vs3_plugin_setup.zip'>Clique aqui</a> para instalá-lo.</p>
+      </object>
+      <script type="text/vbscript">
+        <!--
               Dim Index
               Dim CurrentLayout
+              Dim CurrentSession
+              Dim CurrentCameras()
               CurrentLayout = 0
+              CurrentSession = "<%= 'live' %>"
 
-              Sub AxVideoControlStart(id)
-                  camera_id = id
-                  address  = "177.0.200.3"
-                  username = "admin"
-                  password = "ibtech"
-
+              Sub AxVideoControlStart(id, user, pass, address)
                   If CurrentLayout = 0 Then SetLayoutX1()
 
-                  AxVideoControl.MediaStreamRender Index, "wnvr://" & username & ":" & password & "@" & address & "/media/" & camera_id & "/video/0"
-                  If Index < (CurrentLayout - 1) Then Index = Index + 1
+                  AxVideoControl.MediaStreamRender Index, "wnvr://" & user & ":" & pass & "@" & address & "/media/" & (id-1) & "/video/0"
+
+                  If CurrentLayout = 17 Then
+                    n = 1
+                  Else
+                    n = 0
+                  End If
+
+                  If Index < (CurrentLayout - n) Then Index = Index + 1
+                  'MsgBox "Array is " + CStr(Index-1) + ":" + CStr(id)
+                  CurrentCameras(Index-1) = id
               End Sub
 
               Sub SetLayoutX1()
@@ -80,6 +87,7 @@
                   AxVideoControl.SetPaneLayout Layout
                   Index = 0
                   CurrentLayout = 1
+                  ReDim CurrentCameras(CurrentLayout)
               End Sub
 
               Sub SetLayoutX2()
@@ -87,6 +95,7 @@
                   AxVideoControl.SetPaneLayout Layout
                   Index = 0
                   CurrentLayout = 4
+                  ReDim CurrentCameras(CurrentLayout)
               End Sub
 
               Sub SetLayoutX3()
@@ -94,6 +103,7 @@
                   AxVideoControl.SetPaneLayout Layout
                   Index = 0
                   CurrentLayout = 9
+                  ReDim CurrentCameras(CurrentLayout)
               End Sub
 
               Sub SetLayoutX4()
@@ -101,13 +111,15 @@
                   AxVideoControl.SetPaneLayout Layout
                   Index = 0
                   CurrentLayout = 16
+                  ReDim CurrentCameras(CurrentLayout)
               End Sub
 
               Sub SetLayoutX2p8()
                   Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1+8' Rows='4' Columns='4' AspectRatio='4:3'><Pane Id='0' RowSpan='2' ColumnSpan='2' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='2' ColumnSpan='2' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='3' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='0' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='1' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='2' IsMasterPane='false' /><Pane Id='9' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='3' IsMasterPane='false' /></Layout>"
                   AxVideoControl.SetPaneLayout Layout
                   Index = 0
-                  CurrentLayout = 16.5
+                  CurrentLayout = 17
+                  ReDim CurrentCameras(CurrentLayout)
               End Sub
 
               Sub SetLayoutX1p12()
@@ -115,58 +127,81 @@
                   AxVideoControl.SetPaneLayout Layout
                   Index = 0
                   CurrentLayout = 13
+                  ReDim CurrentCameras(CurrentLayout)
               End Sub
 
               Sub ResetLayout()
-                Select Case CurrentLayout
-                    Case 4     SetLayoutX2()
-                    Case 9     SetLayoutX3()
-                    Case 16    SetLayoutX4()
-                    Case 16.5  SetLayoutX2p8()
-                    Case 13    SetLayoutX1p12()
-                    Else       SetLayoutX1()
-                End Select
+                If CurrentLayout = 4 Then
+                    SetLayoutX2()
+                Elseif CurrentLayout = 9 Then
+                    SetLayoutX3()
+                Elseif CurrentLayout = 16 Then
+                    SetLayoutX4()
+                Elseif CurrentLayout = 17 Then
+                    SetLayoutX2p8()
+                Elseif CurrentLayout = 13 Then
+                    SetLayoutX1p12()
+                Else
+                    SetLayoutX1()
+                End If
               End Sub
+
+              <%#Sub SaveGrid()
+                'input = InputBox( "Favor inserir um nome para o mosaico:", "Salvar mosaico" )
+                input = "MyMosaic"
+
+                Dim CameraList
+                For i = 0 To CurrentLayout-1
+                    CameraList = CameraList + CStr(i) + "," + CStr(CurrentCameras(i)) + ";"
+                    'MsgBox CurrentCameras(i)
+                Next
+
+                'MsgBox "http://177.0.200.3:3000/?save=true&input=" + input + "&layout=" + CStr(CurrentLayout) + "&view=" + CurrentSession + "&cameras=" + CameraList
+
+
+                Response.Redirect( "http://177.0.200.3:3000/?save=true&input=" + input + "&layout=" + CStr(CurrentLayout) + "&view=" + CurrentSession + "&cameras=" + CameraList )
+
+              End Sub%>
             -->
-        </script>
-        <br>
-        <button onclick="ResetLayout()">Limpar mosaico</button>
-        <button>Salvar mosaico</button>
-      </div>
-    </td>
-  </tr>
-  <!--<tr>
-    <td>
-      <table>
-        <tr>
-          <td colspan="3">
-            <button>UP</button>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2">
-            <button>LEFT</button>
-          </td>
-          <td>
-            <button>ZOOM IN</button>
-          </td>
-          <td rowspan="2">
-            <button>RIGHT</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button>ZOOM OUT</button>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="3">
-            <button>DOWN</button>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>-->
+      </script>
+      <br>
+      <button onclick="ResetLayout()">Limpar mosaico</button>
+      <%#<button onclick="SaveGrid()">Salvar mosaico</button>%>
+    </div>
+  </td>
+</tr>
+<!--<tr>
+  <td>
+    <table>
+      <tr>
+        <td colspan="3">
+          <button>UP</button>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          <button>LEFT</button>
+        </td>
+        <td>
+          <button>ZOOM IN</button>
+        </td>
+        <td rowspan="2">
+          <button>RIGHT</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button>ZOOM OUT</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <button>DOWN</button>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>-->
 </table>
 
 <br>

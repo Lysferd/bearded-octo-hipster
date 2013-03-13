@@ -51,6 +51,14 @@
   <td colspan="6" rowspan="2">
     <div id="playback_controls" style="text-align: center;">
       <%# CALENDAR HERE %>
+      <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
+      <label>
+        Data: <input type="text" name="StartDate" value="<%= date %>"/>
+      </label>
+      <label>
+        Hora: <input type="text" name="StartTime" value="<%= time %>:00"/>
+      </label>
+      <input type="button" value="Visualizar imagens gravadas" onclick="AxVideoPlayback_Start()"/>
     </div>
 
     <div id="video_object" style='text-align: center; padding: 5px'>
@@ -65,6 +73,9 @@
       </object>
       <script type="text/vbscript">
         <!--
+              Dim Username
+              Dim Password
+              Dim Address
               Dim Index
               Dim CurrentLayout
               Dim CurrentSession
@@ -73,6 +84,9 @@
               CurrentSession = "<%= params[:session] or 'live' %>"
 
               Sub AxVideoControlStart(id, user, pass, address)
+                  Username = user
+                  Password = pass
+                  Address = address
                   If CurrentLayout = 0 Then SetLayoutX1()
 
                   AxVideoControl.MediaStreamRender Index, "wnvr://" & user & ":" & pass & "@" & address & "/media/" & (id-1) & "/video/0"
@@ -150,6 +164,23 @@
                 Else
                     SetLayoutX1()
                 End If
+              End Sub
+
+              Sub AxVideoPlayback_Start()
+                  startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
+                  Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
+
+                  If CurrentLayout = 17 Then
+                    n = 2
+                  Else
+                    n = 1
+                  End If
+
+                  For i = 0 To CurrentLayout-n
+                    streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & i & "/video/0"
+                    vidControlEx.OpenStreamEx i, streamUri, startDateTime, false, false, 10000
+                    vidControlEx = NULL
+                  End For
               End Sub
 
               <%#Sub SaveGrid()

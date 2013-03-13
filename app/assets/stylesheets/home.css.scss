@@ -25,6 +25,8 @@ li.file a {
   text-decoration: none;
   display: block;
   text-align: left;
+  cursor: hand;
+  cursor: pointer;
 }
 
 li.file a[href *= '.pdf'] {

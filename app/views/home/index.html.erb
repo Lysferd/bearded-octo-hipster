@@ -70,7 +70,7 @@
               Dim CurrentSession
               Dim CurrentCameras()
               CurrentLayout = 0
-              CurrentSession = "<%= 'live' %>"
+              CurrentSession = "<%= params[:session] or 'live' %>"
 
               Sub AxVideoControlStart(id, user, pass, address)
                   If CurrentLayout = 0 Then SetLayoutX1()

@@ -49,18 +49,19 @@
     </div>
   </td>
   <td colspan="6" rowspan="2">
-    <div id="playback_controls" style="text-align: center;">
-      <%# CALENDAR HERE %>
-      <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
-      <label>
-        Data: <input type="text" name="StartDate" value="<%= date %>"/>
-      </label>
-      <label>
-        Hora: <input type="text" name="StartTime" value="<%= time %>:00"/>
-      </label>
-      <input type="button" value="Visualizar imagens gravadas" onclick="AxVideoPlayback_Start()"/>
-    </div>
-
+    <% if params[:session] == 'playback' %>
+        <div id="playback_controls" style="text-align: center;">
+          <%# CALENDAR HERE %>
+          <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
+          <label>
+            Data: <input type="text" name="StartDate" value="<%= date %>"/>
+          </label>
+          <label>
+            Hora: <input type="text" name="StartTime" value="<%= time %>:00"/>
+          </label>
+          <input type="button" value="Visualizar imagens gravadas" onclick="AxVideoPlayback_Start()"/>
+        </div>
+    <% end %>
     <div id="video_object" style='text-align: center; padding: 5px'>
       <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
               width='640'
@@ -84,12 +85,12 @@
               CurrentSession = "<%= params[:session] or 'live' %>"
 
               Sub AxVideoControlStart(id, user, pass, address)
-                  Username = user
-                  Password = pass
-                  Address = address
+                  'Username = user
+                  'Password = pass
+                  'Address = address
                   If CurrentLayout = 0 Then SetLayoutX1()
 
-                  AxVideoControl.MediaStreamRender Index, "wnvr://" & user & ":" & pass & "@" & address & "/media/" & (id-1) & "/video/0"
+                  AxVideoControl.MediaStreamRender Index, "wnvr://" & user & ":" & pass & "@" & address & "/media/" & CStr(id-1) & "/video/0"
 
                   If CurrentLayout = 17 Then
                     n = 2
@@ -177,10 +178,10 @@
                   End If
 
                   For i = 0 To CurrentLayout-n
-                    streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & CurrentCameras(i) & "/video/0"
+                    streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(i)) & "/video/0"
                     vidControlEx.OpenStreamEx i, streamUri, startDateTime, false, false, 10000
                     vidControlEx = NULL
-                  End For
+                  Next
               End Sub
 
               <%#Sub SaveGrid()
@@ -207,38 +208,6 @@
     </div>
   </td>
 </tr>
-<!--<tr>
-  <td>
-    <table>
-      <tr>
-        <td colspan="3">
-          <button>UP</button>
-        </td>
-      </tr>
-      <tr>
-        <td rowspan="2">
-          <button>LEFT</button>
-        </td>
-        <td>
-          <button>ZOOM IN</button>
-        </td>
-        <td rowspan="2">
-          <button>RIGHT</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button>ZOOM OUT</button>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="3">
-          <button>DOWN</button>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>-->
 </table>
 
 <br>

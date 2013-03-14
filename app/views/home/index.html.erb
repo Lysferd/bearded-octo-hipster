@@ -177,11 +177,11 @@
                     n = 1
                   End If
 
-                  For i = 0 To CurrentLayout-n
-                    streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(i)) & "/video/0"
+                  'For i = 0 To CurrentLayout-n
+                    streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(0)-1) & "/video/0"
                     vidControlEx.OpenStreamEx i, streamUri, startDateTime, false, false, 10000
                     vidControlEx = NULL
-                  Next
+                  'Next
               End Sub
 
               <%#Sub SaveGrid()

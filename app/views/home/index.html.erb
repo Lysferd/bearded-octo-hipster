@@ -33,8 +33,8 @@
         <% Warehouse::all.each do |warehouse| %>
             <% warehouse.servers.each do |server| %>
                 <li>
-                  <label for="<%= server.id %>"><%= server.label %></label>
-                  <input type="checkbox" id="<%= server.id %>>"/>
+                  <%#<label for="<%= server.id >"><%= server.label ></label>
+                  <input type="checkbox" id="<%= server.id >>"/>%>
                   <ol>
                     <% server.cameras.each do |camera| %>
                         <li class="file">

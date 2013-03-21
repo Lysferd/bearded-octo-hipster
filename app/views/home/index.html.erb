@@ -83,7 +83,7 @@
                           End If
 
                           CurrentCameras(Index-1) = id+1
-                          MsgBox "Array is " + CStr(Index-1) + ":" + CStr(CurrentCameras(Index-1))
+                          'MsgBox "Array is " + CStr(Index-1) + ":" + CStr(CurrentCameras(Index-1))
                       End Sub
 
                       Sub SetLayoutX1()
@@ -163,12 +163,12 @@
                             CurrentCameras(0) = camera
                           End If
 
-                          MsgBox CStr(CurrentCameras(0))
-                          MsgBox CurrentCameras(0)
-                          MsgBox CStr(camera)
+                          'MsgBox CStr(CurrentCameras(0))
+                          'MsgBox CurrentCameras(0)
+                          'MsgBox CStr(camera)
 
-                          streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & camera & "/video/0"
-                          MsgBox streamUri
+                          streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & 0 & "/video/0"
+                          'MsgBox streamUri
                           vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
                           vidControlEx = NULL
 

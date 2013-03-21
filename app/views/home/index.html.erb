@@ -52,151 +52,153 @@
       </object>
       <script type="text/vbscript">
         <!--
-                      Dim Username
-                      Dim Password
-                      Dim Address
-                      Dim Index
-                      Dim CurrentLayout
-                      Dim CurrentSession
-                      'Dim CurrentCameras()
-                      Dim CurrentCamera
-                      CurrentLayout = 0
-                      CurrentSession = "<%= params[:session] %>"
+          Dim Username
+          Dim Password
+          Dim Address
+          Dim Index
+          Dim CurrentLayout
+          Dim CurrentSession
+          'Dim CurrentCameras()
+          Dim CurrentCamera
+          CurrentLayout = 0
+          CurrentSession = "<%= params[:session] %>"
 
-                      Sub AxVideoControlStart(id, user, pass, addr)
-                          Username = user
-                          Password = pass
-                          Address = addr
-                          If CurrentLayout = 0 Then SetLayoutX1()
+          Sub AxVideoControlStart(id, user, pass, addr)
+              Username = user
+              Password = pass
+              Address = addr
+              If CurrentLayout = 0 Then SetLayoutX1()
 
-                          AxVideoControl.MediaStreamRender Index, "wnvr://" & user & ":" & pass & "@" & addr & "/media/" & CStr(id-1) & "/video/0"
+              AxVideoControl.MediaStreamRender Index, "wnvr://" & user & ":" & pass & "@" & addr & "/media/" & CStr(id-1) & "/video/0"
 
-                          If CurrentLayout = 17 Then
-                            n = 2
-                          Else
-                            n = 1
-                          End If
+              If CurrentLayout = 17 Then
+                n = 2
+              Else
+                n = 1
+              End If
 
-                          If Index < (CurrentLayout - n) Then
-                            Index = Index + 1
-                          Else
-                            Index = 0
-                          End If
+              If Index < (CurrentLayout - n) Then
+                Index = Index + 1
+              Else
+                Index = 0
+              End If
 
-                          CurrentCamera = id
+              CurrentCamera = id
 
-                          'CurrentCameras(Index-1) = id+1
-                          'MsgBox "Array is " + CStr(Index-1) + ":" + CStr(CurrentCameras(Index-1))
-                      End Sub
+              'CurrentCameras(Index-1) = id+1
+              'MsgBox "Array is " + CStr(Index-1) + ":" + CStr(CurrentCameras(Index-1))
+          End Sub
 
-                      Sub SetLayoutX1()
-                          Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio=':3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /></Layout>"
-                          AxVideoControl.SetPaneLayout Layout
-                          Index = 0
-                          CurrentLayout = 1
-                          'ReDim CurrentCameras(CurrentLayout)
-                      End Sub
+          Sub SetLayoutX1()
+              Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio=':3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /></Layout>"
+              AxVideoControl.SetPaneLayout Layout
+              Index = 0
+              CurrentLayout = 1
+              'ReDim CurrentCameras(CurrentLayout)
+          End Sub
 
-                      Sub SetLayoutX2()
-                          Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='2x2' Rows='2' Columns='2' AspectRatio='4:3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /></Layout>"
-                          AxVideoControl.SetPaneLayout Layout
-                          Index = 0
-                          CurrentLayout = 4
-                          'ReDim CurrentCameras(CurrentLayout)
-                      End Sub
+          Sub SetLayoutX2()
+              Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='2x2' Rows='2' Columns='2' AspectRatio='4:3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /></Layout>"
+              AxVideoControl.SetPaneLayout Layout
+              Index = 0
+              CurrentLayout = 4
+              'ReDim CurrentCameras(CurrentLayout)
+          End Sub
 
-                      Sub SetLayoutX3()
-                          Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='3x3' Rows='3' Columns='3' AspectRatio='4:3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /></Layout>"
-                          AxVideoControl.SetPaneLayout Layout
-                          Index = 0
-                          CurrentLayout = 9
-                          'ReDim CurrentCameras(CurrentLayout)
-                      End Sub
+          Sub SetLayoutX3()
+              Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='3x3' Rows='3' Columns='3' AspectRatio='4:3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /></Layout>"
+              AxVideoControl.SetPaneLayout Layout
+              Index = 0
+              CurrentLayout = 9
+              'ReDim CurrentCameras(CurrentLayout)
+          End Sub
 
-                      Sub SetLayoutX4()
-                          Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='4x4' Rows='4' Columns='4' AspectRatio='4:3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='3' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='3' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='9' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='10' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /><Pane Id='11' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='3' IsMasterPane='false' /><Pane Id='12' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='0' IsMasterPane='false' /><Pane Id='13' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='1' IsMasterPane='false' /><Pane Id='14' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='2' IsMasterPane='false' /><Pane Id='15' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='3' IsMasterPane='false' /></Layout>"
-                          AxVideoControl.SetPaneLayout Layout
-                          Index = 0
-                          CurrentLayout = 16
-                          'ReDim CurrentCameras(CurrentLayout)
-                      End Sub
+          Sub SetLayoutX4()
+              Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='4x4' Rows='4' Columns='4' AspectRatio='4:3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='1' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='3' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='0' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='1' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='3' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='9' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='10' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /><Pane Id='11' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='3' IsMasterPane='false' /><Pane Id='12' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='0' IsMasterPane='false' /><Pane Id='13' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='1' IsMasterPane='false' /><Pane Id='14' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='2' IsMasterPane='false' /><Pane Id='15' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='3' IsMasterPane='false' /></Layout>"
+              AxVideoControl.SetPaneLayout Layout
+              Index = 0
+              CurrentLayout = 16
+              'ReDim CurrentCameras(CurrentLayout)
+          End Sub
 
-                      Sub SetLayoutX2p8()
-                          Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1+8' Rows='4' Columns='4' AspectRatio='4:3'><Pane Id='0' RowSpan='2' ColumnSpan='2' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='2' ColumnSpan='2' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='3' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='0' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='1' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='2' IsMasterPane='false' /><Pane Id='9' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='3' IsMasterPane='false' /></Layout>"
-                          AxVideoControl.SetPaneLayout Layout
-                          Index = 0
-                          CurrentLayout = 17
-                          'ReDim CurrentCameras(CurrentLayout)
-                      End Sub
+          Sub SetLayoutX2p8()
+              Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1+8' Rows='4' Columns='4' AspectRatio='4:3'><Pane Id='0' RowSpan='2' ColumnSpan='2' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='2' ColumnSpan='2' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='3' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='0' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='1' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='2' IsMasterPane='false' /><Pane Id='9' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='3' IsMasterPane='false' /></Layout>"
+              AxVideoControl.SetPaneLayout Layout
+              Index = 0
+              CurrentLayout = 17
+              'ReDim CurrentCameras(CurrentLayout)
+          End Sub
 
-                      Sub SetLayoutX1p12()
-                          Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1+12' Rows='4' Columns='4' AspectRatio='4:3'><Pane Id='0' RowSpan='2' ColumnSpan='2' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='3' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='3' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='3' IsMasterPane='false' /><Pane Id='9' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='0' IsMasterPane='false' /><Pane Id='10' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='1' IsMasterPane='false' /><Pane Id='11' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='2' IsMasterPane='false' /><Pane Id='12' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='3' IsMasterPane='false' /></Layout>"
-                          AxVideoControl.SetPaneLayout Layout
-                          Index = 0
-                          CurrentLayout = 13
-                          'ReDim CurrentCameras(CurrentLayout)
-                      End Sub
+          Sub SetLayoutX1p12()
+              Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1+12' Rows='4' Columns='4' AspectRatio='4:3'><Pane Id='0' RowSpan='2' ColumnSpan='2' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /><Pane Id='1' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='2' IsMasterPane='false' /><Pane Id='2' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='3' IsMasterPane='false' /><Pane Id='3' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='2' IsMasterPane='false' /><Pane Id='4' RowSpan='1' ColumnSpan='1' RowNumber='1' ColumnNumber='3' IsMasterPane='false' /><Pane Id='5' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='0' IsMasterPane='false' /><Pane Id='6' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='1' IsMasterPane='false' /><Pane Id='7' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='2' IsMasterPane='false' /><Pane Id='8' RowSpan='1' ColumnSpan='1' RowNumber='2' ColumnNumber='3' IsMasterPane='false' /><Pane Id='9' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='0' IsMasterPane='false' /><Pane Id='10' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='1' IsMasterPane='false' /><Pane Id='11' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='2' IsMasterPane='false' /><Pane Id='12' RowSpan='1' ColumnSpan='1' RowNumber='3' ColumnNumber='3' IsMasterPane='false' /></Layout>"
+              AxVideoControl.SetPaneLayout Layout
+              Index = 0
+              CurrentLayout = 13
+              'ReDim CurrentCameras(CurrentLayout)
+          End Sub
 
-                      Sub ResetLayout()
-                        If CurrentLayout = 4 Then
-                            SetLayoutX2()
-                        Elseif CurrentLayout = 9 Then
-                            SetLayoutX3()
-                        Elseif CurrentLayout = 16 Then
-                            SetLayoutX4()
-                        Elseif CurrentLayout = 17 Then
-                            SetLayoutX2p8()
-                        Elseif CurrentLayout = 13 Then
-                            SetLayoutX1p12()
-                        Else
-                            SetLayoutX1()
-                        End If
-                      End Sub
+          Sub ResetLayout()
+            If CurrentLayout = 4 Then
+                SetLayoutX2()
+            Elseif CurrentLayout = 9 Then
+                SetLayoutX3()
+            Elseif CurrentLayout = 16 Then
+                SetLayoutX4()
+            Elseif CurrentLayout = 17 Then
+                SetLayoutX2p8()
+            Elseif CurrentLayout = 13 Then
+                SetLayoutX1p12()
+            Else
+                SetLayoutX1()
+            End If
+          End Sub
 
-                      Sub AxVideoPlayback_Start()
-                          On Error Resume Next
+          Sub AxVideoPlayback_Start()
+              On Error Resume Next
 
-                          AxVideoControl.MediaStreamStopAll
-                          startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
-                          Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
+              AxVideoControl.MediaStreamStopAll
+              startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
+              Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 
-                          'If CurrentLayout <> 1 Then
-                          '  camera = CurrentCameras(0)
-                          '  SetLayoutX1()
-                          '  CurrentCameras(0) = camera
-                          'End If
+              'If CurrentLayout <> 1 Then
+              '  camera = CurrentCameras(0)
+              '  SetLayoutX1()
+              '  CurrentCameras(0) = camera
+              'End If
 
-                          MsgBox CurrentCamera
+              'MsgBox CurrentCamera
 
-                          streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCamera) & "/video/0"
-                          MsgBox streamUri
-                          vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
-                          vidControlEx = NULL
+              streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCamera-1) & "/video/0"
+              'MsgBox streamUri
+              vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
+              vidControlEx = NULL
 
-                          If Err Then
-                              MsgBox "error " & Err.Number
-                          End If
-                          On Error GoTo 0
-                      End Sub
+              If Err Then
+                  MsgBox "error " & Err.Number
+              End If
+              On Error GoTo 0
+          End Sub
 
-                      <%#Sub SaveGrid()
-                        'input = InputBox( "Favor inserir um nome para o mosaico:", "Salvar mosaico" )
-                        input = "MyMosaic"
+          <%#Sub SaveGrid()
+            'input = InputBox( "Favor inserir um nome para o mosaico:", "Salvar mosaico" )
+            input = "MyMosaic"
 
-                        Dim CameraList
-                        For i = 0 To CurrentLayout-1
-                            CameraList = CameraList + CStr(i) + "," + CStr(CurrentCameras(i)) + ";"
-                            'MsgBox CurrentCameras(i)
-                        Next
+            Dim CameraList
+            For i = 0 To CurrentLayout-1
+                CameraList = CameraList + CStr(i) + "," + CStr(CurrentCameras(i)) + ";"
+                'MsgBox CurrentCameras(i)
+            Next
 
-                        'MsgBox "http://177.0.200.3:3000/?save=true&input=" + input + "&layout=" + CStr(CurrentLayout) + "&view=" + CurrentSession + "&cameras=" + CameraList
+            'MsgBox "http://177.0.200.3:3000/?save=true&input=" + input + "&layout=" + CStr(CurrentLayout) + "&view=" + CurrentSession + "&cameras=" + CameraList
 
 
-                        Response.Redirect( "http://177.0.200.3:3000/?save=true&input=" + input + "&layout=" + CStr(CurrentLayout) + "&view=" + CurrentSession + "&cameras=" + CameraList )
+            Response.Redirect( "http://177.0.200.3:3000/?save=true&input=" + input + "&layout=" + CStr(CurrentLayout) + "&view=" + CurrentSession + "&cameras=" + CameraList )
 
-                      End Sub%>
-                    -->
+          End Sub%>
+        -->
       </script>
+      <br>
+      <button>Rewind</button> <button>Play</button> <button>Pause</button> <button>Fast forward</button>
       <br>
       <button onclick="ResetLayout()">Limpar mosaico</button>
     </div>
@@ -217,5 +219,4 @@
   </td>
 </tr>
 </table>
-
 <br>

@@ -9,6 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
@@ -35,58 +37,9 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="22" selection-start="12135" selection-end="12135" vertical-scroll-proportion="0.2184466">
+            <state line="182" column="31" selection-start="13591" selection-end="13591" vertical-scroll-proportion="0.49029127">
               <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="e#663#796#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
-                <element signature="e#13010#13846#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="playback.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="37" selection-start="1505" selection-end="1505" vertical-scroll-proportion="-12.416667">
-              <folding>
-                <marker date="1360326537000" expanded="true" signature="3:2364" placeholder="if ... end" />
-                <marker date="1360326537000" expanded="true" signature="99:182" placeholder="..." />
-                <marker date="1360326537000" expanded="true" signature="194:280" placeholder="..." />
-                <marker date="1360326537000" expanded="true" signature="292:727" placeholder="..." />
-                <marker date="1360326537000" expanded="true" signature="338:703" placeholder="..." />
-                <marker date="1360326537000" expanded="true" signature="431:685" placeholder="do ... end" />
-                <marker date="1360326537000" expanded="true" signature="481:667" placeholder="do ... end" />
-                <marker date="1360326537000" expanded="true" signature="898:1211" placeholder="..." />
-                <marker date="1360326537000" expanded="true" signature="1068:1197" placeholder="..." />
-                <marker date="1360326537000" expanded="true" signature="1245:2295" placeholder="..." />
-                <marker date="1360326537000" expanded="true" signature="1257:2279" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="44" selection-start="1219" selection-end="1219" vertical-scroll-proportion="-13.666667">
-              <folding>
-                <marker date="1363013444000" expanded="true" signature="21:1455" placeholder="..." />
-                <marker date="1363013444000" expanded="true" signature="28:275" placeholder="..." />
-                <marker date="1363013444000" expanded="true" signature="38:135" placeholder="..." />
-                <marker date="1363013444000" expanded="true" signature="61:122" placeholder="if ... end" />
-                <marker date="1363013444000" expanded="true" signature="282:1447" placeholder="..." />
-                <marker date="1363013444000" expanded="true" signature="301:1172" placeholder="..." />
-                <marker date="1363013444000" expanded="true" signature="523:651" placeholder="..." />
-                <marker date="1363013444000" expanded="true" signature="528:644" placeholder="if ... end" />
-                <marker date="1363013444000" expanded="true" signature="659:1163" placeholder="..." />
-                <marker date="1363013444000" expanded="true" signature="665:1160" placeholder="if ... end" />
-                <marker date="1363013444000" expanded="true" signature="1201:1220" placeholder="..." />
-                <marker date="1363013444000" expanded="true" signature="1221:1243" placeholder="..." />
-                <marker date="1363013444000" expanded="true" signature="1262:1438" placeholder="..." />
-                <marker date="1363013444000" expanded="true" signature="1268:1431" placeholder="..." />
+                <element signature="e#12755#13591#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,28 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="batch_new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/cameras/batch_new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="cameras_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/cameras_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="56" column="0" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="5" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,6 +86,69 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="82" selection-start="108" selection-end="116" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="0" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="batch_new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/cameras/batch_new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="44" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1363013444000" expanded="true" signature="21:1455" placeholder="..." />
+                <marker date="1363013444000" expanded="true" signature="28:275" placeholder="..." />
+                <marker date="1363013444000" expanded="true" signature="38:135" placeholder="..." />
+                <marker date="1363013444000" expanded="true" signature="61:122" placeholder="if ... end" />
+                <marker date="1363013444000" expanded="true" signature="282:1447" placeholder="..." />
+                <marker date="1363013444000" expanded="true" signature="301:1172" placeholder="..." />
+                <marker date="1363013444000" expanded="true" signature="523:651" placeholder="..." />
+                <marker date="1363013444000" expanded="true" signature="528:644" placeholder="if ... end" />
+                <marker date="1363013444000" expanded="true" signature="659:1163" placeholder="..." />
+                <marker date="1363013444000" expanded="true" signature="665:1160" placeholder="if ... end" />
+                <marker date="1363013444000" expanded="true" signature="1201:1220" placeholder="..." />
+                <marker date="1363013444000" expanded="true" signature="1221:1243" placeholder="..." />
+                <marker date="1363013444000" expanded="true" signature="1262:1438" placeholder="..." />
+                <marker date="1363013444000" expanded="true" signature="1268:1431" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playback.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="37" selection-start="1505" selection-end="1505" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1360326537000" expanded="true" signature="3:2364" placeholder="if ... end" />
+                <marker date="1360326537000" expanded="true" signature="99:182" placeholder="..." />
+                <marker date="1360326537000" expanded="true" signature="194:280" placeholder="..." />
+                <marker date="1360326537000" expanded="true" signature="292:727" placeholder="..." />
+                <marker date="1360326537000" expanded="true" signature="338:703" placeholder="..." />
+                <marker date="1360326537000" expanded="true" signature="431:685" placeholder="do ... end" />
+                <marker date="1360326537000" expanded="true" signature="481:667" placeholder="do ... end" />
+                <marker date="1360326537000" expanded="true" signature="898:1211" placeholder="..." />
+                <marker date="1360326537000" expanded="true" signature="1068:1197" placeholder="..." />
+                <marker date="1360326537000" expanded="true" signature="1245:2295" placeholder="..." />
+                <marker date="1360326537000" expanded="true" signature="1257:2279" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -206,7 +204,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1329" />
+    <option name="x" value="49" />
     <option name="y" value="24" />
     <option name="width" value="1231" />
     <option name="height" value="776" />
@@ -323,34 +321,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bearded-octo-hipster" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bearded-octo-hipster" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bearded-octo-hipster" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bearded-octo-hipster" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ControllersFolderNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -514,21 +484,49 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bearded-octo-hipster" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ControllersFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="70" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="101" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="92" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="92" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$USER_HOME$/.rvm/rubies/ruby-1.9.3-head/bin/ruby" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="148" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="823" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="148" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="856" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="823" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="100" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="94" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -541,14 +539,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="options.lastSelected" value="editor.preferences.tabs" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="last.edited.regexp" value="2012-12-13 12:30" />
-    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -824,6 +822,13 @@
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -855,13 +860,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -982,15 +980,15 @@
       <method />
     </configuration>
     <list size="9">
-      <item index="0" class="java.lang.String" itemvalue="Rails.Production: bearded-octo-hipster" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Development: bearded-octo-hipster" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="4" class="java.lang.String" itemvalue="Capistrano.deploy" />
-      <item index="5" class="java.lang.String" itemvalue="Capistrano.deploy:update" />
-      <item index="6" class="java.lang.String" itemvalue="Rake.db:create" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="8" class="java.lang.String" itemvalue="IRB console.Rails console: bearded-octo-hipster" />
+      <item index="0" class="java.lang.String" itemvalue="Capistrano.deploy" />
+      <item index="1" class="java.lang.String" itemvalue="Capistrano.deploy:update" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.db:create" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: bearded-octo-hipster" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Production: bearded-octo-hipster" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Development: bearded-octo-hipster" />
+      <item index="7" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="8" class="java.lang.String" itemvalue="Rake.spec" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1235,15 +1233,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1329" y="24" width="1231" height="776" extended-state="6" />
+    <frame x="49" y="24" width="1231" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844576" sideWeight="0.5316456" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.90909094" sideWeight="0.4970464" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299578" sideWeight="0.670088" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25364667" sideWeight="0.24340177" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23122363" sideWeight="0.542522" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23544304" sideWeight="0.542522" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2617504" sideWeight="0.43695015" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45747802" sideWeight="0.39156118" order="7" side_tool="true" content_ui="tabs" />
@@ -1254,6 +1251,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844576" sideWeight="0.5316456" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1404,7 +1402,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="44" selection-start="1219" selection-end="1219" vertical-scroll-proportion="-13.666667">
+        <state line="34" column="44" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1363013444000" expanded="true" signature="21:1455" placeholder="..." />
             <marker date="1363013444000" expanded="true" signature="28:275" placeholder="..." />
@@ -1426,7 +1424,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/playback.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="37" selection-start="1505" selection-end="1505" vertical-scroll-proportion="-12.416667">
+        <state line="38" column="37" selection-start="1505" selection-end="1505" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1360326537000" expanded="true" signature="3:2364" placeholder="if ... end" />
             <marker date="1360326537000" expanded="true" signature="99:182" placeholder="..." />
@@ -1452,20 +1450,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="5" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0">
+        <state line="99" column="0" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="22" selection-start="12135" selection-end="12135" vertical-scroll-proportion="0.2184466">
+        <state line="182" column="31" selection-start="13591" selection-end="13591" vertical-scroll-proportion="0.49029127">
           <folding>
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="e#663#796#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
-            <element signature="e#13010#13846#0" expanded="true" />
+            <element signature="e#12755#13591#0" expanded="true" />
           </folding>
         </state>
       </provider>

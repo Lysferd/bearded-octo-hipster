@@ -12,17 +12,13 @@
       <ol class="tree">
         <% Warehouse::all.each do |warehouse| %>
             <% warehouse.servers.each do |server| %>
-                <li>
-                  <%#<label for="<%= server.id >"><%= server.label ></label>
-                          <input type="checkbox" id="<%= server.id >>"/>%>
-                  <ol>
-                    <% server.cameras.each do |camera| %>
-                        <li class="file">
-                          <a onclick='AxVideoControlStart(<%= camera.camera_id %>, "<%= server.username %>", "<%= server.password %>", "<%= server.address %>")'><%= camera.label %></a>
-                        </li>
-                    <% end %>
-                  </ol>
-                </li>
+                <ol>
+                  <% server.cameras.each do |camera| %>
+                      <li class="file">
+                        <a onclick='AxVideoControlStart(<%= camera.camera_id %>, "<%= server.username %>", "<%= server.password %>", "<%= server.address %>")'><%= camera.label %></a>
+                      </li>
+                  <% end %>
+                </ol>
             <% end %>
         <% end %>
       </ol>
@@ -36,11 +32,11 @@
           <label>
             Data: <input type="text" name="StartDate" value="<%= date %>"/>
           </label>
-          <br />
+          <br/>
           <label>
             Hora: <input type="text" name="StartTime" value="<%= time %>:00"/>
           </label>
-          <br />
+          <br/>
           <input type="button" value="Visualizar" onclick="AxVideoPlayback_Start()"/>
         </div>
     <% end %>
@@ -67,9 +63,9 @@
                       CurrentSession = "<%= params[:session] %>"
 
                       Sub AxVideoControlStart(id, user, pass, address)
-                          'Username = user
-                          'Password = pass
-                          'Address = address
+                          Username = user
+                          Password = pass
+                          Address = address
                           If CurrentLayout = 0 Then SetLayoutX1()
 
                           AxVideoControl.MediaStreamRender Index, "wnvr://" & user & ":" & pass & "@" & address & "/media/" & CStr(id-1) & "/video/0"
@@ -158,17 +154,15 @@
                           startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
                           Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 
-                          If CurrentLayout = 17 Then
-                            n = 2
-                          Else
-                            n = 1
+                          If CurrentLayout <> 1 Then
+                            camera = CurrentCameras(0)
+                            SetLayoutX1()
+                            CurrentCameras(0) = camera
                           End If
 
-                          'For i = 0 To CurrentLayout-n
-                            streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(0)-1) & "/video/0"
-                            vidControlEx.OpenStreamEx i, streamUri, startDateTime, false, false, 10000
-                            vidControlEx = NULL
-                          'Next
+                          streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(0)-1) & "/video/0"
+                          vidControlEx.OpenStreamEx i, streamUri, startDateTime, false, false, 10000
+                          vidControlEx = NULL
                       End Sub
 
                       <%#Sub SaveGrid()

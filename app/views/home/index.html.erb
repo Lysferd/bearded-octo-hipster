@@ -154,6 +154,9 @@
                           On Error Resume Next
 
                           startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
+
+                          MsgBox startDateTime
+
                           Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 
                           If CurrentLayout <> 1 Then
@@ -163,7 +166,8 @@
                           End If
 
                           streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(0)-1) & "/video/0"
-                          vidControlEx.OpenStreamEx i, streamUri, startDateTime, false, false, 10000
+                          MsgBox streamUri
+                          vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
                           vidControlEx = NULL
 
                           If Err Then

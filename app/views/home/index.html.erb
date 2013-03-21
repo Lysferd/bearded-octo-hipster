@@ -153,6 +153,7 @@
 
                       Sub AxVideoPlayback_Start()
                           On Error Resume Next
+                          MsgBox Address
 
                           startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
 

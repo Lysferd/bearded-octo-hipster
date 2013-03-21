@@ -154,7 +154,7 @@
                         End If
                       End Sub
 
-                      <%#Sub AxVideoPlayback_Start()
+                      Sub AxVideoPlayback_Start()
                           startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
                           Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 

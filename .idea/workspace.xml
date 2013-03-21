@@ -35,13 +35,13 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="32" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.63106793">
+            <state line="156" column="22" selection-start="12135" selection-end="12135" vertical-scroll-proportion="0.2184466">
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="e#663#796#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
-                <element signature="e#12135#13849#0" expanded="true" />
+                <element signature="e#13010#13846#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1459,13 +1459,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="32" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.63106793">
+        <state line="156" column="22" selection-start="12135" selection-end="12135" vertical-scroll-proportion="0.2184466">
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
             <element signature="e#663#796#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
-            <element signature="e#12135#13849#0" expanded="true" />
+            <element signature="e#13010#13846#0" expanded="true" />
           </folding>
         </state>
       </provider>

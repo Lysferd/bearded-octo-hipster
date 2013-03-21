@@ -156,6 +156,7 @@
                       Sub AxVideoPlayback_Start()
                           On Error Resume Next
 
+                          AxVideoControl.MediaStreamStopAll
                           startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
                           Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 

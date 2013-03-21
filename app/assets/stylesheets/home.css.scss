@@ -92,11 +92,28 @@ li input:checked + ol > li:last-child {
   margin: 0 0 0.063em; /* 1px */
 }
 
+/* My Styles */
+
 #home_table {
   text-align: center;
   padding: 3px;
   margin: {
     left: auto;
     right: auto;
+  }
+}
+
+.side_panel {
+  position: relative;
+  width: 150px;
+  height: 480px;
+  overflow: auto;
+
+  p {
+    font-variant: small-caps;
+  }
+
+  a {
+
   }
 }

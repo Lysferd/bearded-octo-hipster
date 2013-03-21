@@ -1,4 +1,4 @@
-<table id="home_table" border='1'>
+<table id="home_table" border='2'>
 <tr>
   <td colspan="3" style="padding: 10px;">
     <%= button_to 'Ao Vivo', home_path(session: 'live', w: params[:w], u: params[:u], token: params[:token]), disabled: params[:session] == 'live' %>
@@ -6,9 +6,9 @@
   </td>
 </tr>
 <tr>
-  <td colspan="1" rowspan="6">
-    <div style="width: 150px; height: 480px; overflow: auto;">
-      Câmeras:
+  <td colspan="1" rowspan="1">
+    <div class="side_panel">
+      <p>Câmeras:</p>
       <ol class="tree">
         <% Warehouse::all.each do |warehouse| %>
             <% warehouse.servers.each do |server| %>
@@ -28,7 +28,7 @@
       </ol>
     </div>
   </td>
-  <td colspan="1" rowspan="6">
+  <td colspan="1" rowspan="1">
     <% if params[:session] == 'playback' %>
         <div id="playback_controls" style="text-align: center;">
           <%# CALENDAR HERE %>
@@ -191,33 +191,19 @@
       <button onclick="ResetLayout()">Limpar mosaico</button>
     </div>
   </td>
-  <td>
-    <button id="grid_1" onclick="SetLayoutX1()">1x1</button>
-  </td>
-</tr>
-<tr>
-  <td>
-    <button <%= 'disabled' if params[:session] == 'playback' %> id="grid_4" onclick="SetLayoutX2()">2x2</button>
-  </td>
-</tr>
-<tr>
-  <td>
-    <button <%= 'disabled' if params[:session] == 'playback' %> id="grid_9" onclick="SetLayoutX3()">3x3</button>
-  </td>
-</tr>
-<tr>
-  <td>
-    <button <%= 'disabled' if params[:session] == 'playback' %> id="grid_16" onclick="SetLayoutX4()">4x4</button>
-  </td>
-</tr>
-<tr>
-  <td>
-    <button <%= 'disabled' if params[:session] == 'playback' %> id="grid_2+8" onclick="SetLayoutX2p8()">2+8</button>
-  </td>
-</tr>
-<tr>
-  <td>
-    <button <%= 'disabled' if params[:session] == 'playback' %> id="grid_1+12" onclick="SetLayoutX1p12()">1+12</button>
+  <td class="side_panel">
+    <p>Mosaicos:</p>
+    <a id="grid_1" onclick="SetLayoutX1()"><%= image_tag '1x1.png' %></a>
+    <br><br>
+    <a id="grid_4" onclick="SetLayoutX2()"><%= image_tag '2x2.png' %></a>
+    <br><br>
+    <a id="grid_9" onclick="SetLayoutX3()"><%= image_tag '3x3.png' %></a>
+    <br><br>
+    <a id="grid_16" onclick="SetLayoutX4()"><%= image_tag '4x4.png' %></a>
+    <br><br>
+    <a id="grid_2+8" onclick="SetLayoutX2p8()"><%= image_tag '2+8.png' %></a>
+    <br><br>
+    <a id="grid_1+12" onclick="SetLayoutX1p12()"><%= image_tag '1+12.png' %></a>
   </td>
 </tr>
 </table>

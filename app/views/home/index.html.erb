@@ -58,7 +58,8 @@
                       Dim Index
                       Dim CurrentLayout
                       Dim CurrentSession
-                      Dim CurrentCameras()
+                      'Dim CurrentCameras()
+                      Dim CurrentCamera
                       CurrentLayout = 0
                       CurrentSession = "<%= params[:session] %>"
 
@@ -82,7 +83,9 @@
                             Index = 0
                           End If
 
-                          CurrentCameras(Index-1) = id+1
+                          CurrentCamera = id
+
+                          'CurrentCameras(Index-1) = id+1
                           'MsgBox "Array is " + CStr(Index-1) + ":" + CStr(CurrentCameras(Index-1))
                       End Sub
 
@@ -91,7 +94,7 @@
                           AxVideoControl.SetPaneLayout Layout
                           Index = 0
                           CurrentLayout = 1
-                          ReDim CurrentCameras(CurrentLayout)
+                          'ReDim CurrentCameras(CurrentLayout)
                       End Sub
 
                       Sub SetLayoutX2()
@@ -99,7 +102,7 @@
                           AxVideoControl.SetPaneLayout Layout
                           Index = 0
                           CurrentLayout = 4
-                          ReDim CurrentCameras(CurrentLayout)
+                          'ReDim CurrentCameras(CurrentLayout)
                       End Sub
 
                       Sub SetLayoutX3()
@@ -107,7 +110,7 @@
                           AxVideoControl.SetPaneLayout Layout
                           Index = 0
                           CurrentLayout = 9
-                          ReDim CurrentCameras(CurrentLayout)
+                          'ReDim CurrentCameras(CurrentLayout)
                       End Sub
 
                       Sub SetLayoutX4()
@@ -115,7 +118,7 @@
                           AxVideoControl.SetPaneLayout Layout
                           Index = 0
                           CurrentLayout = 16
-                          ReDim CurrentCameras(CurrentLayout)
+                          'ReDim CurrentCameras(CurrentLayout)
                       End Sub
 
                       Sub SetLayoutX2p8()
@@ -123,7 +126,7 @@
                           AxVideoControl.SetPaneLayout Layout
                           Index = 0
                           CurrentLayout = 17
-                          ReDim CurrentCameras(CurrentLayout)
+                          'ReDim CurrentCameras(CurrentLayout)
                       End Sub
 
                       Sub SetLayoutX1p12()
@@ -131,7 +134,7 @@
                           AxVideoControl.SetPaneLayout Layout
                           Index = 0
                           CurrentLayout = 13
-                          ReDim CurrentCameras(CurrentLayout)
+                          'ReDim CurrentCameras(CurrentLayout)
                       End Sub
 
                       Sub ResetLayout()
@@ -154,21 +157,18 @@
                           On Error Resume Next
 
                           startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
-
                           Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 
-                          If CurrentLayout <> 1 Then
-                            camera = CurrentCameras(0)
-                            SetLayoutX1()
-                            CurrentCameras(0) = camera
-                          End If
+                          'If CurrentLayout <> 1 Then
+                          '  camera = CurrentCameras(0)
+                          '  SetLayoutX1()
+                          '  CurrentCameras(0) = camera
+                          'End If
 
-                          'MsgBox CStr(CurrentCameras(0))
-                          'MsgBox CurrentCameras(0)
-                          'MsgBox CStr(camera)
+                          MsgBox CurrentCamera
 
-                          streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & 0 & "/video/0"
-                          'MsgBox streamUri
+                          streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCamera) & "/video/0"
+                          MsgBox streamUri
                           vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
                           vidControlEx = NULL
 

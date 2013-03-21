@@ -35,9 +35,9 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="53" selection-start="12748" selection-end="12748" vertical-scroll-proportion="0.3529412">
+            <state line="68" column="40" selection-start="2815" selection-end="2815" vertical-scroll-proportion="0.5226537">
               <folding>
-                <element signature="e#13068#13904#0" expanded="true" />
+                <element signature="e#13107#13943#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1242,7 +1242,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2617504" sideWeight="0.43695015" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45747802" sideWeight="0.39156118" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45747802" sideWeight="0.6025317" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45747802" sideWeight="0.6025317" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47947213" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1455,9 +1455,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="53" selection-start="12748" selection-end="12748" vertical-scroll-proportion="0.3529412">
+        <state line="68" column="40" selection-start="2815" selection-end="2815" vertical-scroll-proportion="0.5226537">
           <folding>
-            <element signature="e#13068#13904#0" expanded="true" />
+            <element signature="e#13107#13943#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -66,6 +66,7 @@
                           Username = user
                           Password = pass
                           Address = address
+                          MsgBox Address
                           If CurrentLayout = 0 Then SetLayoutX1()
 
                           AxVideoControl.MediaStreamRender Index, "wnvr://" & user & ":" & pass & "@" & address & "/media/" & CStr(id-1) & "/video/0"
@@ -165,7 +166,7 @@
                             CurrentCameras(0) = camera
                           End If
 
-                          streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(0)-1) & "/video/0"
+                          streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(0)) & "/video/0"
                           MsgBox streamUri
                           vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
                           vidControlEx = NULL

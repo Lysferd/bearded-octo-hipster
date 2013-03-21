@@ -30,7 +30,7 @@
           <%# CALENDAR HERE %>
           <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
           <label>
-            Data: <input type="text" name="StartDate" value="<%= date %>"/>
+            Data: <input type="text" name="StartDate" value="20130320T100000.00Z<%#= date %>"/>
           </label>
           <br/>
           <label>
@@ -157,7 +157,7 @@
               On Error Resume Next
 
               AxVideoControl.MediaStreamStopAll
-              startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
+              startDateTime = StartDate.Value 'Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
               Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 
               'If CurrentLayout <> 1 Then

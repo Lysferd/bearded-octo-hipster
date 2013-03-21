@@ -64,7 +64,7 @@
                       Dim CurrentSession
                       Dim CurrentCameras()
                       CurrentLayout = 0
-                      CurrentSession = "<%= params[:session] or 'live' %>"
+                      CurrentSession = "<%= params[:session] %>"
 
                       Sub AxVideoControlStart(id, user, pass, address)
                           'Username = user
@@ -152,7 +152,7 @@
                         End If
                       End Sub
 
-                      Sub AxVideoPlayback_Start()
+                      <%#Sub AxVideoPlayback_Start()
                           startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
                           Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 

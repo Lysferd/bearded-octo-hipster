@@ -155,29 +155,15 @@
 
           Sub AxVideoPlayback_Start()
               MsgBox "Start"
-              'On Error Resume Next
-
-              AxVideoControl.MediaStreamStopAll
+              
+              'AxVideoControl.MediaStreamStopAll
               startDateTime = StartDate.Value 'Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
               Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
-
-              'If CurrentLayout <> 1 Then
-              '  camera = CurrentCameras(0)
-              '  SetLayoutX1()
-              '  CurrentCameras(0) = camera
-              'End If
-
-              'MsgBox CurrentCamera
-
               streamUri = "wnvr://admin:ibtech@177.0.200.3/media/18/video/0"
-              'MsgBox streamUri
+
               vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
               vidControlEx = NULL
 
-              'If Err Then
-              '    MsgBox "error " & Err.Number
-              'End If
-              'On Error GoTo 0
               MsgBox "End"
           End Sub
 

@@ -166,7 +166,7 @@
                             CurrentCameras(0) = camera
                           End If
 
-                          streamUri = "nvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(0)) & "/video/0"
+                          streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(0)) & "/video/0"
                           MsgBox streamUri
                           vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
                           vidControlEx = NULL

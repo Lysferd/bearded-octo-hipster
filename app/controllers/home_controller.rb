@@ -83,11 +83,7 @@ class HomeController < ApplicationController
   end
 
   def index
-    if params[:save]
-      @save = true
-    else
-      @save = '123'
-    end
+    params[:session] ||= 'live'
   end
 
   def live

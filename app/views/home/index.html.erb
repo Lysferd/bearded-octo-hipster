@@ -30,7 +30,7 @@
           <%# CALENDAR HERE %>
           <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
           <label>
-            Data: <input type="text" name="StartDate" value="20130320T100000.00Z<%#= date %>"/>
+            Data: <input type="text" name="StartDate" value="2013032010000200<%#= date %>"/>
           </label>
           <br/>
           <label>
@@ -168,7 +168,7 @@
 
               'MsgBox CurrentCamera
 
-              streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCamera-1) & "/video/0"
+              streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & 18<%#CStr(CurrentCamera-1)%> & "/video/0"
               'MsgBox streamUri
               vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
               vidControlEx = NULL

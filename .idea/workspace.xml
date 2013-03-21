@@ -9,7 +9,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
@@ -36,9 +35,9 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="80" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.48381877">
+            <state line="32" column="77" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.26537216">
               <folding>
-                <element signature="e#11980#12696#0" expanded="true" />
+                <element signature="e#11984#12700#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1472,9 +1471,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="80" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.48381877">
+        <state line="32" column="77" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.26537216">
           <folding>
-            <element signature="e#11980#12696#0" expanded="true" />
+            <element signature="e#11984#12700#0" expanded="true" />
           </folding>
         </state>
       </provider>

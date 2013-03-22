@@ -1,0 +1,17 @@
+<div id="right_panel">
+  <h1>Câmeras</h1>
+  <!--<div style="overflow: auto; max-height: 480px;">-->
+  <ul>
+    <% Warehouse::all.each do |warehouse| %>
+        <% warehouse.servers.each do |server| %>
+            <% server.cameras.each do |camera| %>
+                <li>
+                  <a onclick='AxVideoControlStart(<%= camera.camera_id %>, "<%= server.username %>", "<%= server.password %>", "<%= server.address %>")'><%= camera.label %></a>
+                </li>
+            <% end %>
+        <% end %>
+        <% break %>
+    <% end %>
+  </ul>
+  <!--</div>-->
+</div>

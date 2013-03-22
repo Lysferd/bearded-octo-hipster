@@ -1,0 +1,13 @@
+<div id="playback_controls" style="text-align: center;">
+  <%# CALENDAR HERE %>
+  <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
+  <label>
+    Data: <input type="text" name="StartDate" value="<%= date %>"/>
+  </label>
+  <br/>
+  <label>
+    Hora: <input type="text" name="StartTime" value="<%= time %>:00"/>
+  </label>
+  <br/>
+  <input type="button" value="Visualizar" onclick="AxVideoPlayback_Start()"/>
+</div>

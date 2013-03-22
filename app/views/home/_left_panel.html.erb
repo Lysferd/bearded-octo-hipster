@@ -1,0 +1,19 @@
+<div id="left_panel">
+  <h1>Modo</h1>
+  <%= button_tag 'Monitoramento', disabled: params[:session] == 'live', style: 'width: 128px' %>
+  <%#home_path(session: 'live', w: params[:w], u: params[:u], token: params[:token]),%>
+  <%= button_to 'Reprodução de Vídeo', home_path(session: 'playback', w: params[:w], u: params[:u], token: params[:token]), disabled: params[:session] == 'playback', method: 'get' %>
+
+  <h1>Mosaicos</h1>
+  <a id="grid_1" onclick="SetLayoutX1()"><%= image_tag '1x1.png' %></a>
+  <br><br>
+  <a id="grid_4" onclick="SetLayoutX2()"><%= image_tag '2x2.png' %></a>
+  <br><br>
+  <a id="grid_9" onclick="SetLayoutX3()"><%= image_tag '3x3.png' %></a>
+  <br><br>
+  <a id="grid_16" onclick="SetLayoutX4()"><%= image_tag '4x4.png' %></a>
+  <br><br>
+  <a id="grid_2+8" onclick="SetLayoutX2p8()"><%= image_tag '2+8.png' %></a>
+  <br><br>
+  <a id="grid_1+12" onclick="SetLayoutX1p12()"><%= image_tag '1+12.png' %></a>
+</div>

@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Video Server 3
-    <% if @warehouse %>
-        : <%= @warehouse.label %>
-    <% end %>
-  </title>
+  <title>Video Server 3<%= " : #{@warehouse.label}" if @warehouse %></title>
 
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -23,6 +19,7 @@
           else
             @warehouse.label
           end %></h1>
+  <h2><%= live? ? 'Visualizando vídeo ao vivo.' : 'Visualizando vídeo armazenado.' %></h2>
 </div>
 
 <div id="contents" style="text-align: center;">
@@ -31,7 +28,7 @@
 
 <div id='footer'>
   <p><a href="mailto:fabioalmeida@ibtecnologia.com.br">Contato com o administrador</a><br/>
-    Video Server 3.8β
+    Video Server 3.20β
     &copy; 2012-2013 IB Tecnologia & Sistemas LTDA</p>
 </div>
 

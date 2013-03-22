@@ -97,3 +97,10 @@ li input:checked + ol > li:last-child {
     font-variant: small-caps;
   }
 }
+
+.button_to {
+  button {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -1,65 +1,63 @@
 <table id="home_table" border='2'>
-<tr>
-  <td colspan="3" style="padding: 10px;">
-    <%= button_to 'Ao Vivo', home_path(session: 'live', w: params[:w], u: params[:u], token: params[:token]), disabled: params[:session] == 'live' %>
-    <%= button_to 'Buscar Imagens', home_path(session: 'playback', w: params[:w], u: params[:u], token: params[:token]), disabled: params[:session] == 'playback' %>
-  </td>
-</tr>
-<tr>
-  <td colspan="1" rowspan="1">
-    <div class="side_panel">
-      <p>Câmeras:</p>
-      <ol class="tree">
-        <% Warehouse::all.each do |warehouse| %>
-            <% warehouse.servers.each do |server| %>
-                <ol>
-                  <% server.cameras.each do |camera| %>
-                      <li class="file">
-                        <a onclick='AxVideoControlStart(<%= camera.camera_id %>, "<%= server.username %>", "<%= server.password %>", "<%= server.address %>")'><%= camera.label %></a>
-                      </li>
-                  <% end %>
-                </ol>
-            <% end %>
-        <% end %>
-      </ol>
-    </div>
-  </td>
-  <td colspan="1" rowspan="1">
-    <% if params[:session] == 'playback' %>
-        <div id="playback_controls" style="text-align: center;">
-          <%# CALENDAR HERE %>
-          <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
-          <label>
-            Data: <input type="text" name="StartDate" value="2013032010000200<%#= date %>"/>
-          </label>
-          <br/>
-          <label>
-            Hora: <input type="text" name="StartTime" value="<%= time %>:00"/>
-          </label>
-          <br/>
-          <input type="button" value="Visualizar" onclick="AxVideoPlayback_Start()"/>
-        </div>
-    <% end %>
-    <div id="video_object" style='text-align: center; padding: 5px'>
-      <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
-              width='640'
-              height='480'
-              id='AxVideoControl'
-              EnableJavaScript='true'
-              codebase='ADSDK.IVideoControl'>
-        <p>Plugin American Dynamics SDK não foi encontrado.<br/>
-          <a href='vs3_plugin_setup.zip'>Clique aqui</a> para instalá-lo.</p>
-      </object>
-      <script type="text/vbscript">
-        <!--
+  <tr>
+    <td colspan="1" rowspan="1">
+      <div class="side_panel">
+        <p>Modo:</p>
+        <%= link_to 'Monitoramento', home_path(session: 'live', w: params[:w], u: params[:u], token: params[:token]), disabled: params[:session] == 'live' %>
+        <%= link_to 'Reprodução de Vídeo', home_path(session: 'playback', w: params[:w], u: params[:u], token: params[:token]), disabled: params[:session] == 'playback' %>
+      </div>
+      <div class="side_panel">
+        <p>Câmeras:</p>
+        <ol class="tree">
+          <% Warehouse::all.each do |warehouse| %>
+              <% warehouse.servers.each do |server| %>
+                  <ol>
+                    <% server.cameras.each do |camera| %>
+                        <li class="file">
+                          <a onclick='AxVideoControlStart(<%= camera.camera_id %>, "<%= server.username %>", "<%= server.password %>", "<%= server.address %>")'><%= camera.label %></a>
+                        </li>
+                    <% end %>
+                  </ol>
+              <% end %>
+          <% end %>
+        </ol>
+      </div>
+    </td>
+    <td colspan="1" rowspan="1">
+      <% if params[:session] == 'playback' %>
+          <div id="playback_controls" style="text-align: center;">
+            <%# CALENDAR HERE %>
+            <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
+            <label>
+              Data: <input type="text" name="StartDate" value="<%= date %>"/>
+            </label>
+            <br/>
+            <label>
+              Hora: <input type="text" name="StartTime" value="<%= time %>:00"/>
+            </label>
+            <br/>
+            <input type="button" value="Visualizar" onclick="AxVideoPlayback_Start()"/>
+          </div>
+      <% end %>
+      <div id="video_object" style='text-align: center; padding: 5px'>
+        <object classid='clsid:37BEA57F-131B-49C1-B6FB-6D9E78F41B19'
+                width='640'
+                height='480'
+                id='AxVideoControl'
+                EnableJavaScript='true'
+                codebase='ADSDK.IVideoControl'>
+          <p>Plugin American Dynamics SDK não foi encontrado.<br/>
+            <a href='vs3_plugin_setup.zip'>Clique aqui</a> para instalá-lo.</p>
+        </object>
+        <script type="text/vbscript">
+          <!--
           Dim Username
           Dim Password
           Dim Address
           Dim Index
           Dim CurrentLayout
           Dim CurrentSession
-          'Dim CurrentCameras()
-          Dim CurrentCamera
+          Dim CurrentCameras()
           CurrentLayout = 0
           CurrentSession = "<%= params[:session] %>"
 
@@ -69,7 +67,7 @@
               Address = addr
               If CurrentLayout = 0 Then SetLayoutX1()
 
-              AxVideoControl.MediaStreamRender Index, "wnvr://" & user & ":" & pass & "@" & addr & "/media/" & CStr(id-1) & "/video/0"
+              AxVideoControl.MediaStreamRender(Index, "wnvr://" & user & ":" & pass & "@" & addr & "/media/" & CStr(id-1) & "/video/0")
 
               If CurrentLayout = 17 Then
                 n = 2
@@ -83,9 +81,7 @@
                 Index = 0
               End If
 
-              CurrentCamera = id
-
-              'CurrentCameras(Index-1) = id+1
+              CurrentCameras(Index-1) = id
               'MsgBox "Array is " + CStr(Index-1) + ":" + CStr(CurrentCameras(Index-1))
           End Sub
 
@@ -94,7 +90,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 1
-              'ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentCameras(CurrentLayout-1)
           End Sub
 
           Sub SetLayoutX2()
@@ -102,7 +98,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 4
-              'ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentCameras(CurrentLayout-1)
           End Sub
 
           Sub SetLayoutX3()
@@ -110,7 +106,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 9
-              'ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentCameras(CurrentLayout-1)
           End Sub
 
           Sub SetLayoutX4()
@@ -118,7 +114,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 16
-              'ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentCameras(CurrentLayout-1)
           End Sub
 
           Sub SetLayoutX2p8()
@@ -126,7 +122,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 17
-              'ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentCameras(CurrentLayout-2)
           End Sub
 
           Sub SetLayoutX1p12()
@@ -134,7 +130,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 13
-              'ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentCameras(CurrentLayout-1)
           End Sub
 
           Sub ResetLayout()
@@ -155,54 +151,44 @@
 
           Sub AxVideoPlayback_Start()
             AxVideoControl.MediaStreamStopAll()
-            SetLayoutX1()
+            'SetLayoutX1()
             startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
-            streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCamera-1) &  "/video/0"
             Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
-            vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
-          End Sub
 
-          <%#Sub SaveGrid()
-            'input = InputBox( "Favor inserir um nome para o mosaico:", "Salvar mosaico" )
-            input = "MyMosaic"
-
-            Dim CameraList
-            For i = 0 To CurrentLayout-1
-                CameraList = CameraList + CStr(i) + "," + CStr(CurrentCameras(i)) + ";"
-                'MsgBox CurrentCameras(i)
+            For i = LBound(CurrentCameras) To UBound(CurrentCameras)
+                streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(i)-1) &  "/video/0"
+                vidControlEx.OpenStreamEx i, streamUri, startDateTime, false, false, 10000
             Next
 
-            'MsgBox "http://177.0.200.3:3000/?save=true&input=" + input + "&layout=" + CStr(CurrentLayout) + "&view=" + CurrentSession + "&cameras=" + CameraList
 
-
-            Response.Redirect( "http://177.0.200.3:3000/?save=true&input=" + input + "&layout=" + CStr(CurrentLayout) + "&view=" + CurrentSession + "&cameras=" + CameraList )
-
-          End Sub%>
+            vidControlEx = NULL
+          End Sub
         -->
-      </script>
+        </script>
+        <%#
       <br>
       <button>Rewind</button>
       <button>Play</button>
       <button>Pause</button>
-      <button>Fast forward</button>
-      <br>
-      <button onclick="ResetLayout()">Limpar mosaico</button>
-    </div>
-  </td>
-  <td class="side_panel">
-    <p>Mosaicos:</p>
-    <a id="grid_1" onclick="SetLayoutX1()"><%= image_tag '1x1.png' %></a>
-    <br><br>
-    <a id="grid_4" onclick="SetLayoutX2()"><%= image_tag '2x2.png' %></a>
-    <br><br>
-    <a id="grid_9" onclick="SetLayoutX3()"><%= image_tag '3x3.png' %></a>
-    <br><br>
-    <a id="grid_16" onclick="SetLayoutX4()"><%= image_tag '4x4.png' %></a>
-    <br><br>
-    <a id="grid_2+8" onclick="SetLayoutX2p8()"><%= image_tag '2+8.png' %></a>
-    <br><br>
-    <a id="grid_1+12" onclick="SetLayoutX1p12()"><%= image_tag '1+12.png' %></a>
-  </td>
-</tr>
+      <button>Fast forward</button>%>
+        <br>
+        <button onclick="ResetLayout()">Limpar mosaico</button>
+      </div>
+    </td>
+    <td class="side_panel">
+      <p>Mosaicos:</p>
+      <a id="grid_1" onclick="SetLayoutX1()"><%= image_tag '1x1.png' %></a>
+      <br><br>
+      <a id="grid_4" onclick="SetLayoutX2()"><%= image_tag '2x2.png' %></a>
+      <br><br>
+      <a id="grid_9" onclick="SetLayoutX3()"><%= image_tag '3x3.png' %></a>
+      <br><br>
+      <a id="grid_16" onclick="SetLayoutX4()"><%= image_tag '4x4.png' %></a>
+      <br><br>
+      <a id="grid_2+8" onclick="SetLayoutX2p8()"><%= image_tag '2+8.png' %></a>
+      <br><br>
+      <a id="grid_1+12" onclick="SetLayoutX1p12()"><%= image_tag '1+12.png' %></a>
+    </td>
+  </tr>
 </table>
 <br>

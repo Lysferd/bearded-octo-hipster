@@ -1,27 +1,22 @@
 <table id="home_table" border='2'>
   <tr>
-    <td colspan="1" rowspan="1">
-      <div class="side_panel">
-        <p>Modo:</p>
-        <%= link_to 'Monitoramento', home_path(session: 'live', w: params[:w], u: params[:u], token: params[:token]), disabled: params[:session] == 'live' %>
-        <%= link_to 'Reprodução de Vídeo', home_path(session: 'playback', w: params[:w], u: params[:u], token: params[:token]), disabled: params[:session] == 'playback' %>
-      </div>
-      <div class="side_panel">
-        <p>Câmeras:</p>
-        <ol class="tree">
-          <% Warehouse::all.each do |warehouse| %>
-              <% warehouse.servers.each do |server| %>
-                  <ol>
-                    <% server.cameras.each do |camera| %>
-                        <li class="file">
-                          <a onclick='AxVideoControlStart(<%= camera.camera_id %>, "<%= server.username %>", "<%= server.password %>", "<%= server.address %>")'><%= camera.label %></a>
-                        </li>
-                    <% end %>
-                  </ol>
-              <% end %>
-          <% end %>
-        </ol>
-      </div>
+    <td class="side_panel" colspan="1" rowspan="1">
+      <p>Modo</p>
+      <%= link_to 'Monitoramento', home_path(session: 'live', w: params[:w], u: params[:u], token: params[:token]), disabled: params[:session] == 'live' %>
+      <br />
+      <%= link_to 'Reprodução de Vídeo', home_path(session: 'playback', w: params[:w], u: params[:u], token: params[:token]), disabled: params[:session] == 'playback' %>
+      <p>Mosaicos</p>
+      <a id="grid_1" onclick="SetLayoutX1()"><%= image_tag '1x1.png' %></a>
+      <br><br>
+      <a id="grid_4" onclick="SetLayoutX2()"><%= image_tag '2x2.png' %></a>
+      <br><br>
+      <a id="grid_9" onclick="SetLayoutX3()"><%= image_tag '3x3.png' %></a>
+      <br><br>
+      <a id="grid_16" onclick="SetLayoutX4()"><%= image_tag '4x4.png' %></a>
+      <br><br>
+      <a id="grid_2+8" onclick="SetLayoutX2p8()"><%= image_tag '2+8.png' %></a>
+      <br><br>
+      <a id="grid_1+12" onclick="SetLayoutX1p12()"><%= image_tag '1+12.png' %></a>
     </td>
     <td colspan="1" rowspan="1">
       <% if params[:session] == 'playback' %>
@@ -172,18 +167,20 @@
       </div>
     </td>
     <td class="side_panel">
-      <p>Mosaicos:</p>
-      <a id="grid_1" onclick="SetLayoutX1()"><%= image_tag '1x1.png' %></a>
-      <br><br>
-      <a id="grid_4" onclick="SetLayoutX2()"><%= image_tag '2x2.png' %></a>
-      <br><br>
-      <a id="grid_9" onclick="SetLayoutX3()"><%= image_tag '3x3.png' %></a>
-      <br><br>
-      <a id="grid_16" onclick="SetLayoutX4()"><%= image_tag '4x4.png' %></a>
-      <br><br>
-      <a id="grid_2+8" onclick="SetLayoutX2p8()"><%= image_tag '2+8.png' %></a>
-      <br><br>
-      <a id="grid_1+12" onclick="SetLayoutX1p12()"><%= image_tag '1+12.png' %></a>
+      <p>Câmeras</p>
+      <ol class="tree">
+        <% Warehouse::all.each do |warehouse| %>
+            <% warehouse.servers.each do |server| %>
+                <ol>
+                  <% server.cameras.each do |camera| %>
+                      <li class="file">
+                        <a onclick='AxVideoControlStart(<%= camera.camera_id %>, "<%= server.username %>", "<%= server.password %>", "<%= server.address %>")'><%= camera.label %></a>
+                      </li>
+                  <% end %>
+                </ol>
+            <% end %>
+        <% end %>
+      </ol>
     </td>
   </tr>
 </table>

@@ -5,6 +5,7 @@
 // CSS Tree menu styles
 ol.tree {
   padding: 0 0 0 0px;
+  overflow: auto;
   //width: 100px;
 }
 
@@ -89,8 +90,8 @@ li input:checked + ol > li:last-child {
 
 .side_panel {
   position: relative;
-  //width: 150px;
-  //height: 480px;
+  width: 150px;
+  height: 480px;
   //overflow: auto;
 
   p {

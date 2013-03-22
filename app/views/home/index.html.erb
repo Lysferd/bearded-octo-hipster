@@ -62,14 +62,14 @@
           CurrentLayout = 0
           CurrentSession = "<%= params[:session] %>"
 
-          <Sub AxVideoControlStart(id, user, pass, addr)
+          Sub AxVideoControlStart(id, user, pass, addr)
               Username = user
               Password = pass
               Address = addr
-              
+
               If CurrentLayout = 0 Then SetLayoutX1()
 
-              'AxVideoControl.MediaStreamRender(Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(id-1) & "/video/0")
+              AxVideoControl.MediaStreamRender(Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(id-1) & "/video/0")
 
               'If CurrentLayout = 17 Then n = 2 Else n = 1 End If
               'If Index < (CurrentLayout - n) Then

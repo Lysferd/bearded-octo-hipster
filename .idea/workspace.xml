@@ -35,12 +35,12 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="14" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.4854369">
+            <state line="69" column="15" selection-start="2743" selection-end="2743" vertical-scroll-proportion="0.4368932">
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="e#4513#11650#0" expanded="true" />
-                <element signature="e#11689#11828#0" expanded="true" />
+                <element signature="e#4515#11652#0" expanded="true" />
+                <element signature="e#11691#11830#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1482,12 +1482,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="14" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.4854369">
+        <state line="69" column="15" selection-start="2743" selection-end="2743" vertical-scroll-proportion="0.4368932">
           <folding>
             <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="e#4513#11650#0" expanded="true" />
-            <element signature="e#11689#11828#0" expanded="true" />
+            <element signature="e#4515#11652#0" expanded="true" />
+            <element signature="e#11691#11830#0" expanded="true" />
           </folding>
         </state>
       </provider>

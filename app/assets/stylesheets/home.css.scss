@@ -1,10 +1,10 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$panel-base-height: 550px;
+$panel-base-height: 610px;
 
 @mixin panel-base {
-  min-width: 150px;
+  width: 150px;
   height: $panel-base-height;
   overflow: auto;
 
@@ -15,8 +15,13 @@ $panel-base-height: 550px;
       weight: bold;
     }
     border: {
-      style: solid;
-      width: 1px;
+      bottom: {
+        style: solid;
+        width: 1px;
+      }
+    }
+    padding: {
+      bottom: 10px;
     }
   }
 }
@@ -31,15 +36,22 @@ $panel-base-height: 550px;
 }
 
 #video_object {
-  width: 640px;
-  height: 480px;
-  //overflow: auto;
+  min-width: 640px;
+  min-height: 480px;
 }
 
 #left_panel {
   @include panel-base;
   position: relative;
   top: -( $panel-base-height / 2px );
+
+  #selected {
+    font-weight: bold;
+  }
+
+  button, input {
+    width: 146px;
+  }
 }
 
 #right_panel {

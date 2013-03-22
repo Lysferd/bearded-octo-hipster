@@ -35,13 +35,12 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="19" selection-start="3299" selection-end="3299" vertical-scroll-proportion="0.5825243">
+            <state line="79" column="34" selection-start="3181" selection-end="3181" vertical-scroll-proportion="0.60679615">
               <folding>
                 <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="e#2592#3299#0" expanded="true" />
-                <element signature="e#3770#11649#0" expanded="true" />
-                <element signature="e#11688#11827#0" expanded="true" />
+                <element signature="e#3764#11643#0" expanded="true" />
+                <element signature="e#11682#11821#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1483,13 +1482,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="19" selection-start="3299" selection-end="3299" vertical-scroll-proportion="0.5825243">
+        <state line="79" column="34" selection-start="3181" selection-end="3181" vertical-scroll-proportion="0.60679615">
           <folding>
             <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="e#2592#3299#0" expanded="true" />
-            <element signature="e#3770#11649#0" expanded="true" />
-            <element signature="e#11688#11827#0" expanded="true" />
+            <element signature="e#3764#11643#0" expanded="true" />
+            <element signature="e#11682#11821#0" expanded="true" />
           </folding>
         </state>
       </provider>

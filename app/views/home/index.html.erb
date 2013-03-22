@@ -62,7 +62,7 @@
           CurrentLayout = 0
           CurrentSession = "<%= params[:session] %>"
 
-          <%#Sub AxVideoControlStart(id, user, pass, addr)
+          <Sub AxVideoControlStart(id, user, pass, addr)
               Username = user
               Password = pass
               Address = addr
@@ -77,9 +77,9 @@
                 Index = 0
               End If
 
-              CurrentCameras(Index-1) = id
+              CurrentCameras(Index) = id
               'MsgBox "Array is " + CStr(Index-1) + ":" + CStr(CurrentCameras(Index-1))
-          End Sub%>
+          End Sub
 
           Sub SetLayoutX1()
               Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio=':3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /></Layout>"

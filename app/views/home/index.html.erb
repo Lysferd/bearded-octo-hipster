@@ -58,23 +58,19 @@
           Dim CurrentLayout
           Dim CurrentSession
           Dim CurrentCameras()
+
           CurrentLayout = 0
           CurrentSession = "<%= params[:session] %>"
 
-          Sub AxVideoControlStart(id, user, pass, addr)
+          <%#Sub AxVideoControlStart(id, user, pass, addr)
               Username = user
               Password = pass
               Address = addr
               If CurrentLayout = 0 Then SetLayoutX1()
 
-              AxVideoControl.MediaStreamRender(Index, "wnvr://" & user & ":" & pass & "@" & addr & "/media/" & CStr(id-1) & "/video/0")
+              AxVideoControl.MediaStreamRender(Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(id-1) & "/video/0")
 
-              If CurrentLayout = 17 Then
-                n = 2
-              Else
-                n = 1
-              End If
-
+              If CurrentLayout = 17 Then n = 2 Else n = 1 End If
               If Index < (CurrentLayout - n) Then
                 Index = Index + 1
               Else
@@ -83,7 +79,7 @@
 
               CurrentCameras(Index-1) = id
               'MsgBox "Array is " + CStr(Index-1) + ":" + CStr(CurrentCameras(Index-1))
-          End Sub
+          End Sub%>
 
           Sub SetLayoutX1()
               Layout = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio=':3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /></Layout>"

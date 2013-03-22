@@ -154,17 +154,12 @@
           End Sub
 
           Sub AxVideoPlayback_Start()
-              MsgBox "Start"
-              
-              'AxVideoControl.MediaStreamStopAll
-              startDateTime = StartDate.Value 'Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
-              Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
-              streamUri = "wnvr://admin:ibtech@177.0.200.3/media/18/video/0"
-
-              vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
-              vidControlEx = NULL
-
-              MsgBox "End"
+            AxVideoControl.MediaStreamStopAll()
+            SetLayoutX1()
+            startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
+            streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCamera-1) &  "/video/0"
+            Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
+            vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
           End Sub
 
           <%#Sub SaveGrid()
@@ -186,7 +181,10 @@
         -->
       </script>
       <br>
-      <button>Rewind</button> <button>Play</button> <button>Pause</button> <button>Fast forward</button>
+      <button>Rewind</button>
+      <button>Play</button>
+      <button>Pause</button>
+      <button>Fast forward</button>
       <br>
       <button onclick="ResetLayout()">Limpar mosaico</button>
     </div>

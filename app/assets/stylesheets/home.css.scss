@@ -89,18 +89,11 @@ li input:checked + ol > li:last-child {
 
 .side_panel {
   position: relative;
-  width: 150px;
-  height: 480px;
-  overflow: auto;
+  //width: 150px;
+  //height: 480px;
+  //overflow: auto;
 
   p {
     font-variant: small-caps;
-  }
-}
-
-.button_to {
-  button {
-    width: 100px;
-    height: 100px;
   }
 }

@@ -1,8 +1,5 @@
 Videoserver3::Application.routes.draw do
 
-  resources :clients
-
-
   # -=-=-=-=-
   # Define routes.
   root to: 'home#index', as: 'home'
@@ -32,5 +29,6 @@ Videoserver3::Application.routes.draw do
   end
   resources :exclusive_cameras
   resources :warehouses
+  resources :clients
 
 end

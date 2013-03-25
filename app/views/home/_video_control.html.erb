@@ -111,16 +111,20 @@
               End Sub
 
           Sub AxVideoPlayback_Start()
-            AxVideoControl.MediaStreamStopAll()
-            'SetLayoutX1()
-            startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
-            Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 
-            streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CurrentCameras(0)-1 & "/video/0"
-            vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
+            If UBound(CurrentCameras) > 0 Then
+                AxVideoControl.MediaStreamStopAll()
+                'SetLayoutX1()
+                startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
+                Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 
-            vidControlEx = NULL
-            MsgBox "Starting recorded video."
+                streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CurrentCameras(0)-1 & "/video/0"
+                vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
+
+                vidControlEx = NULL
+                'MsgBox "Starting recorded video."
+            Else
+                MsgBox "Nenhuma câmera foi selecionada!"
           End Sub
         -->
   </script>

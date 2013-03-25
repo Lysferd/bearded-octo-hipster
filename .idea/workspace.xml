@@ -62,7 +62,7 @@
       <file leaf-file-name="_video_control.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_video_control.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="56" selection-start="9980" selection-end="9980" vertical-scroll-proportion="0.8543689">
+            <state line="127" column="18" selection-start="9999" selection-end="9999" vertical-scroll-proportion="0.8786408">
               <folding />
             </state>
           </provider>
@@ -1485,7 +1485,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_video_control.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="56" selection-start="9980" selection-end="9980" vertical-scroll-proportion="0.8543689">
+        <state line="127" column="18" selection-start="9999" selection-end="9999" vertical-scroll-proportion="0.8786408">
           <folding />
         </state>
       </provider>

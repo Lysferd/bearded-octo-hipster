@@ -18,7 +18,8 @@
         var user = 'admin';
         var pass = 'ibtech';
         var addr = '177.0.200.3';
-        AxVideoControl.MediaStreamRender(0, "wnvr://" + user + ":" + pass + "@" + addr + "/media/0/video/0");
+        var uri = "wnvr://" + user + ":" + pass + "@" + addr + "/media/10/video/0";
+        AxVideoControl.MediaStreamRender(0, uri);
     }
 
     function PlaybackStart() {
@@ -27,7 +28,10 @@
         var addr = '177.0.200.3';
         var start_time = '2013031900000200';
         var uri = "wnvr://" + user + ":" + pass + "@" + addr + "/media/10/video/0";
+
         var playback_control = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback");
+        if (playback_control == null)
+            alert("Playback object failed.");
 
         playback_control.OpenStreamEx(0, uri, start_time, false, false, 10000);
     }

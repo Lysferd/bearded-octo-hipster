@@ -29,9 +29,9 @@
               Password = pass
               Address = addr
 
-              If CurrentLayout = 0 Then
+              'If CurrentLayout = 0 Then
                 SetLayoutX1()
-              End If
+              'End If
 
               AxVideoControl.MediaStreamRender Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(id-1) & "/video/0"
 

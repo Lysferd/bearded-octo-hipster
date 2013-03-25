@@ -10,15 +10,15 @@
                 id: playback? ? 'selected' : '' %>
 
   <h1>Mosaicos</h1>
-  <button id="grid_1" onclick="SetLayoutX1()"><%= image_tag '1x1.png' %></button>
+  <button class="grid" onclick="SetLayoutX1()"><%= image_tag '1x1.png' %></button>
   <br><br>
-  <button id="grid_4" onclick="SetLayoutX2()" <%= 'disabled' if playback? %>><%= image_tag '2x2.png' %></button>
+  <button class="grid" onclick="SetLayoutX2()" <%= 'disabled' if playback? %>><%= image_tag '2x2.png' %></button>
   <br><br>
-  <button id="grid_9" onclick="SetLayoutX3()" <%= 'disabled' if playback? %>><%= image_tag '3x3.png' %></button>
+  <button class="grid" onclick="SetLayoutX3()" <%= 'disabled' if playback? %>><%= image_tag '3x3.png' %></button>
   <br><br>
-  <button id="grid_16" onclick="SetLayoutX4()" <%= 'disabled' if playback? %>><%= image_tag '4x4.png' %></button>
+  <button class="grid" onclick="SetLayoutX4()" <%= 'disabled' if playback? %>><%= image_tag '4x4.png' %></button>
   <br><br>
-  <button id="grid_2+8" onclick="SetLayoutX2p8()" <%= 'disabled' if playback? %>><%= image_tag '2+8.png' %></button>
+  <button class="grid" onclick="SetLayoutX2p8()" <%= 'disabled' if playback? %>><%= image_tag '2+8.png' %></button>
   <br><br>
-  <button id="grid_1+12" onclick="SetLayoutX1p12()" <%= 'disabled' if playback? %>><%= image_tag '1+12.png' %></button>
+  <button class="grid" onclick="SetLayoutX1p12()" <%= 'disabled' if playback? %>><%= image_tag '1+12.png' %></button>
 </div>

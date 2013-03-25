@@ -49,8 +49,14 @@ $panel-base-height: 610px;
     font-weight: bold;
   }
 
-  button, input {
+  input {
     width: 146px;
+  }
+
+  .grid {
+    button {
+      width: 32px;
+    }
   }
 }
 

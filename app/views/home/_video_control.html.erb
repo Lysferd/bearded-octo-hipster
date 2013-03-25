@@ -108,11 +108,11 @@
             Else
                 SetLayoutX1()
             End If
-          End Sub
+              End Sub
 
           Sub AxVideoPlayback_Start()
             AxVideoControl.MediaStreamStopAll()
-            SetLayoutX1()
+            'SetLayoutX1()
             startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
             Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 

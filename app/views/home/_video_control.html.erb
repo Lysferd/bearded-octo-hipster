@@ -118,6 +118,7 @@
 
             'For i = LBound(CurrentCameras) To UBound(CurrentCameras)
                 streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(0)-1) &  "/video/0"
+                MsgBox streamUri
                 vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
             'Next
 

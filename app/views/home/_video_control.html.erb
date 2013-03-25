@@ -25,6 +25,8 @@
           CurrentSession = "<%= params[:session] %>"
 
           Sub AxVideoControlStart(id, user, pass, addr)
+              MsgBox "Starting live video."
+
               Username = user
               Password = pass
               Address = addr
@@ -108,19 +110,20 @@
             End If
           End Sub
 
-          <%#Sub AxVideoPlayback_Start()
+          Sub AxVideoPlayback_Start()
+            MsgBox "Starting recorded video."
             AxVideoControl.MediaStreamStopAll()
-            'SetLayoutX1()
+            SetLayoutX1()
             startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
             Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 
-            For i = LBound(CurrentCameras) To UBound(CurrentCameras)
-                streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(i)-1) &  "/video/0"
-                vidControlEx.OpenStreamEx i, streamUri, startDateTime, false, false, 10000
-            Next
+            'For i = LBound(CurrentCameras) To UBound(CurrentCameras)
+                streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(CurrentCameras(0)-1) &  "/video/0"
+                vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
+            'Next
 
             vidControlEx = NULL
-          End Sub%>
+          End Sub
         -->
   </script>
 </div>

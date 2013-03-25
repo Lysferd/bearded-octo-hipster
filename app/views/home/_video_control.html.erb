@@ -10,6 +10,16 @@
   </object>
   <br/>
   <button onclick="ResetLayout()">Limpar mosaico</button>
+  <button onclick="VideoControlStart()">Initialize with JavaScript</button>
+
+  <script type="text/javascript">
+    function VideoControlStart() {
+        var user = 'admin';
+        var pass = 'ibtech';
+        var addr = '177.0.200.3';
+        AxVideoControl.MediaStreamRender(0, "wnvr://" + user + ":" + pass + "@" + addr + "/media/0/video/0");
+    }
+  </script>
 
   <script type="text/vbscript">
     <!--

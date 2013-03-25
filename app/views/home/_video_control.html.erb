@@ -51,7 +51,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 1
-              ReDim CurrentCameras(CurrentLayout-1)
+              ReDim CurrentCameras(CurrentLayout)
           End Sub
 
           Sub SetLayoutX2()
@@ -59,7 +59,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 4
-              ReDim CurrentCameras(CurrentLayout-1)
+              ReDim CurrentCameras(CurrentLayout)
           End Sub
 
           Sub SetLayoutX3()
@@ -67,7 +67,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 9
-              ReDim CurrentCameras(CurrentLayout-1)
+              ReDim CurrentCameras(CurrentLayout)
           End Sub
 
           Sub SetLayoutX4()
@@ -75,7 +75,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 16
-              ReDim CurrentCameras(CurrentLayout-1)
+              ReDim CurrentCameras(CurrentLayout)
           End Sub
 
           Sub SetLayoutX2p8()
@@ -83,7 +83,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 17
-              ReDim CurrentCameras(CurrentLayout-2)
+              ReDim CurrentCameras(CurrentLayout-1)
           End Sub
 
           Sub SetLayoutX1p12()
@@ -91,7 +91,7 @@
               AxVideoControl.SetPaneLayout Layout
               Index = 0
               CurrentLayout = 13
-              ReDim CurrentCameras(CurrentLayout-1)
+              ReDim CurrentCameras(CurrentLayout)
           End Sub
 
           Sub ResetLayout()
@@ -111,7 +111,6 @@
               End Sub
 
           Sub AxVideoPlayback_Start()
-
             If UBound(CurrentCameras) > 0 Then
                 AxVideoControl.MediaStreamStopAll()
                 'SetLayoutX1()

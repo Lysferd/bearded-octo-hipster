@@ -62,7 +62,7 @@
       <file leaf-file-name="_video_control.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_video_control.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="12" selection-start="9366" selection-end="9366" vertical-scroll-proportion="0.5631068">
+            <state line="124" column="45" selection-start="9922" selection-end="9922" vertical-scroll-proportion="0.8300971">
               <folding />
             </state>
           </provider>
@@ -1018,15 +1018,15 @@
       <method />
     </configuration>
     <list size="9">
-      <item index="0" class="java.lang.String" itemvalue="Capistrano.deploy" />
-      <item index="1" class="java.lang.String" itemvalue="Capistrano.deploy:update" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.db:create" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: bearded-octo-hipster" />
-      <item index="5" class="java.lang.String" itemvalue="Rails.Production: bearded-octo-hipster" />
-      <item index="6" class="java.lang.String" itemvalue="Rails.Development: bearded-octo-hipster" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="8" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="0" class="java.lang.String" itemvalue="Rails.Production: bearded-octo-hipster" />
+      <item index="1" class="java.lang.String" itemvalue="Rails.Development: bearded-octo-hipster" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="4" class="java.lang.String" itemvalue="Capistrano.deploy" />
+      <item index="5" class="java.lang.String" itemvalue="Capistrano.deploy:update" />
+      <item index="6" class="java.lang.String" itemvalue="Rake.db:create" />
+      <item index="7" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="8" class="java.lang.String" itemvalue="IRB console.Rails console: bearded-octo-hipster" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1286,7 +1286,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299578" sideWeight="0.670088" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25364667" sideWeight="0.24340177" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2329114" sideWeight="0.542522" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2329114" sideWeight="0.542522" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2617504" sideWeight="0.43695015" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45747802" sideWeight="0.39156118" order="7" side_tool="true" content_ui="tabs" />
@@ -1485,7 +1485,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_video_control.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="12" selection-start="9366" selection-end="9366" vertical-scroll-proportion="0.5631068">
+        <state line="124" column="45" selection-start="9922" selection-end="9922" vertical-scroll-proportion="0.8300971">
           <folding />
         </state>
       </provider>

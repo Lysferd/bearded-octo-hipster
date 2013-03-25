@@ -111,7 +111,6 @@
           End Sub
 
           Sub AxVideoPlayback_Start()
-            MsgBox "Starting recorded video."
             AxVideoControl.MediaStreamStopAll()
             SetLayoutX1()
             startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
@@ -123,6 +122,7 @@
             'Next
 
             vidControlEx = NULL
+            MsgBox "Starting recorded video."
           End Sub
         -->
   </script>

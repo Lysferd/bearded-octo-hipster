@@ -1,8 +1,13 @@
-<div id="playback_controls" style="text-align: center;">
-  <%# CALENDAR HERE %>
+<div id="playback_controls">
+  <script>
+      $(function () {
+          $("#datepicker").datepicker();
+      });
+  </script>
+
   <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
   <label>
-    Data: <input type="text" name="StartDate" value="<%= date %>"/>
+    Data: <input type="text" name="StartDate" id="datepicker" value="<%= date %>"/>
   </label>
   <br/>
   <label>

@@ -909,7 +909,7 @@ body .ui-tooltip {
 ----------------------------------*/
 .ui-widget {
     font-family: Verdana, Arial, sans-serif;
-    font-size: .6em; /*1.1em;*/
+    font-size: 1.1em; /*1.1em;*/
 }
 
 .ui-widget .ui-widget {

@@ -9,8 +9,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/calendar.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/calendar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/calendar.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/calendar.css" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
@@ -61,19 +59,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calendar.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="calendar.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/calendar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="943" column="21" selection-start="18504" selection-end="18504" vertical-scroll-proportion="-133.71428">
+            <state line="911" column="18" selection-start="17888" selection-end="17888" vertical-scroll-proportion="0.25895765">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calendar.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="calendar.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/calendar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7707" column="58" selection-start="301456" selection-end="301456" vertical-scroll-proportion="0.5521173">
+            <state line="7702" column="41" selection-start="300930" selection-end="300930" vertical-scroll-proportion="-9.428572">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <marker date="1364405771000" expanded="true" signature="39499:39516" placeholder="..." />
@@ -174,8 +172,8 @@
         <option value="$PROJECT_DIR$/app/views/home/_playback_controls.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_video_control.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/calendar.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/calendar.js" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/calendar.css" />
       </list>
     </option>
   </component>
@@ -1515,13 +1513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/calendar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="943" column="21" selection-start="18504" selection-end="18504" vertical-scroll-proportion="-133.71428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_video_control.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="27" selection-start="739" selection-end="739" vertical-scroll-proportion="-10.625">
@@ -1538,7 +1529,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/calendar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7707" column="58" selection-start="301456" selection-end="301456" vertical-scroll-proportion="0.5521173">
+        <state line="7702" column="41" selection-start="300930" selection-end="300930" vertical-scroll-proportion="-9.428572">
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <marker date="1364405771000" expanded="true" signature="39499:39516" placeholder="..." />
@@ -1548,6 +1539,13 @@
             <marker date="1364405771000" expanded="true" signature="483975:484028" placeholder="..." />
             <marker date="1364405771000" expanded="true" signature="484042:484066" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/calendar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="911" column="18" selection-start="17888" selection-end="17888" vertical-scroll-proportion="0.25895765">
+          <folding />
         </state>
       </provider>
     </entry>

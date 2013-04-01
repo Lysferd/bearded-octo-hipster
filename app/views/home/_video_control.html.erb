@@ -46,8 +46,9 @@
           Dim CurrentLayout
           Dim CurrentSession
           Dim CurrentCameras()
-          Dim BREAK = False
+          Dim Brk
 
+          Brk = False
           CurrentLayout = 0
           CurrentSession = "<%= params[:session] %>"
 
@@ -63,12 +64,12 @@
               If UBound(CurrentCameras) > 0 Then
                 For i = LBound(CurrentCameras)+1 To UBound(CurrentCameras)
                     If i = id Then
-                        BREAK = True
+                        Brk = True
                     End If
                 Next
               End If
 
-              If BREAK = False Then
+              If Brk = False Then
                   AxVideoControl.MediaStreamRender Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(id-1) & "/video/0"
 
                   If CurrentLayout = 17 Then n = 2 Else n = 1 End If
@@ -79,7 +80,6 @@
                   End If
 
                   CurrentCameras(Index) = id
-                  'MsgBox "Array is " + CStr(Index-1) + ":" + CStr(CurrentCameras(Index-1))
               End If
           End Sub
 

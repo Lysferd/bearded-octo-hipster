@@ -1,13 +1,7 @@
 <div id="playback_controls">
-  <script>
-      $(function () {
-          $("#datepicker").datepicker();
-      });
-  </script>
-
   <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
   <label>
-    Data: <input type="text" name="StartDate" id="datepicker" value="<%= date %>"/>
+    Data: <input type="text" name="StartDate" id="StartDate" value="<%= date %>"/>
   </label>
   <br/>
   <label>
@@ -16,3 +10,6 @@
   <br/>
   <input type="button" value="Visualizar" onclick="AxVideoPlayback_Start()"/>
 </div>
+<script type="text/javascript">
+    calendar.set("StartDate");
+</script>

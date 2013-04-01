@@ -10,8 +10,8 @@
  * </script>
  */
 calendar = {
-    month_names:["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"],
-    weekdays:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    month_names:["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+    weekdays:["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
     month_days:[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
     //Get today's date - year, month, day and date
     today:new Date(),

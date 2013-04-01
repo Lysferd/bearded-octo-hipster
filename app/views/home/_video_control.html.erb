@@ -59,6 +59,10 @@
                 SetLayoutX1()
               End If
 
+              For i From LBound(CurrentCameras) To UBound(CurrentCameras)
+                MsgBox i == id
+              Next
+
               AxVideoControl.MediaStreamRender Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(id-1) & "/video/0"
 
               If CurrentLayout = 17 Then n = 2 Else n = 1 End If
@@ -138,8 +142,7 @@
 
           Sub AxVideoPlayback_Start()
             If UBound(CurrentCameras) > 0 Then
-                'AxVideoControl.MediaStreamStopAll()
-                'SetLayoutX1()
+                AxVideoControlStart(CurrentCameras(0), Username, Password, Address)
                 startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
                 Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 

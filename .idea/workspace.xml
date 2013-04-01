@@ -9,7 +9,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/calendar.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/calendar.js" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
@@ -90,7 +89,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="18" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+            <state line="48" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -117,7 +116,7 @@
       <file leaf-file-name="calendar.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/calendar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="50" selection-start="656" selection-end="656" vertical-scroll-proportion="0.21028037">
+            <state line="158" column="54" selection-start="6744" selection-end="6744" vertical-scroll-proportion="0.88785046">
               <folding />
             </state>
           </provider>
@@ -1443,13 +1442,6 @@
         <state line="24" column="18" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="18" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="17" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
@@ -1506,9 +1498,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/calendar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="50" selection-start="656" selection-end="656" vertical-scroll-proportion="0.21028037">
+        <state line="158" column="54" selection-start="6744" selection-end="6744" vertical-scroll-proportion="0.88785046">
           <folding />
         </state>
       </provider>

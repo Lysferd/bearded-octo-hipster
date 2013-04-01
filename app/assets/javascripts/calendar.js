@@ -156,7 +156,7 @@ calendar = {
             this.wrt("</tr>");
         }
         this.wrt("</table>");
-        this.wrt("<input type='button' value='Cancel' class='calendar-cancel' onclick='calendar.hideCalendar();' />");
+        this.wrt("<input type='button' value='Cancelar' class='calendar-cancel' onclick='calendar.hideCalendar();' />");
 
         document.getElementById(this.opt['calendar']).innerHTML = this.data.join("");
         this.data = [];

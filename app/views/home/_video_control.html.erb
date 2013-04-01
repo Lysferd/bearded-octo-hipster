@@ -60,7 +60,7 @@
               End If
 
               For i From LBound(CurrentCameras) To UBound(CurrentCameras)
-                MsgBox i == id
+                MsgBox i = id
               Next
 
               AxVideoControl.MediaStreamRender Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(id-1) & "/video/0"

@@ -63,7 +63,7 @@
 
               If UBound(CurrentCameras) > 0 Then
                 For i = LBound(CurrentCameras)+1 To UBound(CurrentCameras)
-                    If i = id Then
+                    If CurrentCameras(i) = id Then
                         Brk = True
                     End If
                 Next

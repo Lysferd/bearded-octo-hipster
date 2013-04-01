@@ -59,11 +59,11 @@
                 SetLayoutX1()
               End If
 
-              If UBound(CurrentCameras) > 0 Then
-                For i = LBound(CurrentCameras) To UBound(CurrentCameras)
-                    MsgBox i = id
-                Next
-              End If
+              'If UBound(CurrentCameras) > 0 Then
+              '  For i = LBound(CurrentCameras) To UBound(CurrentCameras)
+              '      MsgBox i = id
+              '  Next
+              'End If
 
               AxVideoControl.MediaStreamRender Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(id-1) & "/video/0"
 

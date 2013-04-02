@@ -44,7 +44,11 @@ $video-control-width: 70%;
   float: left;
 
   #selected {
-    font-weight: bold;
+    font: {
+      weight: bold;
+      height: 12px;
+      size: 10px;
+    };
   }
 
   input {

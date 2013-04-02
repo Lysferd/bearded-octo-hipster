@@ -10,11 +10,15 @@
         <label for="StartTime">Hora <em>(UTC*)</em>:</label>
         <input type="text" name="StartTime" value="<%= time %>:00"/>
       </li>
+      <li>
+        <input type="button" value="Visualizar" onclick="AxVideoPlayback_Start()"/>
+      </li>
+      <li>
+        <h6>*Horários no servidor são em UTC, que, em relação ao horário de Brasília, são +3 horas.
+          Portanto, 10:00 no horário real é visto como 13:00 no servidor.</h6>
+      </li>
     </ol>
   </fieldset>
-  <h6>*Horários no servidor são em UTC, que, em relação ao horário de Brasília, são +3 horas.
-    Portanto, 10:00 no horário real é visto como 13:00 no servidor.</h6>
-  <input type="button" value="Visualizar" onclick="AxVideoPlayback_Start()"/>
 </div>
 <script type="text/javascript">
     calendar.set("StartDate");

@@ -15,7 +15,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364911321516" ignored="false" />
     <file path="/_playback_controls.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364919583430" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364933384447" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364933529169" ignored="false" />
     <file path="/home.css.scss" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364933342986" ignored="false" />
     <file path="/application.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364927817999" ignored="false" />
     <file path="/_video_control.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364927641594" ignored="false" />
@@ -73,8 +73,12 @@
       <file leaf-file-name="home.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="14" selection-start="841" selection-end="841" vertical-scroll-proportion="0.6651376">
-              <folding />
+            <state line="106" column="4" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.18348624">
+              <folding>
+                <element signature="e#253#705#0" expanded="false" />
+                <element signature="e#719#945#0" expanded="false" />
+                <element signature="e#960#1445#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1568,8 +1572,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="14" selection-start="841" selection-end="841" vertical-scroll-proportion="0.6651376">
-          <folding />
+        <state line="106" column="4" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.18348624">
+          <folding>
+            <element signature="e#253#705#0" expanded="false" />
+            <element signature="e#719#945#0" expanded="false" />
+            <element signature="e#960#1445#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

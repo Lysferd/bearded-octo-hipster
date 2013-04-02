@@ -38,6 +38,64 @@ $panel-base-height: 610px;
 #playback_controls {
   text-align: left;
   padding-left: 5px;
+
+  fieldset {
+    border: none;
+    margin-bottom: 10px;
+
+    fieldset {
+      border: none;
+      margin: 3px 0 0;
+
+      legend {
+        padding: 0 0 5px;
+        font-weight: normal;
+      }
+
+      label {
+        display: block;
+        width: auto;
+        margin-left: 123px; /* Width plus 3 (html space) */
+      }
+    }
+
+    ol {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      padding: 5px;
+      margin: 0;
+    }
+  }
+
+  legend {
+    padding: 0 2px;
+    font-weight: bold;
+  }
+
+  label {
+    display: inline-block;
+    line-height: 1.8;
+    vertical-align: top;
+  }
+
+  em {
+    //color: #f00;
+    vertical-align: super;
+    font: {
+      size: 8px;
+      weight: bold;
+      style: normal;
+      variant: small-caps;
+    };
+  }
+
+  label {
+    width: 120px; /* Width of labels */
+  }
 }
 
 #video_object {

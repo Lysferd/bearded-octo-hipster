@@ -1,12 +1,17 @@
 <div id="playback_controls">
   <% /^(?<date>\d+-\d+-\d+)\s(?<time>\d+)/ =~ String(Time::new) %>
-  <label>
-    Data <sub>(ano/mês/dia)</sub>: <input type="text" name="StartDate" id="StartDate" value="<%= date %>"/>
-  </label>
-  <br/>
-  <label>
-    Hora <sub>(UTC*)</sub>: <input type="text" name="StartTime" value="<%= time %>:00"/>
-  </label>
+  <fieldset>
+    <ol>
+      <li>
+        <label for="StartDate">Data <em>(ano/mês/dia)</em>:</label>
+        <input type="text" name="StartDate" id="StartDate" value="<%= date %>"/>
+      </li>
+      <li>
+        <label for="StartTime">Hora <em>(UTC*)</em>:</label>
+        <input type="text" name="StartTime" value="<%= time %>:00"/>
+      </li>
+    </ol>
+  </fieldset>
   <h6>*Horários no servidor são em UTC, que, em relação ao horário de Brasília, são +3 horas.
     Portanto, 10:00 no horário real é visto como 13:00 no servidor.</h6>
   <input type="button" value="Visualizar" onclick="AxVideoPlayback_Start()"/>

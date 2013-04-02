@@ -170,8 +170,7 @@
 
           Sub Load()
             MsgBox "start load"
-            WScript.Sleep 1000
-            SetLayoutX1()
+            setTimeout(1000, SetLayoutX1(), "VBScript")
             MsgBox "end load"
           End Sub
         -->

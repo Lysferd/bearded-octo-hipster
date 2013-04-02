@@ -1,8 +1,12 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-###
-$ ->
+
+#$ ->
+  #layoutx1 = "<?xml version='1.0' encoding='utf-8' ?><Layout xmlns='urn:VideoLayoutSchema' Name='1x1' Rows='1' Columns='1' AspectRatio=':3'><Pane Id='0' RowSpan='1' ColumnSpan='1' RowNumber='0' ColumnNumber='0' IsMasterPane='true' /></Layout>"
+  #AxVideoControl.SetPaneLayout(layoutx1)
+
+  ###
   #recorder = recorder_factory.CreateVideoEdgeNvr1('201.64.223.')
 
   $("#contents button#live").click ->

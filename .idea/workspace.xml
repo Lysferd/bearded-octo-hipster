@@ -9,14 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364911321516" ignored="false" />
     <file path="/_playback_controls.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364919583430" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364933529169" ignored="false" />
-    <file path="/home.css.scss" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364933342986" ignored="false" />
+    <file path="/home.css.scss" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364934053208" ignored="false" />
     <file path="/application.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364927817999" ignored="false" />
     <file path="/_video_control.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364927641594" ignored="false" />
     <file path="/home.js.coffee" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364926861679" ignored="false" />
@@ -73,12 +72,8 @@
       <file leaf-file-name="home.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="4" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.18348624">
-              <folding>
-                <element signature="e#253#705#0" expanded="false" />
-                <element signature="e#719#945#0" expanded="false" />
-                <element signature="e#960#1445#0" expanded="false" />
-              </folding>
+            <state line="7" column="45" selection-start="300" selection-end="300" vertical-scroll-proportion="0.16055046">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1572,12 +1567,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="4" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.18348624">
-          <folding>
-            <element signature="e#253#705#0" expanded="false" />
-            <element signature="e#719#945#0" expanded="false" />
-            <element signature="e#960#1445#0" expanded="false" />
-          </folding>
+        <state line="7" column="45" selection-start="300" selection-end="300" vertical-scroll-proportion="0.16055046">
+          <folding />
         </state>
       </provider>
     </entry>

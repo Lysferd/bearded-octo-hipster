@@ -9,14 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364911321516" ignored="false" />
     <file path="/_playback_controls.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364919583430" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364931792771" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364932101932" ignored="false" />
     <file path="/home.css.scss" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364931375989" ignored="false" />
     <file path="/application.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364927817999" ignored="false" />
     <file path="/_video_control.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364927641594" ignored="false" />
@@ -82,7 +81,7 @@
       <file leaf-file-name="home.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="4" selection-start="453" selection-end="453" vertical-scroll-proportion="0.4587156">
+            <state line="3" column="22" selection-start="202" selection-end="202" vertical-scroll-proportion="0.06880734">
               <folding />
             </state>
           </provider>
@@ -1568,7 +1567,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="453" selection-end="453" vertical-scroll-proportion="0.4587156">
+        <state line="3" column="22" selection-start="202" selection-end="202" vertical-scroll-proportion="0.06880734">
           <folding />
         </state>
       </provider>

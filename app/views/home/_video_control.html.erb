@@ -153,7 +153,7 @@
               End Sub
 
           Sub AxVideoPlayback_Start()
-            If UBound(CurrentCameras) > 1 Then
+            If CurrentCameras(0) > 0 Then
                 AxVideoControl.MediaStreamRender Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CurrentCameras(0)-1 & "/video/0"
                 startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
                 Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")

@@ -153,7 +153,7 @@
               End Sub
 
           Sub AxVideoPlayback_Start()
-            If UBound(CurrentCameras) > 0 Then
+            If UBound(CurrentCameras) > 1 Then
                 AxVideoControl.MediaStreamRender Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CurrentCameras(0)-1 & "/video/0"
                 startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
                 Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
@@ -166,12 +166,6 @@
             Else
                 MsgBox "Nenhuma câmera foi selecionada!"
             End If
-          End Sub
-
-          Sub Load()
-            MsgBox "start load"
-
-            MsgBox "end load"
           End Sub
         -->
   </script>

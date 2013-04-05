@@ -9,14 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_video_control.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_video_control.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1365160928915" ignored="false" />
     <file path="/_playback_controls.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364919583430" ignored="false" />
     <file path="/home.css.scss" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364934053208" ignored="false" />
-    <file path="/application.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364927817999" ignored="false" />
+    <file path="/application.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1365163358162" ignored="false" />
     <file path="/_video_control.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1365161020349" ignored="false" />
     <file path="/home.js.coffee" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364926861679" ignored="false" />
     <file path="/application.css.scss" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364930605031" ignored="false" />
@@ -51,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_video_control.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_video_control.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/_video_control.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="50" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.7027464">
+            <state line="50" column="21" selection-start="1728" selection-end="1728" vertical-scroll-proportion="-2.5">
               <folding />
             </state>
           </provider>
@@ -78,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="52" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+            <state line="14" column="17" selection-start="553" selection-end="553" vertical-scroll-proportion="0.3322785">
               <folding />
             </state>
           </provider>
@@ -173,8 +173,8 @@
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_left_panel.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_video_control.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -1494,16 +1494,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/_video_control.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="52" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+        <state line="50" column="21" selection-start="1728" selection-end="1728" vertical-scroll-proportion="-2.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_video_control.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="50" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.7027464">
+        <state line="14" column="17" selection-start="553" selection-end="553" vertical-scroll-proportion="0.3322785">
           <folding />
         </state>
       </provider>

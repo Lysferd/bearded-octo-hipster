@@ -10,7 +10,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_video_control.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_video_control.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,7 +54,7 @@
       <file leaf-file-name="_video_control.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_video_control.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="18" selection-start="2475" selection-end="2475" vertical-scroll-proportion="0.5088853">
+            <state line="156" column="158" selection-start="10942" selection-end="10942" vertical-scroll-proportion="0.48465267">
               <folding />
             </state>
           </provider>
@@ -1504,7 +1503,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_video_control.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="18" selection-start="2475" selection-end="2475" vertical-scroll-proportion="0.5088853">
+        <state line="156" column="158" selection-start="10942" selection-end="10942" vertical-scroll-proportion="0.48465267">
           <folding />
         </state>
       </provider>

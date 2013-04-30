@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 
 class ApplicationController < ActionController::Base
-  #protect_from_forgery
+  protect_from_forgery
   before_filter :check_browser, :check_for_user, :authorize
 
   protected

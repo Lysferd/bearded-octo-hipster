@@ -7,13 +7,13 @@ set :repository, 'https://github.com/Lysferd/bearded-octo-hipster.git' #'git@git
 set :deploy_to, "/home/#{user}/#{application}"
 set :rvm_ruby_string, '1.9.3-p392'
 
-#role :web, '201.64.223.142' # Your HTTP server, Apache/etc
-#role :app, '201.64.223.142' # This may be the same as your `Web` server
-#role :db, '201.64.223.142', :primary => true # This is where Rails migrations will run
+role :web, '201.64.223.142' # Your HTTP server, Apache/etc
+role :app, '201.64.223.142' # This may be the same as your `Web` server
+role :db, '201.64.223.142' #, :primary => true # This is where Rails migrations will run
 
-role :web, '177.0.200.3' #%w( 201.64.223.142 177.0.200.3 )
-role :app, '177.0.200.3' #%w( 201.64.223.142 177.0.200.3 )
-role :db,  '177.0.200.3' #%w( 201.64.223.142 177.0.200.3 )
+#role :web, '177.0.200.3' #%w( 201.64.223.142 177.0.200.3 )
+#role :app, '177.0.200.3' #%w( 201.64.223.142 177.0.200.3 )
+#role :db,  '177.0.200.3' #%w( 201.64.223.142 177.0.200.3 )
 
 set :deploy_via, :remote_cache
 set :scm, 'git'

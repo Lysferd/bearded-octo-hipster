@@ -15,7 +15,7 @@ class HomeController < ApplicationController
       Warehouse::all.each { |warehouse| @warehouse = warehouse if /#{params[:w]}/i =~ warehouse.label }
       authenticate!(params[:u], params[:token])
     else
-      redirect_to login_path
+      #redirect_to login_path
     end
   end
 

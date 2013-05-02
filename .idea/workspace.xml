@@ -9,12 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1367497233532" ignored="false" />
+    <file path="/Dummy.txt" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1367497432324" ignored="false" />
     <file path="/_playback_controls.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364919583430" ignored="false" />
     <file path="/home.css.scss" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364934053208" ignored="false" />
     <file path="/application.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1365163358162" ignored="false" />
@@ -26,7 +27,7 @@
     <file path="/deploy.rb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1367326420755" ignored="false" />
     <file path="/home_controller.rb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1367497418168" ignored="false" />
     <file path="/new.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1367353124764" ignored="false" />
-    <file path="/application_controller.rb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1367496179439" ignored="false" />
+    <file path="/application_controller.rb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1367497649812" ignored="false" />
     <file path="/users_controller.rb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1367497397917" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="7" selection-start="613" selection-end="613" vertical-scroll-proportion="0.41530946">
+            <state line="17" column="6" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
+            <state line="4" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.09569378">
               <folding />
             </state>
           </provider>
@@ -181,9 +182,9 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
   </component>
@@ -1380,7 +1381,11 @@
       <created>1367497236604</created>
       <updated>1367497236604</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Update">
+      <created>1367497435230</created>
+      <updated>1367497435230</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1589,13 +1594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="20" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0">
@@ -1612,7 +1610,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="7" selection-start="613" selection-end="613" vertical-scroll-proportion="0.41530946">
+        <state line="17" column="6" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.09569378">
           <folding />
         </state>
       </provider>

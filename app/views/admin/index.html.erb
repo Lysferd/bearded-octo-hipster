@@ -41,18 +41,21 @@
   <% end %>
 </table>
 <br/>
+
+<!--
 <table id="admin_table" border="1" style="text-align: center;">
   <tr>
-    <th><%= link_to 'Lista de Câmeras Exclusivas', exclusive_cameras_path %></th>
+    <th><%#= link_to 'Lista de Câmeras Exclusivas', exclusive_cameras_path %></th>
   </tr>
-  <% ExclusiveCamera::all.each do |ex_camera| %>
+  <%# ExclusiveCamera::all.each do |ex_camera| %>
       <tr>
         <td>
-          <%= ex_camera.label %>
+          <%#= ex_camera.label %>
         </td>
       </tr>
-  <% end %>
+  <%# end %>
 </table>
+-->
 
 <% if User::find_by_id(session[:user_id]).username == 'Administrador' %>
     <br>

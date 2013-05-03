@@ -20,7 +20,7 @@ User::delete_all
 warehouse_id = Warehouse::create(label: 'Armazém 9-A').id
 
 server_id = Server::create(label: 'SRV-ROCHA-AZ-9A',
-                           address: '201.64.223.152',
+                           address: '201.64.223.150',
                            username: 'admin',
                            password: 'VIDEO!edge23',
                            warehouse_id: warehouse_id).id
@@ -56,17 +56,13 @@ server_id = Server::create(label: 'SRV-ROCHA-AZ-9A',
  'CF-27 CONTROLE DE ACESSO',
  'CF-28 PLACA DO PORTAO 1',
  'CM-29 SPEED DOME ARMAZEM'].each_with_index do |c, i|
-  Camera::create(label: c, camera_id: i, server_id: server_id)
+  Camera::create(label: c, camera_id: i+1, server_id: server_id)
 end
-
-User::create(username: 'Administrador',
-             password: 'ibtech',
-             password_confirmation: 'ibtech')
 
 warehouse_id = Warehouse::create(label: 'Armazém Bunge').id
 
 server_id = Server::create(label: 'SRV-ROCHA-AZBUNGE-01',
-                           address: '201.64.223.150',
+                           address: '201.64.223.151',
                            username: 'admin',
                            password: 'VIDEO!edge23',
                            warehouse_id: warehouse_id).id
@@ -111,11 +107,11 @@ server_id = Server::create(label: 'SRV-ROCHA-AZBUNGE-01',
  'CF-83 SALA DE MONITORAMENTO',
  'CF-39 VISAO PORTAO ACESSO L FERREA - BL FERROVIARIA',
  'CF-40 VISAO GERAL PATIO - LATERAL BL RODOFERROVIARIA'].each_with_index do |c, i|
-  Camera::create(label: c, camera_id: i, server_id: server_id)
+  Camera::create(label: c, camera_id: i+1, server_id: server_id)
 end
 
 server_id = Server::create(label: 'SRV-ROCHA-AZBUNGE-02',
-                           address: '201.64.223.151',
+                           address: '201.64.223.152',
                            username: 'admin',
                            password: 'VIDEO!edge23',
                            warehouse_id: warehouse_id).id
@@ -162,5 +158,9 @@ server_id = Server::create(label: 'SRV-ROCHA-AZBUNGE-02',
  'CF-80 VISAO GERAL INTERNA DO ARMAZEM',
  'CF-81 PERIMETRO AV. CORONEL JOSE LOBO 2',
  'CF-82 ACESSO PNE - GUARITA ARMAZEM'].each_with_index do |c, i|
-  Camera::create(label: c, camera_id: i, server_id: server_id)
+  Camera::create(label: c, camera_id: i+1, server_id: server_id)
 end
+
+User::create(username: 'Administrador',
+             password: 'ibtech',
+             password_confirmation: 'ibtech')

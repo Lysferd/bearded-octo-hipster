@@ -1,0 +1,12 @@
+<h3>Importando dados de <%= translate(params[:model]) %>:</h3>
+
+<%= form_tag({action: :create, controller: params[:model]+'s'}, multipart: true) do %>
+    <div class='field'>
+      <%= label_tag :csv_file, 'Arquivo CSV:' %>
+      <%= file_field_tag :csv_file %>
+    </div>
+    <div class='actions'>
+      <%= submit_tag 'Importar' %>
+      <%= submit_tag 'Cancelar', type: :button, onclick: 'back();' %>
+    </div>
+<% end %>

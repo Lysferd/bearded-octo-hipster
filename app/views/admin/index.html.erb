@@ -1,6 +1,10 @@
 <table id="admin_table" border="1" style="text-align: center;">
   <tr>
-    <th><%= link_to 'Lista de Armazéns', warehouses_path %></th>
+    <th><%= link_to 'Lista de Armazéns', warehouses_path %>
+      <br/>
+      <%= link_to 'Importar', import_path(model: :warehouse) %>
+      <%= link_to 'Exportar', export_path(model: :warehouse) %>
+    </th>
     <th><%= link_to 'Lista de Servidores', servers_path %></th>
     <th><%= link_to 'Lista de Câmeras', cameras_path %></th>
   </tr>

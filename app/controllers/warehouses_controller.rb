@@ -1,3 +1,5 @@
+# Encoding: UTF-8
+
 class WarehousesController < ApplicationController
   # GET /warehouses
   # GET /warehouses.json
@@ -41,15 +43,23 @@ class WarehousesController < ApplicationController
   # POST /warehouses
   # POST /warehouses.json
   def create
-    @warehouse = Warehouse.new(params[:warehouse])
+    if params[:csv_file]
+      import_data(:warehouse)
+      @warehouses = Warehouse::all
+      respond_to do |format|
+        format.html { redirect_to admin_path, notice: 'Warehouses successfully created.' }
+      end
+    else
+      @warehouse = Warehouse.new(params[:warehouse])
 
-    respond_to do |format|
-      if @warehouse.save
-        format.html { render action: :index, notice: 'Warehouse was successfully created.' }
-        format.json { render json: @warehouse, status: :created, location: @warehouse }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @warehouse.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @warehouse.save
+          format.html { render action: :index, notice: 'Armazém criado com sucesso.' }
+          format.json { render json: @warehouse, status: :created, location: @warehouse }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @warehouse.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -61,10 +71,10 @@ class WarehousesController < ApplicationController
 
     respond_to do |format|
       if @warehouse.update_attributes(params[:warehouse])
-        format.html { redirect_to @warehouse, notice: 'Warehouse was successfully updated.' }
+        format.html { redirect_to @warehouse, notice: 'Armazém modificado com sucesso.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: 'edit' }
         format.json { render json: @warehouse.errors, status: :unprocessable_entity }
       end
     end
@@ -80,5 +90,9 @@ class WarehousesController < ApplicationController
       format.html { redirect_to warehouses_url }
       format.json { head :no_content }
     end
+  end
+
+  def export
+    export_data(:warehouse)
   end
 end

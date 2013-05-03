@@ -1,14 +1,17 @@
-Videoserver3::Application.routes.draw do
+VideoServer3::Application.routes.draw do
 
   # -=-=-=-=-
   # Define routes.
   root to: 'home#index', as: 'home'
+
   get 'index' => 'home#index'
   get 'live' => 'home#live'
   get 'playback' => 'home#playback'
   get 'error_406' => 'home#error_406'
   get 'error_401' => 'home#error_401'
   get 'admin' => 'admin#index'
+  get 'import' => 'admin#import'
+  get 'export' => 'admin#export'
 
   controller :sessions do
     get 'login' => :new
@@ -28,7 +31,9 @@ Videoserver3::Application.routes.draw do
     get :batch_new, on: :collection
   end
   resources :exclusive_cameras
-  resources :warehouses
+  resources :warehouses do
+    post :export, on: :collection
+  end
   resources :clients
 
 end

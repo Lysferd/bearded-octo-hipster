@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Videoserver3::Application.load_tasks
+VideoServer3::Application.load_tasks

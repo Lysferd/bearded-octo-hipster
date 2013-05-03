@@ -22,7 +22,7 @@ warehouse_id = Warehouse::create(label: 'Armazém 9-A').id
 server_id = Server::create(label: 'SRV-ROCHA-AZ-9A',
                            address: '201.64.223.150',
                            username: 'admin',
-                           password: 'VIDEO!edge23',
+                           password: 'ibtech',
                            warehouse_id: warehouse_id).id
 
 ['CF-01 SALA MONITORAMENTO',
@@ -113,7 +113,7 @@ end
 server_id = Server::create(label: 'SRV-ROCHA-AZBUNGE-02',
                            address: '201.64.223.152',
                            username: 'admin',
-                           password: 'VIDEO!edge23',
+                           password: 'ibtech',
                            warehouse_id: warehouse_id).id
 
 ['CM-41 SPD DOME VISAO GERAL - PORTOES LINHA FERREA',

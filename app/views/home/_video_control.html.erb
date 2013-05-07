@@ -47,6 +47,8 @@
 
               If Brk = False Then
                   AxVideoControl.MediaStreamRender Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(id-1) & "/video/0"
+                  AxVideoControl.SetOverlayProperties(0)
+                  AxVideoControl.SetOverlayDateTimeType(OverlayDateTimeType_RecorderTime)
 
                   If CurrentLayout = 17 Then n = 2 Else n = 1 End If
                   If Index < (CurrentLayout - n) Then

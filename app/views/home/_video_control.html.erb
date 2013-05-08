@@ -19,6 +19,7 @@
           Dim CurrentLayout
           Dim CurrentSession
           Dim CurrentCameras()
+          Dim CurrentServers()
           Dim Brk
 
           Brk = False
@@ -36,7 +37,7 @@
 
               If UBound(CurrentCameras) > 0 Then
                 For i = LBound(CurrentCameras)+1 To UBound(CurrentCameras)
-                    If CurrentCameras(i) = id Then
+                    If CurrentCameras(i) = id And CurrentServers(i) = Address Then
                         Brk = True
                         Exit For
                     Else
@@ -64,6 +65,7 @@
                   End If
 
                   CurrentCameras(Index) = id
+                  CurrentServers(Index) = Address
               Else
                 MsgBox "A câmera selecionada já está sendo visualizada no mosaico."
               End If
@@ -75,6 +77,7 @@
               Index = 0
               CurrentLayout = 1
               ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentServers(CurrentLayout)
           End Sub
 
           Sub SetLayoutX2()
@@ -83,6 +86,7 @@
               Index = 0
               CurrentLayout = 4
               ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentServers(CurrentLayout)
           End Sub
 
           Sub SetLayoutX3()
@@ -91,6 +95,7 @@
               Index = 0
               CurrentLayout = 9
               ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentServers(CurrentLayout)
           End Sub
 
           Sub SetLayoutX4()
@@ -99,6 +104,7 @@
               Index = 0
               CurrentLayout = 16
               ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentServers(CurrentLayout)
           End Sub
 
           Sub SetLayoutX2p8()
@@ -107,6 +113,7 @@
               Index = 0
               CurrentLayout = 17
               ReDim CurrentCameras(CurrentLayout-1)
+              ReDim CurrentServers(CurrentLayout-1)
           End Sub
 
           Sub SetLayoutX1p12()
@@ -115,6 +122,7 @@
               Index = 0
               CurrentLayout = 13
               ReDim CurrentCameras(CurrentLayout)
+              ReDim CurrentServers(CurrentLayout)
           End Sub
 
           Sub ResetLayout()
@@ -160,19 +168,6 @@
             Else
                 MsgBox "Nenhuma câmera foi selecionada!"
             End If
-          End Sub
-
-          Sub Reverse( ByRef myArray )
-            Dim i, j, idxLast, idxHalf, strHolder
-
-            idxLast = UBound( myArray )
-            idxHalf = Int( idxLast / 2 )
-
-            For i = 0 To idxHalf
-                strHolder              = myArray( i )
-                myArray( i )           = myArray( idxLast - i )
-                myArray( idxLast - i ) = strHolder
-            Next
           End Sub
         -->
   </script>

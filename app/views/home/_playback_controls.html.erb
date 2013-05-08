@@ -3,8 +3,8 @@
   <fieldset>
     <ol>
       <li>
-        <label for="StartDate">Data <em>(ano / mês / dia)</em>:</label>
-        <input type="text" name="StartDate" id="StartDate" value="<%= date %>"/>
+        <label for="StartDate">Data:</label>
+        <input type="text" name="StartDate" id="StartDate" value="<%= date.split('-').reverse.join('-') %>"/>
       </li>
       <li>
         <label for="StartTime">Hora:</label>
@@ -13,10 +13,6 @@
       <li>
         <input type="button" value="Visualizar" onclick="AxVideoPlayback_Start()"/>
       </li>
-      <!--<li>
-        <h6>*Horários no servidor são em UTC, que, em relação ao horário de Brasília, são +3 horas.
-          Portanto, 10:00 no horário real é visto como 13:00 no servidor.</h6>
-      </li>-->
     </ol>
   </fieldset>
 </div>

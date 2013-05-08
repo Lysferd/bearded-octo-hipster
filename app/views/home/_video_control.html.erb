@@ -47,8 +47,14 @@
 
               If Brk = False Then
                   AxVideoControl.MediaStreamRender Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CStr(id-1) & "/video/0"
-                  'AxVideoControl.SetOverlayProperties(0)
-                  'AxVideoControl.SetOverlayDateTimeType OverlayDateTimeType_RecorderTime
+                  Set overlay = AxVideoControl.GetInterface("ADSDK.IOverlay")
+                  If CurrentLayout < 8 Then
+                    overlay.SetOverlayProperties(2+4+8+128)
+                  Else
+                    overlay.SetOverlayProperties(2)
+                  End If
+                  overlay.SetOverlayDateTimeType OverlayDateTimeType_RecorderTime
+                  overlay = NULL
 
                   If CurrentLayout = 17 Then n = 2 Else n = 1 End If
                   If Index < (CurrentLayout - n) Then
@@ -130,17 +136,43 @@
           Sub AxVideoPlayback_Start()
             If CurrentCameras(0) > 0 Then
                 AxVideoControl.MediaStreamRender Index, "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CurrentCameras(0)-1 & "/video/0"
-                startDateTime = Replace(StartDate.Value, "-", "") & Replace(StartTime.Value, ":", "") & "0200"
+
+                d1 = Split(StartDate.Value, "-")
+                Dim d2(2)
+                d2(0) = d1(2)
+                d2(1) = d1(1)
+                d2(2) = d1(0)
+                dt = Join(d2, "")
+
+                t1 = Split(StartTime.Value, ":")
+                Dim t2(1)
+                t2(0) = CInt(t1(0)) + 3
+                t2(1) = t1(1)
+                tt = Join(t2, "")
+
+                startDateTime = Replace(dt, "-", "") & Replace(tt, ":", "") & "0200"
                 Set vidControlEx = AxVideoControl.GetInterface("ADSDK.IStreamingPlayback")
 
                 streamUri = "wnvr://" & Username & ":" & Password & "@" & Address & "/media/" & CurrentCameras(0)-1 & "/video/0"
                 vidControlEx.OpenStreamEx 0, streamUri, startDateTime, false, false, 10000
 
                 vidControlEx = NULL
-                'MsgBox "Starting recorded video."
             Else
                 MsgBox "Nenhuma câmera foi selecionada!"
             End If
+          End Sub
+
+          Sub Reverse( ByRef myArray )
+            Dim i, j, idxLast, idxHalf, strHolder
+
+            idxLast = UBound( myArray )
+            idxHalf = Int( idxLast / 2 )
+
+            For i = 0 To idxHalf
+                strHolder              = myArray( i )
+                myArray( i )           = myArray( idxLast - i )
+                myArray( idxLast - i ) = strHolder
+            Next
           End Sub
         -->
   </script>

@@ -10,22 +10,22 @@
  * </script>
  */
 calendar = {
-    month_names:["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
-    weekdays:["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
-    month_days:[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+    month_names: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+    weekdays: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
+    month_days: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
     //Get today's date - year, month, day and date
-    today:new Date(),
-    opt:{},
-    data:[],
+    today: new Date(),
+    opt: {},
+    data: [],
 
     //Functions
     /// Used to create HTML in a optimized way.
-    wrt:function (txt) {
+    wrt: function (txt) {
         this.data.push(txt);
     },
 
     /* Inspired by http://www.quirksmode.org/dom/getstyles.html */
-    getStyle:function (ele, property) {
+    getStyle: function (ele, property) {
         if (ele.currentStyle) {
             var alt_property_name = property.replace(/\-(\w)/g, function (m, c) {
                 return c.toUpperCase();
@@ -44,7 +44,7 @@ calendar = {
         else if (property == "height" && isNaN(value)) value = ele.clientHeight || ele.offsetHeight;
         return value;
     },
-    getPosition:function (ele) {
+    getPosition: function (ele) {
         var x = 0;
         var y = 0;
         while (ele) {
@@ -61,13 +61,13 @@ calendar = {
         return xy;
     },
     /// Called when the user clicks on a date in the calendar.
-    selectDate:function (year, month, day) {
+    selectDate: function (year, month, day) {
         var ths = _calendar_active_instance;
-        document.getElementById(ths.opt["input"]).value = year + "-" + month + "-" + day; // Date format is :HARDCODE:
+        document.getElementById(ths.opt["input"]).value = day + "-" + month + "-" + year; // Date format is :HARDCODE:
         ths.hideCalendar();
     },
     /// Creates a calendar with the date given in the argument as the selected date.
-    makeCalendar:function (year, month, day) {
+    makeCalendar: function (day, month, year) {
         year = parseInt(year);
         month = parseInt(month);
         day = parseInt(day);
@@ -163,7 +163,7 @@ calendar = {
     },
 
     /// Display the calendar - if a date exists in the input box, that will be selected in the calendar.
-    showCalendar:function () {
+    showCalendar: function () {
         var input = document.getElementById(this.opt['input']);
 
         //Position the div in the correct location...
@@ -181,7 +181,7 @@ calendar = {
             var date_parts = date_in_input.split("-");
             if (date_parts.length == 3) {
                 date_parts[1]--; //Month starts with 0
-                selected_date = new Date(date_parts[0], date_parts[1], date_parts[2]);
+                selected_date = new Date(date_parts[2], date_parts[1], date_parts[0]);
             }
             if (selected_date && !isNaN(selected_date.getYear())) { //Valid date.
                 existing_date = selected_date;
@@ -190,13 +190,13 @@ calendar = {
 
         var the_year = existing_date.getYear();
         if (the_year < 1900) the_year += 1900;
-        this.makeCalendar(the_year, existing_date.getMonth(), existing_date.getDate());
+        this.makeCalendar(existing_date.getDate(), existing_date.getMonth(), the_year);
         document.getElementById(this.opt['calendar']).style.display = "block";
         _calendar_active_instance = this;
     },
 
     /// Hides the currently show calendar.
-    hideCalendar:function (instance) {
+    hideCalendar: function (instance) {
         var active_calendar_id = "";
         if (instance) active_calendar_id = instance.opt['calendar'];
         else active_calendar_id = _calendar_active_instance.opt['calendar'];
@@ -206,7 +206,7 @@ calendar = {
     },
 
     /// Setup a text input box to be a calendar box.
-    set:function (input_id) {
+    set: function (input_id) {
         var input = document.getElementById(input_id);
         if (!input) return; //If the input field is not there, exit.
 
@@ -220,7 +220,7 @@ calendar = {
     },
 
     /// Will be called once when the first input is set.
-    init:function () {
+    init: function () {
         if (!this.opt['calendar'] || !document.getElementById(this.opt['calendar'])) {
             var div = document.createElement('div');
             if (!this.opt['calendar']) this.opt['calendar'] = 'calender_div_' + Math.round(Math.random() * 100);

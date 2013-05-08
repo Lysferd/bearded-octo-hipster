@@ -2,11 +2,11 @@
 
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  #before_filter :check_browser, :check_for_user, :authorize
+  before_filter :check_browser, :check_for_user, :authorize
 
   protected
   def check_browser
-    #redirect_to error_406_path if request.env['HTTP_USER_AGENT'] and not request.env['HTTP_USER_AGENT'][/msie/i]
+    redirect_to error_406_path if request.env['HTTP_USER_AGENT'] and not request.env['HTTP_USER_AGENT'][/msie/i]
   end
 
   def check_for_user

@@ -16,11 +16,11 @@ Warehouse::delete_all
 Server::delete_all
 Camera::delete_all
 User::delete_all
-
+=begin
 warehouse_id = Warehouse::create(label: 'Armazém 9-A').id
 
 server_id = Server::create(label: 'SRV-ROCHA-AZ-9A',
-                           address: '201.64.223.150',
+                           address: '201.64.223.152',
                            username: 'admin',
                            password: 'ibtech',
                            warehouse_id: warehouse_id).id
@@ -58,11 +58,11 @@ server_id = Server::create(label: 'SRV-ROCHA-AZ-9A',
  'CM-29 SPEED DOME ARMAZEM'].each_with_index do |c, i|
   Camera::create(label: c, camera_id: i+1, server_id: server_id)
 end
-
+=end
 warehouse_id = Warehouse::create(label: 'Armazém Bunge').id
 
 server_id = Server::create(label: 'SRV-ROCHA-AZBUNGE-01',
-                           address: '201.64.223.151',
+                           address: '201.64.223.150',
                            username: 'admin',
                            password: 'VIDEO!edge23',
                            warehouse_id: warehouse_id).id
@@ -111,7 +111,7 @@ server_id = Server::create(label: 'SRV-ROCHA-AZBUNGE-01',
 end
 
 server_id = Server::create(label: 'SRV-ROCHA-AZBUNGE-02',
-                           address: '201.64.223.152',
+                           address: '201.64.223.151',
                            username: 'admin',
                            password: 'ibtech',
                            warehouse_id: warehouse_id).id

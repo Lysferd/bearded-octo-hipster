@@ -11,6 +11,9 @@ class HomeController < ApplicationController
   before_filter :check_for_parameters, except: [:error_406, :error_401] #, :index]
 
   def check_for_parameters
+    @server = Server::find_by_id(params[:server]) || Server::first
+    return
+
     if params[:u] && params[:token] && params[:w]
       @warehouse = (Warehouse::all.collect { |w| w if /#{params[:w]}/i =~ w.label }).compact.first
       authenticate!(params[:u], params[:token])

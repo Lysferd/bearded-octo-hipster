@@ -9,11 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1378387606907" ignored="false" />
+    <file path="/Dummy.txt" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1378388749855" ignored="false" />
     <file path="/_playback_controls.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1368034989319" ignored="false" />
     <file path="/home.css.scss" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364934053208" ignored="false" />
     <file path="/application.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1368046523961" ignored="false" />
@@ -66,7 +67,7 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="21" selection-start="846" selection-end="846" vertical-scroll-proportion="0.57983196">
+            <state line="3" column="31" selection-start="77" selection-end="77" vertical-scroll-proportion="0.075630255">
               <folding />
             </state>
           </provider>
@@ -1398,7 +1399,11 @@
       <created>1378388736726</created>
       <updated>1378388736726</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Capistrano settings.">
+      <created>1378388755797</created>
+      <updated>1378388755797</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1645,7 +1650,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="21" selection-start="846" selection-end="846" vertical-scroll-proportion="0.57983196">
+        <state line="3" column="31" selection-start="77" selection-end="77" vertical-scroll-proportion="0.075630255">
           <folding />
         </state>
       </provider>

@@ -1,7 +1,7 @@
 require 'rvm/capistrano'
 
 set :user, 'ibtech'
-set :application, 'videoserver4'
+set :application, 'videoserver3'
 set :repository, 'https://github.com/Lysferd/bearded-octo-hipster.git' #'git@github.com:Lysferd/bearded-octo-hipster.git'
 set :deploy_to, "/home/#{user}/#{application}"
 set :rvm_ruby_string, '1.9.3-p392'

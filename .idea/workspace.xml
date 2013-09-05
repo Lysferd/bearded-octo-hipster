@@ -9,12 +9,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a262fed-78de-4ae4-b528-445de187bfd5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/execjs-1.4.0.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/fastthread-1.0.7.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/i18n-0.6.4.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/jquery-rails-2.2.1.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/json-1.7.7.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/mysql2-0.3.11.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/net-scp-1.1.0.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/net-sftp-2.1.1.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/passenger-3.0.19.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/test-unit-2.5.4.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/therubyracer-0.11.4.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/treetop-1.4.12.gem" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bearded-octo-hipster.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1378388749855" ignored="false" />
+    <file path="/Dummy.txt" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1378389213056" ignored="false" />
     <file path="/_playback_controls.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1368034989319" ignored="false" />
     <file path="/home.css.scss" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1364934053208" ignored="false" />
     <file path="/application.html.erb" changelist="9a262fed-78de-4ae4-b528-445de187bfd5" time="1368046523961" ignored="false" />
@@ -67,7 +79,7 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="31" selection-start="77" selection-end="77" vertical-scroll-proportion="0.075630255">
+            <state line="12" column="21" selection-start="529" selection-end="529" vertical-scroll-proportion="0.30252102">
               <folding />
             </state>
           </provider>
@@ -1403,7 +1415,11 @@
       <created>1378388755797</created>
       <updated>1378388755797</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Capistrano settings.">
+      <created>1378389226177</created>
+      <updated>1378389226177</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1650,7 +1666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="31" selection-start="77" selection-end="77" vertical-scroll-proportion="0.075630255">
+        <state line="12" column="21" selection-start="529" selection-end="529" vertical-scroll-proportion="0.30252102">
           <folding />
         </state>
       </provider>

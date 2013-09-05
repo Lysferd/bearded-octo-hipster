@@ -3,7 +3,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   #before_filter :check_browser, :check_for_user, :authorize
-
+=begin
   protected
   def check_browser
     redirect_to error_406_path if request.env['HTTP_USER_AGENT'] and not request.env['HTTP_USER_AGENT'][/msie/i]
@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
       redirect_to login_url, notice: 'A página exige privilégios administrativos.'
     end
   end
-
+=end
   private
   def import_data(model)
     begin

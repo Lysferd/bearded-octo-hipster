@@ -12,7 +12,7 @@
   <a href="http://www.rochalog.com.br/"><%= image_tag 'logo_ib.jpg', id: 'image', align: 'left' %></a>
   <a href="http://www.ibtecnologia.com.br/"><%= image_tag 'rocha_logo.gif', id: 'image', align: 'right' %></a>
 
-  <h1><%= @server.label rescue "Administracao" %></h1>
+  <h1><%= @server.label rescue "Administração" %></h1>
   <% if @server %>
       <h2><%= live? ? 'Visualizando vídeo ao vivo.' : 'Visualizando vídeo armazenado.' %></h2>
   <% end %>
